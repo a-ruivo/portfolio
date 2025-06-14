@@ -1,0 +1,151 @@
+<h1 align="center"> Portfolio - Allan Ruivo </h1>
+My name is Allan Ruivo Wildner, this repository is used to store the projects in my portfolio as an analytics engineer.
+<h1 align="center"> Project 1 </h1>
+# :hammer: Steps  <br>
+- 1: Setting up the python, vscode and git environment.  <br>
+- 2: Create architecture using airflow, docker and terraform.<br>  
+- 3: Connect to the IBGE API and extract data and save it in a postgres database.<br>  
+- 4: Create a dashboard using streamlit and an agent AI flow that performs analysis. <br> 
+<br>
+<h2 align="center"> 1. Setting up </h2>
+## GitHub Setup
+- Create a GitHub account.
+- Create a repository for the project.
+## Install Necessary Tools
+- Install **GitHub Desktop**.
+- Install **Git** for version control.
+## Set Up WSL
+- Enable WSL using:
+  ```bash
+  wsl --install
+- To check for distributions already installed use the command:
+  ```bash
+  wsl -- list --verbose
+- To check available distributions to install if necessary, use command:
+  ```bash
+  wsl --list --online
+- To install new distribution use the command:
+  ```bash
+  wsl --install --distribution <distro>
+- To uninstall old distro use the command:
+  ```bash
+  wsl --unregister <distro>
+- To configure a distro as default:
+  ```bash
+  wsl --set-dafault <distro>
+- Updates
+  ```bash
+  wsl --update
+- Status
+  ```bash
+  wsl --status
+- Help
+  wsl --help
+## Linux Commands
+- View directories
+  ```bash
+  ls
+- Go to directorie
+  ```bash
+  cd <path>
+- Move file
+  ```bash
+  mv <path1> <path2>
+- Delete file
+  ```bash
+  rm <path>
+- Delete directorie
+  ```bash
+  rm -rf <path>
+- Create directorie
+  ```bash
+  mkdir <directorie>
+- Permission override
+  ```bash
+  sudo
+## Python Setup
+- Intall python. Go to the python website and install. Select the options to install as administrator and to add python.exe to the PATH variable.
+- Check that python is accessible from linux using the "python" or "python3" command, otherwise go to the windows environment variable settings and add it.
+## VScode Setup
+- Install VS Code from the microsoft store.
+- Activate VS Code in WSL using the command:
+  ```bash
+  code
+- Install python extensions and WSL.
+- Change vs code to the WSL environment in the bottom left corner of the screen.
+- Use SSH connection to connect WSL on github.
+- Go to github > settings > SSH and GPH keys.
+- Click on New SSH Key.
+- On linux use the command:
+  ```bash
+  ssh-keygen -t ed25519 -C "seuemail@email.com"
+- Press enter 3 times.
+- To activate use the command:
+  ```bash
+  eval "$(ssh-agent -s)"
+- To create the key use the command:
+  ```bash
+  ssh-add ~/. ssh/id_ed25519
+- If this command doesn't work, use the command:
+  ```bash
+  nano ~/.
+- If you need to bring a repository that already exists to vscode use the command:
+  ```bash
+  git clone <repository url>
+- In the repository create a python virtual environment using the command:
+  ```bash
+  python3 -m venv <enviroment>
+- To activate the env use this command:
+  ```bash
+  source <path>/bin/activate
+- To deactivate use:
+  ```bash
+  deactivate
+- To install libraries in the env use or install directly from pip:
+  ```bash
+  pip install -r <requirements path>
+<br>
+<h2 align="center"> 2. Creating architecture </h2>
+## Infrastructure Provisioning (Terraform)
+Use terraform to create and configure the necessary services.
+- Intalling terraform:
+  ```bash
+  sudo apt update && sudo apt install -y terraform
+- you need to install using snap:
+  ```bash
+  sudo snap install terraform --classic
+Instale o AWS CLI fora do seu repositorio
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+- Configurando o AWS CLI
+- Na AWS configure um usuario IAM com acesso a sua conta
+- No terminal use o comando
+    aws configure sso
+    SSO session name (Recommended): <nome da sessao>
+    SSO start URL [None]: <link disponivel no IAM>
+    SSO region [None]: <regiao AWS>
+    SSO registration scopes [None]: sso:account:access
+Crie um arquivo main.tf com as condigurações iniciais
+Use o comando terraform init para iniciar o terraform com as configurações
+- Create PostgreSQL instances and configure storage.
+- Create a Dcoker environment to run the containers.
+- Define networking between services.
+## Task Orchestration (Airflow)
+Create a DAG in Apache Airflow to automate the flow of data extraction and loading:
+- Task 1: Extract data from the API using a Python operator (HttpSensor + SimpleHttpOperator).
+- Task 2: Transform the data using DuckDB (for efficient columnar processing).
+- Task 3: Insert the data into PostgreSQL.
+- Task 4: Validate the inserted data and send notifications.
+## Execution with Docker
+Create a Docker Compose with:
+- Container for Airflow (scheduler, webserver, worker).
+- Container for PostgreSQL (database).
+- Container for DuckDB (processing).
+- Configure volumes and networks between containers to ensure communication.
+# Automation and Deployment (GitHub Actions)
+Create a workflow in GitHub Actions to:
+- Validate code and run integration tests (pytest to check the API).
+- Provision infrastructure via Terraform.
+- Build and publish containers on Docker Hub.
+- Deploy the pipeline for execution.
