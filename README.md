@@ -11,13 +11,9 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 
 <h2 align="center"> 1. Setting up </h2>
 
-## GitHub Setup
-- Create a GitHub account.
-- Create a repository for the project.
-## Install Necessary Tools
-- Install **GitHub Desktop**.
-- Install **Git** for version control.
-## Set Up WSL
+## Install WSL
+<br>
+WSL Commands
 - Enable WSL
   ```bash
   wsl --install
@@ -44,11 +40,14 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   wsl --status
 - Help
   wsl --help
-
-## Linux Commands
+<br>
+Linux Commands
 - View directories
   ```bash
   ls
+- View hidden directories
+  ```bash
+  ls -a
 - Go to directorie
   ```bash
   cd <path>
@@ -71,6 +70,7 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 ## Python Setup
 - Go to the python website and install (select the options to install as administrator and to add python.exe to the PATH variable)
 - Check that python is accessible from linux using the "python" or "python3" command, otherwise go to the windows environment variable settings and add it
+
 ## VScode Setup
 - Install VS Code from the microsoft store
 - Activate VS Code in WSL
@@ -78,6 +78,16 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   code
 - Install python extensions and WSL
 - Change vs code to the WSL environment in the bottom left corner of the screen
+
+## Git
+- Install git
+- Github credentials configuration
+  ```bash
+  git config --global user.name <nome>
+  git config --global user.email <email>
+- In the directorie you want to turn in a git repositore
+  ```bash
+  git init -b <nome da branch>
 - Use SSH connection to connect WSL on github
 - Go to github > settings > SSH and GPH keys
 - Click on New SSH Key
@@ -97,6 +107,70 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 - If you need to bring a repository that already exists to vscode
   ```bash
   git clone <repository url>
+
+## Git Commands
+- Verificar status dos commits
+  ```bash
+  git status
+- Adicionar arquivos para o commit
+  ```bash
+  git add <file1> <file2> <fileN>
+- Adicionar todos os arquivos para o commit
+  ```bash
+  git add -A
+- Fazendo o commit
+  ```bash
+  git commit -m <message>
+- Commit history on this branch
+  ```bash
+  git log
+- Commit history on all branches
+  ```bash
+  git log -all
+- Branch list
+  ```bash
+  git branch
+- Create branch
+  ```bash
+  git branch <nova branch>
+- Change branch
+  ```bash
+  git checkout <branch> 
+- Change branch and create a new one
+  ```bash
+  git checkout -b <branch>
+- Para fazer merge (necessário estar na branch destino e caso precise cancelar usar o mesmo comando com --abort)
+  ```bash
+  git merge <branch origem>
+- Mudar de commit
+  ```bash
+  git checkou <hash commit>
+- Enviando commits para repositorio remoto
+  ```bash
+  git push <repositorio remoto> <nome branch>
+- Lista os repositorios remotos conectados
+  ```bash
+  git remote -V
+- Conecta a um repositorio remoto
+  ```bash
+  git remote add origin <url>
+- Deletar branch
+  ```bash
+  git push <nome branch remoto> -d <nome branch local>
+- Baixar arquivos do repositorio remoto para as branch remotas
+  ```bash
+  git fetch
+- Integra os arquivos da branch remota com a branch local
+  ```bash
+  git pull
+- Reaplicar commits em outra branch
+  ```bash
+  git rebase <branch destino>
+- Remover arquivos da stage do commit
+  ```bash
+  git restore --staged  <file1> <file2>
+
+## Virtual Env
 - In the repository create a python virtual environment
   ```bash
   python3 -m venv <enviroment>
@@ -136,6 +210,14 @@ Use terraform to create and configure the necessary services.
     SSO registration scopes [None]: sso:account:access
 - Crie um arquivo main.tf com as condigurações iniciais
 - Use o comando terraform init para iniciar o terraform com as configurações
+- terraform plan
+
+docker
+ssh-keygen -t rsa
+chmod 400 "id_rsa"
+ssh -i ec2-18-231-20-112.sa-east-1.compute.amazonaws.com
+
+
 - Create PostgreSQL instances and configure storage.
 - Create a Dcoker environment to run the containers.
 - Define networking between services.
