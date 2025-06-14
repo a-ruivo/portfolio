@@ -11,9 +11,7 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 
 <h2 align="center"> 1. Setting up </h2>
 
-## Install WSL
-<br>
-WSL Commands
+## WSL Commands
 - Enable WSL
   ```bash
   wsl --install
@@ -40,8 +38,8 @@ WSL Commands
   wsl --status
 - Help
   wsl --help
-<br>
-Linux Commands
+
+## Linux Commands
 - View directories
   ```bash
   ls
