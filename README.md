@@ -24,10 +24,18 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   ```bash
   wsl --install
 - Selecting WSL distribution
-- Use the command wsl -- list --verbose to check for distributions already installed.
-- If necessary, use command wsl --list --online to check available distributions to install.
-- Use command wsl --install --distribution <distro> to install new distribution.
-- Use command wsl --unregister <distro> to uninstall old distro.
+- To check for distributions already installed use the command:
+  ```bash
+  wsl -- list --verbose
+- To check available distributions to install if necessary, use command:
+  ```bash
+  wsl --list --online
+- To install new distribution use the command:
+  ```bash
+  wsl --install --distribution <distro>
+- To uninstall old distro use the command:
+  ```bash
+  wsl --unregister <distro>
 
 ## Python Setup
 - Intall python. Go to the python website and install. Select the options to install as administrator and to add python.exe to the PATH variable.
@@ -36,14 +44,24 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 ## VScode Setup
 - Installing VS Code.
 - Install VS Code from the microsoft store.
-- Activate VS Code in WSL using the "code" command.
+- Activate VS Code in WSL using the command:
+  ```bash
+  code
 - Install python extensions and WSL.
 - Change vs code to the WSL environment in the bottom left corner of the screen.
 - Use SSH connection to connect WSL on github.
 - Go to github > settings > SSH and GPH keys.
 - Click on New SSH Key.
-- On linux use the command "ssh-keygen -t ed25519 -C "seuemail@email.com"
+- On linux use the command:
+  ```bash
+  ssh-keygen -t ed25519 -C "seuemail@email.com"
 - Press enter 3 times.
-- Use the command "eval "$(ssh-agent -s)"" to activate.
-- Use the command "ssh-add ~/. ssh/id_ed25519" to create the key.
-- If this command doesn't work, use the command "nano ~/.
+- To activate use the command:
+  ```bash
+  eval "$(ssh-agent -s)"
+- To create the key use the command:
+  ```bash
+  ssh-add ~/. ssh/id_ed25519
+- If this command doesn't work, use the command:
+  ```bash
+  nano ~/.
