@@ -1,5 +1,6 @@
 <h1 align="center"> Portfolio - Allan Ruivo </h1>
 My name is Allan Ruivo Wildner, this repository is used to store the projects in my portfolio as an analytics engineer.
+
 <h1 align="center"> Project 1 </h1>
 # :hammer: Steps  <br>
 - 1: Setting up the python, vscode and git environment.  <br>
@@ -7,7 +8,9 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 - 3: Connect to the IBGE API and extract data and save it in a postgres database.<br>  
 - 4: Create a dashboard using streamlit and an agent AI flow that performs analysis. <br> 
 <br>
+
 <h2 align="center"> 1. Setting up </h2>
+
 ## GitHub Setup
 - Create a GitHub account.
 - Create a repository for the project.
@@ -15,22 +18,22 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 - Install **GitHub Desktop**.
 - Install **Git** for version control.
 ## Set Up WSL
-- Enable WSL using:
+- Enable WSL
   ```bash
   wsl --install
-- To check for distributions already installed use the command:
+- Check for distributions already installed 
   ```bash
   wsl -- list --verbose
-- To check available distributions to install if necessary, use command:
+- Check available distributions to install if necessary
   ```bash
   wsl --list --online
-- To install new distribution use the command:
+- Install new distribution
   ```bash
   wsl --install --distribution <distro>
-- To uninstall old distro use the command:
+- Uninstall old distro
   ```bash
   wsl --unregister <distro>
-- To configure a distro as default:
+- Configure a distro as default
   ```bash
   wsl --set-dafault <distro>
 - Updates
@@ -41,6 +44,7 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   wsl --status
 - Help
   wsl --help
+
 ## Linux Commands
 - View directories
   ```bash
@@ -63,71 +67,75 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 - Permission override
   ```bash
   sudo
+
 ## Python Setup
-- Intall python. Go to the python website and install. Select the options to install as administrator and to add python.exe to the PATH variable.
-- Check that python is accessible from linux using the "python" or "python3" command, otherwise go to the windows environment variable settings and add it.
+- Go to the python website and install (select the options to install as administrator and to add python.exe to the PATH variable)
+- Check that python is accessible from linux using the "python" or "python3" command, otherwise go to the windows environment variable settings and add it
 ## VScode Setup
-- Install VS Code from the microsoft store.
-- Activate VS Code in WSL using the command:
+- Install VS Code from the microsoft store
+- Activate VS Code in WSL
   ```bash
   code
-- Install python extensions and WSL.
-- Change vs code to the WSL environment in the bottom left corner of the screen.
-- Use SSH connection to connect WSL on github.
-- Go to github > settings > SSH and GPH keys.
-- Click on New SSH Key.
-- On linux use the command:
+- Install python extensions and WSL
+- Change vs code to the WSL environment in the bottom left corner of the screen
+- Use SSH connection to connect WSL on github
+- Go to github > settings > SSH and GPH keys
+- Click on New SSH Key
+- On linux use the command
   ```bash
   ssh-keygen -t ed25519 -C "seuemail@email.com"
-- Press enter 3 times.
-- To activate use the command:
+- Press enter 3 times
+- Activate the key
   ```bash
   eval "$(ssh-agent -s)"
-- To create the key use the command:
+- Create the key
   ```bash
   ssh-add ~/. ssh/id_ed25519
-- If this command doesn't work, use the command:
+- If this command doesn't work, use this
   ```bash
   nano ~/.
-- If you need to bring a repository that already exists to vscode use the command:
+- If you need to bring a repository that already exists to vscode
   ```bash
   git clone <repository url>
-- In the repository create a python virtual environment using the command:
+- In the repository create a python virtual environment
   ```bash
   python3 -m venv <enviroment>
-- To activate the env use this command:
+- To activate the env use this command
   ```bash
   source <path>/bin/activate
-- To deactivate use:
+- To deactivate use
   ```bash
   deactivate
-- To install libraries in the env use or install directly from pip:
+- To install libraries in the env use or install directly from pip
   ```bash
   pip install -r <requirements path>
 <br>
+
 <h2 align="center"> 2. Creating architecture </h2>
-## Infrastructure Provisioning (Terraform)
+
+## Infrastructure Provisioning (Terraform, AWS CLI)
 Use terraform to create and configure the necessary services.
-- Intalling terraform:
+- Intalling terraform
   ```bash
   sudo apt update && sudo apt install -y terraform
 - you need to install using snap:
   ```bash
   sudo snap install terraform --classic
-Instale o AWS CLI fora do seu repositorio
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-- Configurando o AWS CLI
+- Instale o AWS CLI fora do seu repositorio
+  ```bash
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
 - Na AWS configure um usuario IAM com acesso a sua conta
 - No terminal use o comando
+  ```bash
     aws configure sso
     SSO session name (Recommended): <nome da sessao>
     SSO start URL [None]: <link disponivel no IAM>
     SSO region [None]: <regiao AWS>
     SSO registration scopes [None]: sso:account:access
-Crie um arquivo main.tf com as condigurações iniciais
-Use o comando terraform init para iniciar o terraform com as configurações
+- Crie um arquivo main.tf com as condigurações iniciais
+- Use o comando terraform init para iniciar o terraform com as configurações
 - Create PostgreSQL instances and configure storage.
 - Create a Dcoker environment to run the containers.
 - Define networking between services.
