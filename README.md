@@ -4,9 +4,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 # Summary
 - [Project 1](#project-1)
   - [1. Setting up the infrastructure](#setting-up-the-infrastructure)
-  <br>WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
     - [WSL](#wsl-commands)
-    <br>I chose to use linux over windows WSL because my personal computer is already on this operating system and tools like tableau don't run on linux
     - [Linux](#linux-commands)
     - [Python](#python-setup)
     - [VScode](#vscode-setup)
@@ -28,8 +26,11 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 # <h1 align="center"> Project 1 </h1>
 
 # <h2 align="center"> Setting up the infrastructure</h2>
+WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
+<br>
 
 # WSL Commands
+I chose to use linux over windows WSL because my personal computer is already on this operating system and tools like tableau don't run on linux
 - Enable WSL
   ```bash
   wsl --install
