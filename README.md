@@ -1,17 +1,18 @@
 <h1 align="center"> Portfolio - Allan Ruivo </h1>
-My name is Allan Ruivo Wildner, this repository is used to store the projects in my portfolio as an analytics engineer.
+My name is Allan Ruivo Wildner. The purpose of this repository is to store projects I've developed in order to develop myself as a professional and to show what technical skills I possess.
 
 # Summary
 - [Project 1](#project-1)
   - [1. Setting up the infrastructure](#1-setting-up-the-infrastructure)
   WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
-    - [a. WSL Commands](#wsl-commands)
-    - [b. Linux Commands](#linux-commands)
-    - [c. Python Setup](#python-setup)
-    - [d. VScode Setup](#vscode-setup)
-    - [e. Git Setup](#git-setup)
-    - [f. Git Commands](#git-commands)
-    - [g. Virtual Env](#virtual-env)
+    - [WSL](#wsl-commands)
+    I chose to use linux over windows WSL because my personal computer is already on this operating system and tools like tableau don't run on linux
+    - [Linux](#linux-commands)
+    - [Python](#python-setup)
+    - [VScode](#vscode-setup)
+    - [Git Setup](#git-setup)
+    - [Git Commands](#git-commands)
+    - [Virtual Env](#virtual-env)
   - [2. Creating architecture](#2-creating-architecture)
     - [a. Creating EC2](#creating-ec2)
 
@@ -47,13 +48,13 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   wsl --status
 - Help
   wsl --help
-- Verificar memoria da unidade virtual
+- Checking WSL memory
   df -h /
-- Verificar memoria RAM e SWAP
+- Checking WSL RAM and SWAP memory
   free -h
-- Mudar tamanho da unidade virtual da distro
+- Changing the WSL memory size
   wsl --manage <distribution name> --resize <memory string>
-- Desativando o WSL
+- WSL deactivation
   wsl --shutdown
 
 ## Linux Commands
@@ -124,16 +125,16 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   git clone <repository url>
 
 ## Git Commands
-- Verificar status dos commits
+- Checking the status of commits
   ```bash
   git status
-- Adicionar arquivos para o commit
+- Add files to the commit
   ```bash
   git add <file1> <file2> <fileN>
-- Adicionar todos os arquivos para o commit
+- Add all the files to the commit
   ```bash
   git add -A
-- Fazendo o commit
+- Commiting
   ```bash
   git commit -m <message>
 - Commit history on this branch
@@ -147,43 +148,51 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   git branch
 - Create branch
   ```bash
-  git branch <nova branch>
+  git branch <new branch>
 - Change branch
   ```bash
   git checkout <branch> 
 - Change branch and create a new one
   ```bash
   git checkout -b <branch>
-- Para fazer merge (necessário estar na branch destino e caso precise cancelar usar o mesmo comando com --abort)
+- To merge (you must be in the target branch and if you need to cancel, use the same command with --abort)
   ```bash
   git merge <branch origem>
-- Mudar de commit
+- Change commit
   ```bash
-  git checkou <hash commit>
-- Enviando commits para repositorio remoto
+  git checkout <hash commit>
+- Sending commits to a remote repository
   ```bash
-  git push <repositorio remoto> <nome branch>
-- Lista os repositorios remotos conectados
+  git push <repository> < branch>
+- List of connected remote repositories
   ```bash
   git remote -V
-- Conecta a um repositorio remoto
+- Connects to a remote repository
   ```bash
   git remote add origin <url>
-- Deletar branch
+- Delete branch
   ```bash
-  git push <nome branch remoto> -d <nome branch local>
-- Baixar arquivos do repositorio remoto para as branch remotas
+  git push <remote branch> -d <local branch>
+- Downloading files from the remote repository to the remote branches
   ```bash
   git fetch
-- Integra os arquivos da branch remota com a branch local
+- Integrates files from the remote branch with the local branch
   ```bash
   git pull
-- Reaplicar commits em outra branch
+- Reapply commits to another branch
   ```bash
-  git rebase <branch destino>
-- Remover arquivos da stage do commit
+  git rebase <destination branch>
+- Remove files from the commit stage
   ```bash
   git restore --staged  <file1> <file2>
+
+# Commits
+- To standardize the commits I used the commitizen library
+  ```bash
+  pip install -U commitizen
+- When committing with the command below, it offers some commit configuration possibilities
+  ```bash
+  cz commit
 
 ## Virtual Env
 - In the repository create a python virtual environment
@@ -200,92 +209,107 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   pip install -r <requirements path>
 
 # Installing airflow
-- Instalando o airflow
-pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
-- Ativando 
-airflow api-server -p 8080
-
-pip install apache-airflow[duckdb]
+- Installing airflow
+  ```bash
+  pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
+- Activating
+  ```bash
+  airflow api-server -p 8080
+- Installing duckdb with ariflow
+  ```bash
+  pip install apache-airflow[duckdb]
 
 # DuckDB
-pip install duckdb
+- Installing duckdb
+  ```bash
+  pip install duckdb
 
 # PostgreSQL
-- Instalando Postgre 14
-sudo apt install -y wget ca-certificates
-wget -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
-sudo apt update
-sudo apt install -y postgresql-14
-
-- Verificando cluster ativo
-pg_lsclusters
-
-- Mudando para o usuario padrao do postgres
-sudo -i -u postgres
-
-- Abrindo terminal postgre
-psql -U postgres -p 5432
-
-- Criando banco de dados
-CREATE DATABASE meu_banco -- Nome do banco de dados a ser criado.
-     WITH OWNER = meu_usuario -- Usuário do servidor que será o owner (dono) do banco.
-          TEMPLATE = template1 -- Banco de dados que será usado como modelo para a criação do novo banco.
-          ENCODING = 'UTF8' -- Tipo de codificação dos dados que serão armazenados no banco.
-          TABLESPACE = pg_default -- Tablespace onde o banco será criado fisicamente.
-          CONNECTION LIMIT = 100; -- Número máximo de conexões simultâneas permitidas no banco.
-
-- Criando uma tabela
-CREATE TABLE cnae_classe -- Nome da tabela
-(
-    id INT NOT NULL, -- Chave primária fornecida pela cnae
-    descricao VARCHAR NOT NULL, -- Descrição da classe
-    observacoes VARCHAR NOT NULL, -- Observacoes
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Data de criação do registro
-);
-
-- Criando usuario
-CREATE ROLE meu_usuario WITH LOGIN PASSWORD 'minha_senha' SUPERUSER CREATEDB CREATEROLE;
-
-- Ajuda
-\h
-- Sair da ajuda
-\q
-- Ver bancos
-\l
-- Ver tabelas
-\dt
-- Para sair do usuario postgres
-exit
-- Ir para um banco especifico
-\c nome_do_banco
-- Para deletar tabela
-DROP TABLE nome_da_tabela;
+- Installing PostgreSQL
+  ```bash
+  sudo apt install -y wget ca-certificates
+  wget -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+  sudo apt update
+  sudo apt install -y postgresql-14
+- Checking for an active cluster
+  ```bash
+  pg_lsclusters
+- Changing user to postgreSQL
+  ```bash
+  sudo -i -u postgres
+- Opening postgreSQL
+  ```bash
+  psql -U postgres -p 5432
+- Create database
+  ```bash
+  CREATE DATABASE my_bank -- Name of the database to be created.
+     WITH OWNER = my_user -- Server user who will be the owner of the database.
+          TEMPLATE = template1 -- Database that will be used as a template for creating the new database.
+          ENCODING = ‘UTF8’ -- Type of encoding for the data that will be stored in the database.
+          TABLESPACE = pg_default -- Tablespace where the database will be physically created.
+          CONNECTION LIMIT = 100; -- Maximum number of simultaneous connections allowed in the database.
+- Create table
+  ```bash
+  CREATE TABLE my_table -- Name of the table
+  (
+      <field1> <data type>, 
+      <field2> <data type>, 
+      <field3> <data type>
+  );
+- Create user
+  ```bash
+  CREATE ROLE my_user WITH LOGIN PASSWORD 'my_password' SUPERUSER CREATEDB CREATEROLE;
+- Help
+  ```bash
+  \h
+- Return
+  ```bash
+  \q
+- View databases
+  ```bash
+  \l
+- View tables
+  ```bash
+  \dt
+- Exit
+  ```bash
+  exit
+- Enter database
+  ```bash
+  \c nome_do_banco
+- Delete table
+  ```bash
+  DROP TABLE nome_da_tabela;
 
 # N8N
-- Installing N8N
-- Primeiro isntalar nodejs
+- Installing NodeJS
+  ```bash
   sudo apt install nodejs
-- Instalar npm
+- Installing NPM
+  ```bash
   sudo apt install npm
-- Intalar N8N
+- Installing N8N
+  ```bash
   npm install n8n -g
-- Abrir N8N
+- Opening N8N
+  ```bash
   n8n
-- Fechar N8N
 
 # <h2 align="center"> 2. Data extraction from IBGE API using python</h2>
 
-- file extract.py
+[Extract](project1/extract.py)
 
 # <h2 align="center"> 3. N8N data upload, transformation and save </h2>
 
 ![alt text](image.png)
 
-- file n8n_request.py
-- file n8n_workflow.json
+[Workflow](project1/n8n_workflow.json)
+
+[Trigger](project1/n8n_request.py)
 
 # <h2 align="center"> 4. DBT </h2>
+-------
 
 # <h2 align="center"> 5. Tasks Orchestration (Airflow) </h2>
 Create a DAG in Apache Airflow to automate the flow of data extraction and loading:
