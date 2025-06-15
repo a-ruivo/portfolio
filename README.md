@@ -23,7 +23,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
   - [6. Data Visualization](#data-visualization)
 
 
-# <h1 align="center"> Project 1 </h1>
+# Project 1
 
 # Setting up the infrastructure
 WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
@@ -305,11 +305,11 @@ I chose to use linux over windows WSL because my personal computer is already on
   ```bash
   n8n
 
-# <h2 align="center"> Data extraction from IBGE API using python</h2>
+# Data extraction from IBGE API using python
 
 [Extract](project1/extract.py)
 
-# <h2 align="center"> N8N data upload, transformation and save </h2>
+# N8N data upload, transformation and save
 
 ![alt text](image.png)
 
@@ -317,17 +317,17 @@ I chose to use linux over windows WSL because my personal computer is already on
 
 [Trigger](project1/n8n_request.py)
 
-# <h2 align="center"> DBT </h2>
+# DBT
 
 
-# <h2 align="center"> Tasks Orchestration (Airflow) </h2>
+# Tasks Orchestration (Airflow)
 
 
-# <h2 align="center"> Data Visualization </h2>
+# Data Visualization
 
 
 
-# <h1 align="center"> Project 2 </h1>
+# Project 2
 
 # Installing docker
 - Instalando utilitarios do gerenciador de pacotes do linux
@@ -341,7 +341,7 @@ sudo systemctl start docker
 - Para que o docker inicie junto com o sistema
 sudo systemctl enable docker
 
-## Creating EC2
+# Creating EC2
 - Instale o AWS CLI fora do seu repositorio
   ```bash
   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
