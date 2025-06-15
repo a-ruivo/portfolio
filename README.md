@@ -199,6 +199,7 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 
 # <h2 align="center"> 2. Creating architecture </h2>
 
+Por limitações de custo não utilizei serviços em nuvem mas vou deixar o passo a passo para criar a instância registrado
 ## Creating EC2
 - Instale o AWS CLI fora do seu repositorio
   ```bash
@@ -219,31 +220,80 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   ```bash
   ssh -i <key path> <user>@<link EC2>
 
-# Intalling terraform
-sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-sudo yum install -y terraform
-
-terraform - version
-
 # Installing docker
-sudo yum update -y
-sudo yum install -y docker
-
+- Instalando utilitarios do gerenciador de pacotes do linux
+sudo apt update && sudo apt install -y software-properties-common
+- Atualizando o apt e todos os pacotes
+sudo apt upgrade -y
+- Instalando o docker
+sudo apt install -y docker.io
+- Iniciando o docker
 sudo systemctl start docker
+- Para que o docker inicie junto com o sistema
 sudo systemctl enable docker
-sudo usermod -aG docker ec2-user
 
 # Installing airflow
-sudo yum install -y python3-pip
-pip3 install --upgrade pip
-pip3 install apache-airflow
+- Instalando o airflow
+pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
+- Ativando 
+airflow api-server -p 8080
 
-airflow db init
+pip install apache-airflow[duckdb]
 
-airflow scheduler &
-airflow webserver -p 8080 &
+# DuckDB
+pip install duckdb
 
+# PostgreSQL
+- Instalando Postgre 14
+sudo apt install -y wget ca-certificates
+wget -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+sudo apt update
+sudo apt install -y postgresql-14
+
+- Verificando cluster ativo
+pg_lsclusters
+
+- Mudando para o usuario padrao do postgres
+sudo -i -u postgres
+
+- Abrindo terminal postgre
+psql -U postgres -p 5432
+
+- Criando banco de dados
+CREATE DATABASE meu_banco -- Nome do banco de dados a ser criado.
+     WITH OWNER = meu_usuario -- Usuário do servidor que será o owner (dono) do banco.
+          TEMPLATE = template1 -- Banco de dados que será usado como modelo para a criação do novo banco.
+          ENCODING = 'UTF8' -- Tipo de codificação dos dados que serão armazenados no banco.
+          TABLESPACE = pg_default -- Tablespace onde o banco será criado fisicamente.
+          CONNECTION LIMIT = 100; -- Número máximo de conexões simultâneas permitidas no banco.
+
+- Criando uma tabela
+CREATE TABLE cnae_classe -- Nome da tabela
+(
+    id INT NOT NULL, -- Chave primária fornecida pela cnae
+    descricao VARCHAR NOT NULL, -- Descrição da classe
+    observacoes VARCHAR NOT NULL, -- Observacoes
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Data de criação do registro
+);
+
+- Criando usuario
+CREATE ROLE meu_usuario WITH LOGIN PASSWORD 'minha_senha' SUPERUSER CREATEDB CREATEROLE;
+
+- Ajuda
+\h
+- Sair da ajuda
+\q
+- Ver bancos
+\l
+- Ver tabelas
+\dt
+- Para sair do usuario postgres
+exit
+- Ir para um banco especifico
+\c nome_do_banco
+- Para deletar tabela
+DROP TABLE nome_da_tabela;
 
 
 - Create PostgreSQL instances and configure storage.
