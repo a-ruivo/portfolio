@@ -1,15 +1,29 @@
 <h1 align="center"> Portfolio - Allan Ruivo </h1>
 My name is Allan Ruivo Wildner, this repository is used to store the projects in my portfolio as an analytics engineer.
 
-<h1 align="center"> Project 1 </h1>
-# :hammer: Steps  <br>
-- 1: Setting up the python, vscode and git environment.  <br>
-- 2: Create architecture using airflow, docker and terraform.<br>  
-- 3: Connect to the IBGE API and extract data and save it in a postgres database.<br>  
-- 4: Create a dashboard using streamlit and an agent AI flow that performs analysis. <br> 
+# Summary
+- [Project 1](#project-1)
+  - [1. Setting up the infrastructure](#1-setting-up-the-infrastructure)
+    - [a. WSL Commands](#wsl-commands)
+    - [b. Linux Commands](#linux-commands)
+    - [c. Python Setup](#python-setup)
+    - [d. VScode Setup](#vscode-setup)
+    - [e. Git Setup](#git-setup)
+    - [f. Git Commands](#git-commands)
+    - [g. Virtual Env](#virtual-env)
+  - [2. Creating architecture](#2-creating-architecture)
+    - [a. Creating EC2](#creating-ec2)
+
+
+# <h1 align="center"> Project 1 </h1>
+<br>
+- 1: Setting up the python, vscode and git environment  <br>
+- 2: Create architecture using airflow, docker and terraform<br>  
+- 3: Connect to the IBGE API and extract data and save it in a postgres database<br>  
+- 4: Create a dashboard using streamlit and an agent AI flow that performs analysis <br> 
 <br>
 
-<h2 align="center"> 1. Setting up </h2>
+# <h2 align="center"> 1. Setting up the infrastructure</h2>
 
 ## WSL Commands
 - Enable WSL
@@ -77,7 +91,7 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 - Install python extensions and WSL
 - Change vs code to the WSL environment in the bottom left corner of the screen
 
-## Git
+## Git Setup
 - Install git
 - Github credentials configuration
   ```bash
@@ -183,16 +197,9 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   pip install -r <requirements path>
 <br>
 
-<h2 align="center"> 2. Creating architecture </h2>
+# <h2 align="center"> 2. Creating architecture </h2>
 
-## Infrastructure Provisioning (Terraform, AWS CLI)
-Use terraform to create and configure the necessary services.
-- Intalling terraform
-  ```bash
-  sudo apt update && sudo apt install -y terraform
-- you need to install using snap:
-  ```bash
-  sudo snap install terraform --classic
+## Creating EC2
 - Instale o AWS CLI fora do seu repositorio
   ```bash
   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -206,14 +213,37 @@ Use terraform to create and configure the necessary services.
     SSO start URL [None]: <link disponivel no IAM>
     SSO region [None]: <regiao AWS>
     SSO registration scopes [None]: sso:account:access
-- Crie um arquivo main.tf com as condigurações iniciais
-- Use o comando terraform init para iniciar o terraform com as configurações
-- terraform plan
+- Criar EC2 configurando chave ssh
+- Ajustar regras de grupo de segurança
+- Conecte na EC2 (cada AMI possui um nome de usuario padrão)
+  ```bash
+  ssh -i <key path> <user>@<link EC2>
 
-docker
-ssh-keygen -t rsa
-chmod 400 "id_rsa"
-ssh -i ec2-18-231-20-112.sa-east-1.compute.amazonaws.com
+# Intalling terraform
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum install -y terraform
+
+terraform - version
+
+# Installing docker
+sudo yum update -y
+sudo yum install -y docker
+
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ec2-user
+
+# Installing airflow
+sudo yum install -y python3-pip
+pip3 install --upgrade pip
+pip3 install apache-airflow
+
+airflow db init
+
+airflow scheduler &
+airflow webserver -p 8080 &
+
 
 
 - Create PostgreSQL instances and configure storage.
