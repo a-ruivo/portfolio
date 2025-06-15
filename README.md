@@ -3,7 +3,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 
 # Summary
 - [Project 1](#project-1)
-  - [1. Setting up the infrastructure](#1-setting-up-the-infrastructure)
+  - [1. Setting up the infrastructure](#setting-up-the-infrastructure)
   <br>WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
     - [WSL](#wsl-commands)
     <br>I chose to use linux over windows WSL because my personal computer is already on this operating system and tools like tableau don't run on linux
@@ -18,16 +18,16 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
     - [DuckDB](#duckdb)
     - [PostgreSQL](#postgresql)
     - [N8N](#n8n)
-  - [2. Data extraction from IBGE API using python](#2-data-extraction-from-ibge-api-using-python)
-  - [3. N8N data upload, transformation and save](#3-n8n-data-upload-transformation-and-save)
-  - [4. DBT](#4-dbt)
-  - [5. Tasks Orchestration (Airflow)](#5-tasks-orchestration-airflow)
-  - [6. Data Visualization](#6-data-visualization)
+  - [2. Data extraction from IBGE API using python](#data-extraction-from-ibge-api-using-python)
+  - [3. N8N data upload, transformation and save](#n8n-data-upload-transformation-and-save)
+  - [4. DBT](#dbt)
+  - [5. Tasks Orchestration (Airflow)](#tasks-orchestration-airflow)
+  - [6. Data Visualization](#data-visualization)
 
 
 # <h1 align="center"> Project 1 </h1>
 
-# <h2 align="center"> 1. Setting up the infrastructure</h2>
+# <h2 align="center"> Setting up the infrastructure</h2>
 
 # WSL Commands
 - Enable WSL
@@ -304,11 +304,11 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
   ```bash
   n8n
 
-# <h2 align="center"> 2. Data extraction from IBGE API using python</h2>
+# <h2 align="center"> Data extraction from IBGE API using python</h2>
 
 [Extract](project1/extract.py)
 
-# <h2 align="center"> 3. N8N data upload, transformation and save </h2>
+# <h2 align="center"> N8N data upload, transformation and save </h2>
 
 ![alt text](image.png)
 
@@ -316,18 +316,13 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 
 [Trigger](project1/n8n_request.py)
 
-# <h2 align="center"> 4. DBT </h2>
--------
-
-# <h2 align="center"> 5. Tasks Orchestration (Airflow) </h2>
-Create a DAG in Apache Airflow to automate the flow of data extraction and loading:
-- Task 1: Extract data from the API using a Python operator (HttpSensor + SimpleHttpOperator).
-- Task 2: Transform the data using DuckDB (for efficient columnar processing).
-- Task 3: Insert the data into PostgreSQL.
-- Task 4: Validate the inserted data and send notifications.
+# <h2 align="center"> DBT </h2>
 
 
-# <h2 align="center"> 6. Data Visualization </h2>
+# <h2 align="center"> Tasks Orchestration (Airflow) </h2>
+
+
+# <h2 align="center"> Data Visualization </h2>
 
 
 
