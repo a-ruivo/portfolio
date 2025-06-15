@@ -25,7 +25,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 
 # <h1 align="center"> Project 1 </h1>
 
-# <h2 align="center"> Setting up the infrastructure</h2>
+# Setting up the infrastructure
 WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
 <br>
 
