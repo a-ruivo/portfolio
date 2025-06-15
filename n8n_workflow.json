@@ -1,0 +1,228 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "0d8205fd-345d-4e28-aeca-ed557de86a22",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f40632a8-f983-4443-a730-83a21a17e66f",
+      "name": "Webhook",
+      "webhookId": "0d8205fd-345d-4e28-aeca-ed557de86a22"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "select * from cnae_classe;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        220,
+        0
+      ],
+      "id": "b2114268-500b-4970-a385-fb01dcd2ec0c",
+      "name": "Postgres",
+      "alwaysOutputData": true,
+      "credentials": {
+        "postgres": {
+          "id": "AxdKlrD3UeLXASc6",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "CREATE TABLE IF NOT EXISTS cnae_classe_agg -- Nome da tabela\n(\n    quantity INT NOT NULL -- Chave primária fornecida pela cnae\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        220,
+        -160
+      ],
+      "id": "1f42188b-e926-4bb7-a4d0-e5fb0e71d5c2",
+      "name": "Postgres1",
+      "credentials": {
+        "postgres": {
+          "id": "AxdKlrD3UeLXASc6",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "value": "public",
+          "mode": "list",
+          "cachedResultName": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "cnae_classe_agg",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {
+            "quantity": 0
+          },
+          "matchingColumns": [
+            "quantity"
+          ],
+          "schema": [
+            {
+              "id": "quantity",
+              "displayName": "quantity",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        820,
+        0
+      ],
+      "id": "e7821ed1-8159-4a1a-9673-d463b645d06a",
+      "name": "Postgres2",
+      "credentials": {
+        "postgres": {
+          "id": "AxdKlrD3UeLXASc6",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "aggregation": "countUnique",
+              "field": "descricao"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "85fa60ed-d43d-47f3-b3d3-7e33c5ea31ad",
+      "name": "Summarize"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5c1be62b-821b-43cc-abb5-9ef33983d6f1",
+              "name": "quantity",
+              "value": "={{ $json.unique_count_descricao }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        620,
+        0
+      ],
+      "id": "3491f48f-6648-4473-9d0e-4e608eaf592e",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Postgres",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Postgres1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres1": {
+      "main": [
+        []
+      ]
+    },
+    "Summarize": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Postgres2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "583b9504-aa98-4d7f-9270-6eea54fe66c5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "88dcf68fc8d3fc599afe0f80472c88262b44290a51d9fd377c74bab4647f7e5d"
+  },
+  "id": "uH1uCjeXQFOJWgEr",
+  "tags": []
+}

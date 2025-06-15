@@ -4,6 +4,7 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 # Summary
 - [Project 1](#project-1)
   - [1. Setting up the infrastructure](#1-setting-up-the-infrastructure)
+  WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
     - [a. WSL Commands](#wsl-commands)
     - [b. Linux Commands](#linux-commands)
     - [c. Python Setup](#python-setup)
@@ -16,12 +17,6 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 
 
 # <h1 align="center"> Project 1 </h1>
-<br>
-- 1: Setting up the python, vscode and git environment  <br>
-- 2: Create architecture using airflow, docker and terraform<br>  
-- 3: Connect to the IBGE API and extract data and save it in a postgres database<br>  
-- 4: Create a dashboard using streamlit and an agent AI flow that performs analysis <br> 
-<br>
 
 # <h2 align="center"> 1. Setting up the infrastructure</h2>
 
@@ -43,7 +38,7 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   wsl --unregister <distro>
 - Configure a distro as default
   ```bash
-  wsl --set-dafault <distro>
+  wsl --set-default <distro>
 - Updates
   ```bash
   wsl --update
@@ -52,6 +47,14 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
   wsl --status
 - Help
   wsl --help
+- Verificar memoria da unidade virtual
+  df -h /
+- Verificar memoria RAM e SWAP
+  free -h
+- Mudar tamanho da unidade virtual da distro
+  wsl --manage <distribution name> --resize <memory string>
+- Desativando o WSL
+  wsl --shutdown
 
 ## Linux Commands
 - View directories
@@ -195,42 +198,6 @@ My name is Allan Ruivo Wildner, this repository is used to store the projects in
 - To install libraries in the env use or install directly from pip
   ```bash
   pip install -r <requirements path>
-<br>
-
-# <h2 align="center"> 2. Creating architecture </h2>
-
-Por limitações de custo não utilizei serviços em nuvem mas vou deixar o passo a passo para criar a instância registrado
-## Creating EC2
-- Instale o AWS CLI fora do seu repositorio
-  ```bash
-  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-  unzip awscliv2.zip
-  sudo ./aws/install
-- Na AWS configure um usuario IAM com acesso a sua conta
-- No terminal use o comando
-  ```bash
-    aws configure sso
-    SSO session name (Recommended): <nome da sessao>
-    SSO start URL [None]: <link disponivel no IAM>
-    SSO region [None]: <regiao AWS>
-    SSO registration scopes [None]: sso:account:access
-- Criar EC2 configurando chave ssh
-- Ajustar regras de grupo de segurança
-- Conecte na EC2 (cada AMI possui um nome de usuario padrão)
-  ```bash
-  ssh -i <key path> <user>@<link EC2>
-
-# Installing docker
-- Instalando utilitarios do gerenciador de pacotes do linux
-sudo apt update && sudo apt install -y software-properties-common
-- Atualizando o apt e todos os pacotes
-sudo apt upgrade -y
-- Instalando o docker
-sudo apt install -y docker.io
-- Iniciando o docker
-sudo systemctl start docker
-- Para que o docker inicie junto com o sistema
-sudo systemctl enable docker
 
 # Installing airflow
 - Instalando o airflow
@@ -295,25 +262,73 @@ exit
 - Para deletar tabela
 DROP TABLE nome_da_tabela;
 
+# N8N
+- Installing N8N
+- Primeiro isntalar nodejs
+  sudo apt install nodejs
+- Instalar npm
+  sudo apt install npm
+- Intalar N8N
+  npm install n8n -g
+- Abrir N8N
+  n8n
+- Fechar N8N
 
-- Create PostgreSQL instances and configure storage.
-- Create a Dcoker environment to run the containers.
-- Define networking between services.
-## Task Orchestration (Airflow)
+# <h2 align="center"> 2. Data extraction from IBGE API using python</h2>
+
+- file extract.py
+
+# <h2 align="center"> 3. N8N data upload, transformation and save </h2>
+
+![alt text](image.png)
+
+- file n8n_request.py
+- file n8n_workflow.json
+
+# <h2 align="center"> 4. DBT </h2>
+
+# <h2 align="center"> 5. Tasks Orchestration (Airflow) </h2>
 Create a DAG in Apache Airflow to automate the flow of data extraction and loading:
 - Task 1: Extract data from the API using a Python operator (HttpSensor + SimpleHttpOperator).
 - Task 2: Transform the data using DuckDB (for efficient columnar processing).
 - Task 3: Insert the data into PostgreSQL.
 - Task 4: Validate the inserted data and send notifications.
-## Execution with Docker
-Create a Docker Compose with:
-- Container for Airflow (scheduler, webserver, worker).
-- Container for PostgreSQL (database).
-- Container for DuckDB (processing).
-- Configure volumes and networks between containers to ensure communication.
-# Automation and Deployment (GitHub Actions)
-Create a workflow in GitHub Actions to:
-- Validate code and run integration tests (pytest to check the API).
-- Provision infrastructure via Terraform.
-- Build and publish containers on Docker Hub.
-- Deploy the pipeline for execution.
+
+
+# <h2 align="center"> 6. Data Visualization </h2>
+
+
+
+# <h1 align="center"> Project 2 </h1>
+
+# Installing docker
+- Instalando utilitarios do gerenciador de pacotes do linux
+sudo apt update && sudo apt install -y software-properties-common
+- Atualizando o apt e todos os pacotes
+sudo apt upgrade -y
+- Instalando o docker
+sudo apt install -y docker.io
+- Iniciando o docker
+sudo systemctl start docker
+- Para que o docker inicie junto com o sistema
+sudo systemctl enable docker
+
+## Creating EC2
+- Instale o AWS CLI fora do seu repositorio
+  ```bash
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
+- Na AWS configure um usuario IAM com acesso a sua conta
+- No terminal use o comando
+  ```bash
+    aws configure sso
+    SSO session name (Recommended): <nome da sessao>
+    SSO start URL [None]: <link disponivel no IAM>
+    SSO region [None]: <regiao AWS>
+    SSO registration scopes [None]: sso:account:access
+- Criar EC2 configurando chave ssh
+- Ajustar regras de grupo de segurança
+- Conecte na EC2 (cada AMI possui um nome de usuario padrão)
+  ```bash
+  ssh -i <key path> <user>@<link EC2>
