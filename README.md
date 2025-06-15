@@ -4,24 +4,32 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 # Summary
 - [Project 1](#project-1)
   - [1. Setting up the infrastructure](#1-setting-up-the-infrastructure)
-  WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
+  <br>WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
     - [WSL](#wsl-commands)
-    I chose to use linux over windows WSL because my personal computer is already on this operating system and tools like tableau don't run on linux
+    <br>I chose to use linux over windows WSL because my personal computer is already on this operating system and tools like tableau don't run on linux
     - [Linux](#linux-commands)
     - [Python](#python-setup)
     - [VScode](#vscode-setup)
     - [Git Setup](#git-setup)
     - [Git Commands](#git-commands)
+    - [Commits](#commits)
     - [Virtual Env](#virtual-env)
-  - [2. Creating architecture](#2-creating-architecture)
-    - [a. Creating EC2](#creating-ec2)
+    - [Airflow](#airflow)
+    - [DuckDB](#duckdb)
+    - [PostgreSQL](#postgresql)
+    - [N8N](#n8n)
+  - [2. Data extraction from IBGE API using python](#2-data-extraction-from-ibge-api-using-python)
+  - [3. N8N data upload, transformation and save](#3-n8n-data-upload-transformation-and-save)
+  - [4. DBT](#4-dbt)
+  - [5. Tasks Orchestration (Airflow)](#5-tasks-orchestration-airflow)
+  - [6. Data Visualization](#6-data-visualization)
 
 
 # <h1 align="center"> Project 1 </h1>
 
 # <h2 align="center"> 1. Setting up the infrastructure</h2>
 
-## WSL Commands
+# WSL Commands
 - Enable WSL
   ```bash
   wsl --install
@@ -57,7 +65,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 - WSL deactivation
   wsl --shutdown
 
-## Linux Commands
+# Linux Commands
 - View directories
   ```bash
   ls
@@ -83,11 +91,11 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
   ```bash
   sudo
 
-## Python Setup
+# Python Setup
 - Go to the python website and install (select the options to install as administrator and to add python.exe to the PATH variable)
 - Check that python is accessible from linux using the "python" or "python3" command, otherwise go to the windows environment variable settings and add it
 
-## VScode Setup
+# VScode Setup
 - Install VS Code from the microsoft store
 - Activate VS Code in WSL
   ```bash
@@ -95,7 +103,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 - Install python extensions and WSL
 - Change vs code to the WSL environment in the bottom left corner of the screen
 
-## Git Setup
+# Git Setup
 - Install git
 - Github credentials configuration
   ```bash
@@ -124,7 +132,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
   ```bash
   git clone <repository url>
 
-## Git Commands
+# Git Commands
 - Checking the status of commits
   ```bash
   git status
@@ -194,7 +202,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
   ```bash
   cz commit
 
-## Virtual Env
+# Virtual Env
 - In the repository create a python virtual environment
   ```bash
   python3 -m venv <enviroment>
@@ -208,7 +216,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
   ```bash
   pip install -r <requirements path>
 
-# Installing airflow
+# Airflow
 - Installing airflow
   ```bash
   pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
