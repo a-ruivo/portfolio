@@ -278,6 +278,9 @@ I chose to use linux over windows WSL because my personal computer is already on
 - View databases
   ```bash
   \l
+- View schemas
+  ```bash
+  \dn
 - View tables
   ```bash
   \dt
@@ -318,6 +321,20 @@ I chose to use linux over windows WSL because my personal computer is already on
 [Trigger](project1/n8n_request.py)
 
 # DBT
+
+- DBT Installing
+  ```bash
+  pip install dbt-postgres
+- Configuration
+  ```bash
+  dbt init
+- Check configuration
+  ```bash
+  dbt debug
+- Editing profiles.yml
+  ```bash
+  cd ~/.dbt
+  nano profiles.yml
 
 
 # Tasks Orchestration (Airflow)

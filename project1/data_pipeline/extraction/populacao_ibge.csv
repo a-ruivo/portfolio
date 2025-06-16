@@ -1,0 +1,1702 @@
+id,variavel,unidade,categoria_id,categoria_nome,localidade_id,localidade_nome,nivel_id,nivel_nome,ano,valor
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1950,36935
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1960,70783
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1970,116620
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1980,503125
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1991,1130874
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,2000,1377792
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,2010,1562409
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1950,114755
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1960,160208
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1970,218006
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1980,306893
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1991,417165
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,2000,557226
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,2010,733559
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1950,514099
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1960,721215
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1970,960934
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1980,1449135
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1991,2102901
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,2000,2813085
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,2010,3483985
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1950,18116
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1960,29489
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1970,41638
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1980,82018
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1991,215950
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,2000,324152
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,2010,450479
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1950,1123273
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1960,1550935
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1970,2197072
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1980,3507312
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1991,5181570
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,2000,6189550
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,2010,7581051
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1950,37477
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1960,68889
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1970,116480
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1980,180078
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1991,288690
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,2000,475843
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,2010,669526
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1950,204041
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1960,328486
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1970,537563
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1980,738688
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1991,920116
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,2000,1155913
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,2010,1383445
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1950,1583248
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1960,2492139
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1970,3037135
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1980,4097231
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1991,4929029
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,2000,5642960
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,2010,6574789
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1950,1045696
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1960,1263368
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1970,1734894
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1980,2188150
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1991,2581215
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,2000,2841202
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,2010,3118360
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1950,2695450
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1960,3337856
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1970,4491590
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1980,5380432
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1991,6362620
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,2000,7418476
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,2010,8452381
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1950,967921
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1960,1157258
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1970,1611606
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1980,1933126
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1991,2414121
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,2000,2771538
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,2010,3168027
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1950,1713259
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1960,2018023
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1970,2445419
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1980,2810032
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1991,3200677
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,2000,3439344
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,2010,3766528
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1950,3395766
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1960,4138289
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1970,5253901
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1980,6244275
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1991,7122548
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,2000,7911937
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,2010,8796448
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1950,1093137
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1960,1271062
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1970,1606174
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1980,2011875
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1991,2512991
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,2000,2819172
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,2010,3120494
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1950,644361
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1960,760273
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1970,911251
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1980,1156642
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1991,1491867
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,2000,1781714
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,2010,2068017
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1950,4834575
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1960,5990605
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1970,7583140
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1980,9597393
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1991,11855157
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,2000,13066910
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,2010,14016906
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1950,7782188
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1960,9960040
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1970,11645095
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1980,13651852
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1991,15731961
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,2000,17866402
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,2010,19597330
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1950,957238
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1960,1418348
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1970,1617857
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1980,2063679
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1991,2598505
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,2000,3094390
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,2010,3514952
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1950,4674645
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1960,6709891
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1970,9110324
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1980,11489797
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1991,12783761
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,2000,14367083
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,2010,15989929
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1950,9134423
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1960,12974699
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1970,17958693
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1980,25375199
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1991,31546473
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,2000,36969476
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,2010,41262199
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1950,2115547
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1960,4296375
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1970,6997682
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1980,7749752
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1991,8443299
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,2000,9558454
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,2010,10444526
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1950,1560502
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1960,2146909
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1970,2930411
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1980,3687652
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1991,4538248
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,2000,5349580
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,2010,6248436
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1950,4164821
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1960,5448823
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1970,6755458
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1980,7942722
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1991,9135479
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,2000,10181749
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,2010,10693929
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1950,309395
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1960,579652
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1970,1010731
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1980,1401151
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1991,1778741
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,2000,2074877
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,2010,2449024
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1950,212649
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1960,330610
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1970,612887
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1980,1169812
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1991,2022524
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,2000,2502260
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,2010,3035122
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1950,1010880
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1960,1626376
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1970,2460007
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1980,3229219
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1991,4012562
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,2000,4996439
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,2010,6003788
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1950,0
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1960,141742
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1970,546015
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1980,1203333
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1991,1598415
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,2000,2043169
+"id    606
+id      1
+Name: 0, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,2010,2570160
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1950,13816
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1960,30842
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1970,60541
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1980,239436
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1991,658172
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,2000,883048
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,2010,1149180
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1950,21272
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1960,33998
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1970,60557
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1980,135754
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1991,258035
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,2000,370018
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,2010,532279
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1950,137736
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1960,239659
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1970,409278
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1980,869020
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1991,1501807
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,2000,2104290
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,2010,2755490
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1950,5132
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1960,12717
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1970,17929
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1980,49622
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1991,139466
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,2000,246732
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,2010,344859
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1950,389011
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1960,630672
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1970,1037340
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1980,1702403
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1991,2609777
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,2000,4116378
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,2010,5191559
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1950,13900
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1960,35390
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1970,63785
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1980,106424
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1991,233515
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,2000,423581
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,2010,601036
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1950,26297
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1960,57935
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1970,134793
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1980,296238
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1991,530795
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,2000,858915
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,2010,1090106
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1950,274288
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1960,448509
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1970,771790
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1980,1296413
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1991,1972008
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,2000,3357898
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,2010,4147149
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1950,170584
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1960,298152
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1970,561081
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1980,931204
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1991,1366218
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,2000,1787192
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,2010,2050959
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1950,679604
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1960,1124829
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1970,1811202
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1980,2877555
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1991,4158059
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,2000,5304554
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,2010,6346557
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1950,253765
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1960,435189
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1970,751064
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1980,1140697
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1991,1668165
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,2000,2032163
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,2010,2464991
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1950,456716
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1960,708051
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1970,1019338
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1980,1479705
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1991,2051576
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,2000,2443590
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,2010,2838678
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1950,1167981
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1960,1858078
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1970,2862489
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1980,3864285
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1991,5046535
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,2000,6052930
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,2010,7052210
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1950,286379
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1960,428228
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1970,642208
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1980,995344
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1991,1481125
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,2000,1917922
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,2010,2297860
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1950,204984
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1960,295929
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1970,421358
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1980,629415
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1991,1001940
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,2000,1271465
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,2010,1520366
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1950,1250507
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1960,2083716
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1970,3140407
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1980,4745022
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1991,7007729
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,2000,8761604
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,2010,10102476
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1950,2322915
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1960,3964580
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1970,6167113
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1980,9185088
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1991,11776538
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,2000,14651164
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,2010,16715216
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1950,199186
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1960,403461
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1970,734756
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1980,1324701
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1991,1922828
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,2000,2460621
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,2010,2931472
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1950,3394422
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1960,5300629
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1970,8013057
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1980,10546547
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1991,12177144
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,2000,13798096
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,2010,15464239
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1950,4804211
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1960,8149979
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1970,14432244
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1980,22494328
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1991,29272927
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,2000,34531635
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,2010,39585251
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1950,528288
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1960,1327982
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1970,2546899
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1980,4566755
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1991,6192976
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,2000,7781664
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,2010,8912692
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1950,362717
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1960,695347
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1970,1266709
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1980,2201350
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1991,3205600
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,2000,4211979
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,2010,5247913
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1950,1421980
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1960,2445774
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1970,3620588
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1980,5385866
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1991,6994134
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,2000,8312899
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,2010,9100291
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1950,113545
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1960,242088
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1970,460137
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1980,939510
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1991,1413095
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,2000,1744520
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,2010,2097238
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1950,64285
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1960,121916
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1970,239524
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1980,673069
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1991,1481073
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,2000,1985590
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,2010,2482801
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1950,219370
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1960,541469
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1970,1134242
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1980,2172965
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1991,3241119
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,2000,4390660
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,2010,5420714
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1950,0
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1960,89698
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1970,524315
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1980,1164659
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1991,1513470
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,2000,1954442
+"id    606
+id      1
+Name: 1, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,2010,2482210
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1950,23119
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1960,39941
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1970,56079
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1980,263689
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,1991,472702
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,2000,494744
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,11,Rondônia,N3,Unidade da Federação,2010,413229
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1950,93483
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1960,126210
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1970,157449
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1980,171139
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,1991,159130
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,2000,187208
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,12,Acre,N3,Unidade da Federação,2010,201280
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1950,376363
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1960,481556
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1970,551656
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1980,580115
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,1991,601094
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,2000,708795
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,13,Amazonas,N3,Unidade da Federação,2010,728495
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1950,12984
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1960,16772
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1970,23709
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1980,32396
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,1991,76484
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,2000,77420
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,14,Roraima,N3,Unidade da Federação,2010,105620
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1950,734262
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1960,920263
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1970,1159732
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1980,1804909
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,1991,2571793
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,2000,2073172
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,15,Pará,N3,Unidade da Federação,2010,2389492
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1950,23577
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1960,33499
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1970,52695
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1980,73654
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,1991,55175
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,2000,52262
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,16,Amapá,N3,Unidade da Federação,2010,68490
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1950,177744
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1960,270551
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1970,402770
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1980,442450
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,1991,389321
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,2000,296998
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,17,Tocantins,N3,Unidade da Federação,2010,293339
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1950,1308960
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1960,2043630
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1970,2265345
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1980,2800818
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,1991,2957021
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,2000,2285062
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,21,Maranhão,N3,Unidade da Federação,2010,2427640
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1950,875112
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1960,965216
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1970,1173813
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1980,1256946
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,1991,1214997
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,2000,1054010
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,22,Piauí,N3,Unidade da Federação,2010,1067401
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1950,2015846
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1960,2213027
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1970,2680388
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1980,2502877
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,1991,2204561
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,2000,2113922
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,23,Ceará,N3,Unidade da Federação,2010,2105824
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1950,714156
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1960,722069
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1970,860542
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1980,792429
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,1991,745956
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,2000,739375
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,24,Rio Grande do Norte,N3,Unidade da Federação,2010,703036
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1950,1256543
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1960,1309972
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1970,1426081
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1980,1330327
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,1991,1149101
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,2000,995754
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,25,Paraíba,N3,Unidade da Federação,2010,927850
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1950,2227785
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1960,2280211
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1970,2391412
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1980,2379990
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,1991,2076013
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,2000,1859007
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,26,Pernambuco,N3,Unidade da Federação,2010,1744238
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1950,806758
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1960,842834
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1970,963966
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1980,1016531
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,1991,1031866
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,2000,901250
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,27,Alagoas,N3,Unidade da Federação,2010,822634
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1950,439377
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1960,464344
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1970,489893
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1980,527227
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,1991,489927
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,2000,510249
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,28,Sergipe,N3,Unidade da Federação,2010,547651
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1950,3584068
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1960,3906889
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1970,4442733
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1980,4852371
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,1991,4847428
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,2000,4305306
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,29,Bahia,N3,Unidade da Federação,2010,3914430
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1950,5459273
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1960,5995460
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1970,5477982
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1980,4466764
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,1991,3955423
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,2000,3215238
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,31,Minas Gerais,N3,Unidade da Federação,2010,2882114
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1950,758052
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1960,1014887
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1970,883101
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1980,738978
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,1991,675677
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,2000,633769
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,32,Espírito Santo,N3,Unidade da Federação,2010,583480
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1950,1280223
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1960,1409262
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1970,1097267
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1980,943250
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,1991,606617
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,2000,568987
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,33,Rio de Janeiro,N3,Unidade da Federação,2010,525690
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1950,4330212
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1960,4824720
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1970,3526449
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1980,2880871
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,1991,2273546
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,2000,2437841
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,35,São Paulo,N3,Unidade da Federação,2010,1676948
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1950,1587259
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1960,2968393
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1970,4450783
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1980,3182997
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,1991,2250323
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,2000,1776790
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,41,Paraná,N3,Unidade da Federação,2010,1531834
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1950,1197785
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1960,1451562
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1970,1663702
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1980,1486302
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,1991,1332648
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,2000,1137601
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,42,Santa Catarina,N3,Unidade da Federação,2010,1000523
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1950,2742841
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1960,3003049
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1970,3134870
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1980,2556856
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,1991,2141345
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,2000,1868850
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,43,Rio Grande do Sul,N3,Unidade da Federação,2010,1593638
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1950,195850
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1960,337564
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1970,550594
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1980,461641
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,1991,365646
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,2000,330357
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,50,Mato Grosso do Sul,N3,Unidade da Federação,2010,351786
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1950,148364
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1960,208694
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1970,373363
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1980,496743
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,1991,541451
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,2000,516670
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,51,Mato Grosso,N3,Unidade da Federação,2010,552321
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1950,791510
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1960,1084907
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1970,1325765
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1980,1056254
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,1991,771443
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,2000,605779
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,52,Goiás,N3,Unidade da Federação,2010,583074
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1950,0
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1960,52044
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1970,21700
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1980,38674
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,1991,84945
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,2000,88727
+"id    606
+id      1
+Name: 2, dtype: object",População,Pessoas,,,53,Distrito Federal,N3,Unidade da Federação,2010,87950
