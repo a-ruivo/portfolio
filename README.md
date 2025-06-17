@@ -25,6 +25,8 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 
 # Project 1
 
+![alt text](doc/image.png)
+
 # Setting up the infrastructure
 WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
 <br>
@@ -308,17 +310,21 @@ I chose to use linux over windows WSL because my personal computer is already on
   ```bash
   n8n
 
-# Data extraction from IBGE API using python
+# Data extraction
 
-[Extract](project1/extract.py)
+[Extract](project1/pipeline/1.extraction/)
+
+# Data ingestion
+
+[Ingestion](project1/pipeline/2.ingestion/)
 
 # N8N data upload, transformation and save
 
-![alt text](image.png)
+![alt text](doc/n8n.png)
 
-[Workflow](project1/n8n_workflow.json)
+[Workflow](project1/pipeline/3.transformation/n8n/n8n_workflow.json)
 
-[Trigger](project1/n8n_request.py)
+[Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)
 
 # DBT
 

@@ -4,7 +4,7 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-DUCKDB_PATH = "cnae_duckdb.db"
+DUCKDB_PATH = "project1/pipeline/extraction/cnae_duckdb.db"
 
 load_dotenv()
 
@@ -21,51 +21,8 @@ PG_CONFIG = {
     "port": os.getenv("DB_PORT", "5432")
 }
 
-URL = "https://servicodados.ibge.gov.br/api/v2/cnae/classes"
-
-def extrair_dados():
-    print("1/5 - Extraindo dados da API CNAE")
-    response = requests.get(URL)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        raise Exception(f"Erro ao acessar API: {response.status_code}")
-
-def preparar_dados(dados):
-    print("2/5 - Preparando os dados")
-    registros = []
-    for item in dados:
-        registros.append((
-            int(item["id"]),
-            item["descricao"],
-            ", ".join(item.get("observacoes", []))
-        ))
-    return registros
-
-def criar_tabela_duckdb():
-    print("3/5 - Criando tabela DuckDB")
-    conn = duckdb.connect(DUCKDB_PATH)
-    conn.execute("DROP TABLE IF EXISTS cnae")
-    conn.execute("""
-        CREATE TABLE cnae (
-            id INT PRIMARY KEY,
-            descricao VARCHAR,
-            observacoes VARCHAR
-        )
-    """)
-    conn.close()
-
-def inserir_dados_duckdb(registros):
-    print("4/5 - Inserindo dados no DuckDB")
-    conn = duckdb.connect(DUCKDB_PATH)
-    conn.executemany(
-        "INSERT INTO cnae (id, descricao, observacoes) VALUES (?, ?, ?)",
-        registros
-    )
-    conn.close()
-
 def exportar_para_postgres():
-    print("5/5 - Exportando dados para PostgreSQL")
+    print("Exportando dados para PostgreSQL")
     conn_duckdb = duckdb.connect(DUCKDB_PATH)
     dados = conn_duckdb.execute("SELECT id, descricao, observacoes FROM cnae").fetchall()
 
@@ -94,13 +51,9 @@ def exportar_para_postgres():
     conn_pg.close()
     conn_duckdb.close()
 
-def pipeline():
-    dados = extrair_dados()
-    registros = preparar_dados(dados)
-    criar_tabela_duckdb()
-    inserir_dados_duckdb(registros)
+def ingestion():
     exportar_para_postgres()
     print("Processo concluído com sucesso.")
 
 if __name__ == "__main__":
-    pipeline()
+    ingestion()

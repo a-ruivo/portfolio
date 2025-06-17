@@ -30,7 +30,7 @@ PG_CONFIG = {
 URL = "https://servicodados.ibge.gov.br/api/v3/agregados/1288/periodos/1950|1960|1970|1980|1991|2000|2010/variaveis/606?localidades=N3[all]&classificacao=1[all]"
 
 def extrair_dados():
-    print("[1/6] Extraindo dados da API IBGE...")
+    print("[1/5] Extraindo dados da API IBGE...")
     response = requests.get(URL)
     if response.status_code == 200:
         return response.json()
@@ -38,7 +38,7 @@ def extrair_dados():
         raise Exception(f"Erro ao acessar API IBGE: {response.status_code}")
 
 def normalize(json_data):
-    print("[2/6] Normalizando estrutura JSON...")
+    print("[2/5] Normalizando estrutura JSON...")
     dados = pd.json_normalize(
         json_data,
         record_path=['resultados'],
@@ -49,7 +49,7 @@ def normalize(json_data):
     return pd.concat([dados.drop(columns=['classificacoes']), classificacoes_df], axis=1)
 
 def formato_tabular(resultado):
-    print("[3/6] Estruturando dados em formato tabular...")
+    print("[3/5] Estruturando dados em formato tabular...")
     linha_list = []
     for _, row in resultado.iterrows():
         for item in row['series']:
@@ -81,7 +81,7 @@ def formato_tabular(resultado):
     return pd.DataFrame(linha_list)
 
 def criar_tabela_duckdb():
-    print("[4/6] Criando tabela no banco DuckDB...")
+    print("[4/5] Criando tabela no banco DuckDB...")
     conn = duckdb.connect(DUCKDB_PATH)
     conn.execute("DROP TABLE IF EXISTS populacao")
     conn.execute("""
@@ -94,7 +94,7 @@ def criar_tabela_duckdb():
     conn.close()
 
 def inserir_dados_duckdb(registros):
-    print("[5/6] Inserindo dados no DuckDB...")
+    print("[5/5] Inserindo dados no DuckDB...")
     conn = duckdb.connect(DUCKDB_PATH)
     conn.executemany(
         "INSERT INTO populacao (localidade_nome, ano, valor) VALUES (?, ?, ?)",
@@ -102,37 +102,7 @@ def inserir_dados_duckdb(registros):
     )
     conn.close()
 
-def exportar_para_postgres():
-    print("[6/6] Exportando dados para PostgreSQL...")
-    conn_duckdb = duckdb.connect(DUCKDB_PATH)
-    dados = conn_duckdb.execute("SELECT localidade_nome, ano, valor FROM populacao").fetchall()
-
-    conn_pg = psycopg2.connect(**PG_CONFIG)
-    cursor_pg = conn_pg.cursor()
-    cursor_pg.execute("""
-        CREATE TABLE IF NOT EXISTS populacao (
-            location_name_str TEXT,
-            year_num INT,
-            population_qty INT,
-            PRIMARY KEY (location_name_str, year_num)
-        )
-    """)
-    for row in dados:
-        try:
-            cursor_pg.execute("""
-                INSERT INTO populacao (location_name_str, year_num, population_qty)
-                VALUES (%s, %s, %s)
-                ON CONFLICT DO NOTHING
-            """, row)
-        except Exception as e:
-            print("Erro ao inserir registro:", row, e)
-
-    conn_pg.commit()
-    cursor_pg.close()
-    conn_pg.close()
-    conn_duckdb.close()
-
-def pipeline():
+def extraction():
     json_data = extrair_dados()
     dados_norm = normalize(json_data)
     df = formato_tabular(dados_norm)
@@ -142,8 +112,7 @@ def pipeline():
 
     criar_tabela_duckdb()
     inserir_dados_duckdb(df[['localidade_nome', 'ano', 'valor']].itertuples(index=False, name=None))
-    exportar_para_postgres()
     print("Tudo pronto! Os dados foram enviados com sucesso.")
 
 if __name__ == "__main__":
-    pipeline()
+    extraction()
