@@ -25,7 +25,7 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 
 # Project 1
 
-![alt text](doc/image.png)
+![alt text](project1/doc/project1.png)
 
 # Setting up the infrastructure
 WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
@@ -320,7 +320,7 @@ I chose to use linux over windows WSL because my personal computer is already on
 
 # N8N data upload, transformation and save
 
-![alt text](doc/n8n.png)
+![alt text](project1/doc/n8n.png)
 
 [Workflow](project1/pipeline/3.transformation/n8n/n8n_workflow.json)
 
