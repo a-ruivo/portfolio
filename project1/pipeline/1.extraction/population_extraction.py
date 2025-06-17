@@ -2,11 +2,12 @@ import requests
 import duckdb
 import pandas as pd
 import psycopg2
+import json
 import os
 from dotenv import load_dotenv
 
 # Caminho para o banco DuckDB
-DUCKDB_PATH = "populacao_duckdb.db"
+DUCKDB_PATH = "ibge_duckdb.db"
 
 # Carrega variáveis do .env
 load_dotenv()
@@ -27,10 +28,10 @@ PG_CONFIG = {
 }
 
 # URL da API
-URL = "https://servicodados.ibge.gov.br/api/v3/agregados/1288/periodos/1950|1960|1970|1980|1991|2000|2010/variaveis/606?localidades=N3[all]&classificacao=1[all]"
+URL = "https://servicodados.ibge.gov.br/api/v3/agregados/1209/periodos/2000|2010|2022/variaveis/606?localidades=N3[all]&classificacao=58[all]"
 
 def extrair_dados():
-    print("[1/5] Extraindo dados da API IBGE...")
+    print("[1/4] Extraindo dados da API IBGE...")
     response = requests.get(URL)
     if response.status_code == 200:
         return response.json()
@@ -38,66 +39,58 @@ def extrair_dados():
         raise Exception(f"Erro ao acessar API IBGE: {response.status_code}")
 
 def normalize(json_data):
-    print("[2/5] Normalizando estrutura JSON...")
+    print("[2/4] Normalizando estrutura JSON...")
     dados = pd.json_normalize(
         json_data,
         record_path=['resultados'],
         meta=['id', 'variavel', 'unidade']
     )
-    dados = dados.explode('classificacoes').reset_index(drop=True)
-    classificacoes_df = pd.json_normalize(dados['classificacoes'])
-    return pd.concat([dados.drop(columns=['classificacoes']), classificacoes_df], axis=1)
-
-def formato_tabular(resultado):
-    print("[3/5] Estruturando dados em formato tabular...")
-    linha_list = []
-    for _, row in resultado.iterrows():
-        for item in row['series']:
-            localidade = item['localidade']
-            serie_anos = item['serie']
-
-            categoria_dict = row.get('categoria', {})
-            categoria_id = next(iter(categoria_dict), None)
-            categoria_nome = categoria_dict.get(categoria_id) if categoria_id else None
-
-            base_info = {
-                'id': row['id'],
-                'variavel': row['variavel'],
-                'unidade': row['unidade'],
-                'categoria_id': categoria_id,
-                'categoria_nome': categoria_nome,
-                'localidade_id': localidade['id'],
-                'localidade_nome': localidade['nome'],
-                'nivel_id': localidade['nivel']['id'],
-                'nivel_nome': localidade['nivel']['nome']
-            }
-
-            for ano, valor in serie_anos.items():
-                nova_linha = base_info.copy()
-                nova_linha['ano'] = ano
-                nova_linha['valor'] = int(valor.replace("-", "0"))
-                linha_list.append(nova_linha)
-
-    return pd.DataFrame(linha_list)
+    dados1 = dados.explode('classificacoes').reset_index(drop=True)
+    classificacoes_df = pd.json_normalize(dados1['classificacoes'])
+    dados2 = dados.explode('series').reset_index(drop=True)
+    serie_df = pd.json_normalize(dados2['series'])
+    return pd.concat([dados1.drop(columns=['classificacoes']), classificacoes_df,dados2.drop(columns=['series']),serie_df], axis=1)
 
 def criar_tabela_duckdb():
-    print("[4/5] Criando tabela no banco DuckDB...")
+    print("[3/4] Criando tabela no banco DuckDB...")
     conn = duckdb.connect(DUCKDB_PATH)
-    conn.execute("DROP TABLE IF EXISTS populacao")
+    conn.execute("DROP TABLE IF EXISTS ibge_populacao")
     conn.execute("""
-        CREATE TABLE populacao (
-            localidade_nome VARCHAR,
-            ano INT,
-            valor INT
-        )
+      CREATE TABLE ibge_populacao (
+    series VARCHAR,
+    nome VARCHAR,
+    categoria_0 VARCHAR,
+    categoria_1140 VARCHAR,
+    categoria_1141 VARCHAR,
+    categoria_1142 VARCHAR,
+    categoria_1143 VARCHAR,
+    categoria_2792 VARCHAR,
+    categoria_92982 VARCHAR,
+    categoria_1144 VARCHAR,
+    categoria_1145 VARCHAR,
+    categoria_3299 VARCHAR,
+    categoria_3300 VARCHAR,
+    categoria_3301 VARCHAR,
+    categoria_3520 VARCHAR,
+    categoria_3244 VARCHAR,
+    categoria_3245 VARCHAR,
+    classificacoes VARCHAR,
+    localidade_id VARCHAR,
+    localidade_nivel_id VARCHAR,
+    localidade_nivel_nome VARCHAR,
+    localidade_nome VARCHAR,
+    serie_2000 VARCHAR,
+    serie_2010 VARCHAR,
+    serie_2022 VARCHAR
+    );
     """)
     conn.close()
 
 def inserir_dados_duckdb(registros):
-    print("[5/5] Inserindo dados no DuckDB...")
+    print("[4/4] Inserindo dados no DuckDB...")
     conn = duckdb.connect(DUCKDB_PATH)
     conn.executemany(
-        "INSERT INTO populacao (localidade_nome, ano, valor) VALUES (?, ?, ?)",
+        "INSERT INTO ibge_populacao (series, nome, categoria_0, categoria_1140, categoria_1141, categoria_1142, categoria_1143, categoria_2792, categoria_92982, categoria_1144, categoria_1145, categoria_3299, categoria_3300, categoria_3301, categoria_3520, categoria_3244, categoria_3245, classificacoes, localidade_id, localidade_nivel_id, localidade_nivel_nome, localidade_nome, serie_2000, serie_2010, serie_2022) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
         registros
     )
     conn.close()
@@ -105,13 +98,12 @@ def inserir_dados_duckdb(registros):
 def extraction():
     json_data = extrair_dados()
     dados_norm = normalize(json_data)
-    df = formato_tabular(dados_norm)
-
+    dados_norm = dados_norm.drop(columns=['id','variavel','unidade'])
+    dados_norm.columns = [col.replace(".", "_") for col in dados_norm.columns]
     # Exporta para CSV local para inspeção opcional
-    df.to_csv("populacao_ibge.csv", index=False)
-
+    dados_norm.to_csv("populacao_ibge.csv", index=False)
     criar_tabela_duckdb()
-    inserir_dados_duckdb(df[['localidade_nome', 'ano', 'valor']].itertuples(index=False, name=None))
+    inserir_dados_duckdb(dados_norm[['series', 'nome', 'categoria_0', 'categoria_1140', 'categoria_1141', 'categoria_1142', 'categoria_1143', 'categoria_2792', 'categoria_92982', 'categoria_1144', 'categoria_1145', 'categoria_3299', 'categoria_3300', 'categoria_3301', 'categoria_3520', 'categoria_3244', 'categoria_3245', 'classificacoes', 'localidade_id', 'localidade_nivel_id', 'localidade_nivel_nome', 'localidade_nome', 'serie_2000', 'serie_2010', 'serie_2022']].itertuples(index=False, name=None))
     print("Tudo pronto! Os dados foram enviados com sucesso.")
 
 if __name__ == "__main__":

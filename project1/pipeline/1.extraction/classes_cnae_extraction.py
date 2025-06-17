@@ -4,7 +4,7 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-DUCKDB_PATH = "cnae_duckdb.db"
+DUCKDB_PATH = "ibge_duckdb.db"
 
 load_dotenv()
 
@@ -45,9 +45,9 @@ def preparar_dados(dados):
 def criar_tabela_duckdb():
     print("3/4 - Criando tabela DuckDB")
     conn = duckdb.connect(DUCKDB_PATH)
-    conn.execute("DROP TABLE IF EXISTS cnae")
+    conn.execute("DROP TABLE IF EXISTS ibge_classes_cnae")
     conn.execute("""
-        CREATE TABLE cnae (
+        CREATE TABLE ibge_classes_cnae (
             id INT PRIMARY KEY,
             descricao VARCHAR,
             observacoes VARCHAR
@@ -59,7 +59,7 @@ def inserir_dados_duckdb(registros):
     print("4/4 - Inserindo dados no DuckDB")
     conn = duckdb.connect(DUCKDB_PATH)
     conn.executemany(
-        "INSERT INTO cnae (id, descricao, observacoes) VALUES (?, ?, ?)",
+        "INSERT INTO ibge_classes_cnae (id, descricao, observacoes) VALUES (?, ?, ?)",
         registros
     )
     conn.close()

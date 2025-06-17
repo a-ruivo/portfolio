@@ -4,9 +4,10 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-DUCKDB_PATH = "project1/pipeline/extraction/cnae_duckdb.db"
-
 load_dotenv()
+
+
+DUCKDB_PATH = os.getenv("extraction_path")+"ibge_duckdb.db"
 
 required_vars = ["DB_NAME", "DB_USER", "DB_PASSWORD"]
 missing = [var for var in required_vars if os.getenv(var) is None]
@@ -24,12 +25,12 @@ PG_CONFIG = {
 def exportar_para_postgres():
     print("Exportando dados para PostgreSQL")
     conn_duckdb = duckdb.connect(DUCKDB_PATH)
-    dados = conn_duckdb.execute("SELECT id, descricao, observacoes FROM cnae").fetchall()
+    dados = conn_duckdb.execute("SELECT id, descricao, observacoes FROM ibge_classes_cnae").fetchall()
 
     conn_pg = psycopg2.connect(**PG_CONFIG)
     cursor_pg = conn_pg.cursor()
     cursor_pg.execute("""
-        CREATE TABLE IF NOT EXISTS cnae_classe (
+        CREATE TABLE IF NOT EXISTS ibge_classes_cnae (
             id INT PRIMARY KEY,
             descricao TEXT,
             observacoes TEXT
@@ -39,7 +40,7 @@ def exportar_para_postgres():
     for row in dados:
         try:
             cursor_pg.execute("""
-                INSERT INTO cnae_classe (id, descricao, observacoes)
+                INSERT INTO ibge_classes_cnae (id, descricao, observacoes)
                 VALUES (%s, %s, %s)
                 ON CONFLICT (id) DO NOTHING
             """, row)
