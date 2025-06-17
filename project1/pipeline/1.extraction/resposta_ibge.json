@@ -1,0 +1,6279 @@
+[
+  {
+    "id": "606",
+    "variavel": "População",
+    "unidade": "Pessoas",
+    "resultados": [
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "0": "Total"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1581196"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "830018"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3941613"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "636707"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "8120131"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "733759"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1511460"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "6776699"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3271199"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "8794957"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3302729"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3974687"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "9058931"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3127683"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2210004"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "14141626"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "20539989"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3833712"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "16055174"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "44411238"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "11444380"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "7610361"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "10882965"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2757013"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3658649"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "7056495"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2817381"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "1140": "0 a 4 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "113450"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "71001"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "351726"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "64752"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "632045"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "65666"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "114383"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "517099"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "216538"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "574335"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "204705"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "264885"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "593211"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "228824"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "148010"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "887805"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1187024"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "240565"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "875769"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2467570"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "698133"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "468406"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "609791"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "199203"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "281538"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "461578"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "166848"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "1141": "5 a 9 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "117536"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "74586"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "367770"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "63243"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "669620"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "67164"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "117486"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "547083"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "226124"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "609895"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "220287"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "276601"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "645069"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "235921"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "156741"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "965550"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1257588"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "254280"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1015741"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2775377"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "759916"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "489625"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "665885"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "208196"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "283473"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "494072"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "184611"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "1142": "10 a 14 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "117166"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "75573"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "355930"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "58213"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "689277"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "65346"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "119117"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "581398"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "239272"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "618205"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "229666"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "285435"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "656399"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "246946"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "164750"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1009716"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1263307"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "246651"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "964636"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2732216"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "737248"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "465179"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "630834"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "199393"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "264675"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "475639"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "182774"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "1143": "15 a 19 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "122058"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "78689"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "367978"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "56875"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "726778"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "67628"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "125373"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "612914"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "257358"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "648812"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "243526"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "296275"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "685570"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "258193"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "172544"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1068959"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1363591"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "256029"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1011978"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2857669"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "761026"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "480629"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "669068"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "198275"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "270800"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "508801"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "208546"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "2792": "15 a 17 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "74037"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "47566"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "222408"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "33862"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "439839"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "40397"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "75942"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "374934"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "155969"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "392095"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "146300"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "177746"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "409870"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "155398"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "104952"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "637602"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "809481"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "152730"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "600470"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1707409"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "456314"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "285298"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "398734"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "119896"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "162674"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "301032"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "122342"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "92982": "18 e 19 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "48021"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "31123"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "145570"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "23013"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "286939"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "27231"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "49431"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "237980"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "101389"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "256717"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "97226"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "118529"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "275700"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "102795"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "67592"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "431357"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "554110"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "103299"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "411508"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1150260"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "304712"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "195331"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "270334"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "78379"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "108126"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "207769"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "86204"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "1144": "20 a 24 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "124515"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "77247"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "362878"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "58711"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "707887"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "69388"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "123471"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "572449"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "258937"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "701679"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "255391"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "301247"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "712918"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "258640"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "178868"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1084267"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1526557"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "276033"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1149011"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3210836"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "846638"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "574485"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "755646"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "206935"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "289545"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "554318"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "227966"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "1145": "25 a 29 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "126056"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "68848"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "332163"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "55700"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "665964"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "63419"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "117576"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "518068"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "242215"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "719689"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "256511"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "296144"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "680743"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "242922"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "175310"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1021456"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1536109"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "279424"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1160926"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3306143"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "889031"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "623099"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "783222"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "216631"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "303722"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "564470"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "224162"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "3299": "30 a 39 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "253223"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "125875"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "596414"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "98674"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1291231"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "115476"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "234512"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1068030"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "509850"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1401618"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "525855"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "609074"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1395368"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "468522"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "347004"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2182095"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3126299"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "605389"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2376896"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "7039945"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1748094"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1272471"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1615622"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "428459"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "603862"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1143567"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "462483"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "3300": "40 a 49 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "230699"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "108066"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "510664"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "78224"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1094817"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "94543"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "213674"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "892507"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "463880"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1232589"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "475828"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "570833"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1314913"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "437413"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "321142"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2126056"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3023580"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "576351"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2401463"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "6793597"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1653079"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1114526"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1532295"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "391566"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "530710"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1065838"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "463429"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "3301": "50 a 59 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "180447"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "71717"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "339108"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "51855"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "766180"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "63213"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "156947"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "645190"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "363126"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "997602"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "393069"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "458865"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1042581"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "341081"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "251026"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1636443"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2595998"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "467592"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2073125"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "5577317"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1458095"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "937548"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1427186"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "317264"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "399845"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "823795"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "331472"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "3520": "60 a 69 anos"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "118007"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "45538"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "215739"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "31467"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "507379"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "37479"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "104386"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "447639"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "259137"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "672897"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "263949"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "317404"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "724940"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "230172"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "163089"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1153753"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "2013210"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "362203"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1678255"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "4266063"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1069300"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "688604"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1204482"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "224963"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "258407"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "555696"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "206463"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "3244": "70 anos ou mais"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "78039"
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "32878"
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "141243"
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "18993"
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "368953"
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "24437"
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "84535"
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "374322"
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "234762"
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "617636"
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "233942"
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "297924"
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "607219"
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "179049"
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "131520"
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1005526"
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1646726"
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "269195"
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "1347374"
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "3384505"
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "823820"
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "495789"
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "988934"
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "166128"
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "172072"
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "408721"
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "158627"
+            }
+          }
+        ]
+      },
+      {
+        "classificacoes": [
+          {
+            "id": "58",
+            "nome": "Grupo de idade",
+            "categoria": {
+              "3245": "Idade ignorada"
+            }
+          }
+        ],
+        "series": [
+          {
+            "localidade": {
+              "id": "11",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rondônia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "12",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Acre"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "13",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amazonas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "14",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Roraima"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "15",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "16",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Amapá"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "17",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Tocantins"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "21",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Maranhão"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "22",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Piauí"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "23",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Ceará"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "24",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Norte"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "25",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraíba"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "26",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Pernambuco"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "27",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Alagoas"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "28",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Sergipe"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "29",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Bahia"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "31",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Minas Gerais"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "32",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Espírito Santo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "33",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio de Janeiro"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "35",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "São Paulo"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "41",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Paraná"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "42",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Santa Catarina"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "43",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Rio Grande do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "50",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso do Sul"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "51",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Mato Grosso"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "52",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Goiás"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          },
+          {
+            "localidade": {
+              "id": "53",
+              "nivel": {
+                "id": "N3",
+                "nome": "Unidade da Federação"
+              },
+              "nome": "Distrito Federal"
+            },
+            "serie": {
+              "2000": "...",
+              "2010": "...",
+              "2022": "..."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
