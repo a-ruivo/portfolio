@@ -401,6 +401,28 @@ sudo systemctl enable docker
     SSO registration scopes [None]: sso:account:access
 - Criar EC2 configurando chave ssh
 - Ajustar regras de grupo de segurança
-- Conecte na EC2 (cada AMI possui um nome de usuario padrão)
+- Conecte na EC2 (cada AMI possui um nome de usuario padrão como ec2-user)
   ```bash
-  ssh -i <key path> <user>@<link EC2>
+  ssh -i <key path> (~/.ssh/ec2-key) <user>@<link EC2>
+
+# AWS CLI
+- Login
+  ```bash
+  aws sso login --profile default
+
+# Terraform
+- Intalling
+  ```bash
+  sudo apt-get install terraform
+- Starting
+  ```bash
+  terraform init
+- Planning
+  ```bash
+  terraform plan
+- Applying
+  ```bash
+  terraform apply
+
+
+# Atualiza e instala o Terraform
