@@ -1,0 +1,68 @@
+
+version: 2
+
+models:
+  - name: mart_ibge_dim_age_group
+    description: "Age group dimension"
+    columns:
+      - name: age_group_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: age_group_name_str
+        description: "Age group name"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: mart_ibge_dim_state
+    description: "State dimension"
+    columns:
+      - name: state_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: state_name_str
+        description: "State name"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: mart_ibge_dim_date
+    description: "Date dimension"
+    columns:
+      - name: date_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: year_num
+        description: "Number of year"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: mart_ibge_fact_population
+    description: "Population quantity fact"
+    columns:
+      - name: population_fact_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: age_group_id
+        description: "Age group FK"
+        data_tests:
+          - not_null
+      - name: state_id
+        description: "State FK"
+        data_tests:
+          - not_null
+      - name: date_id
+        description: "Date FK"
+        data_tests:
+          - not_null
+      - name: population_qty
+        description: "Population quantity"

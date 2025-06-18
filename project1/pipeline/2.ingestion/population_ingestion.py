@@ -34,9 +34,9 @@ def export_to_postgres():
     conn_pg = psycopg2.connect(**PG_CONFIG)
     cursor_pg = conn_pg.cursor()
 
-    cursor_pg.execute("DROP TABLE IF EXISTS ibge_populacao_etaria;")
+    cursor_pg.execute("DROP TABLE IF EXISTS silver.ibge_populacao_etaria;")
     cursor_pg.execute("""
-        CREATE TABLE ibge_populacao_etaria (
+        CREATE TABLE silver.ibge_populacao_etaria (
             nome VARCHAR,
             grupo_idade VARCHAR,
             localidade VARCHAR,
@@ -49,7 +49,7 @@ def export_to_postgres():
     for row in dados:
         try:
             cursor_pg.execute("""
-                INSERT INTO ibge_populacao_etaria 
+                INSERT INTO silver.ibge_populacao_etaria 
                 (nome, grupo_idade, localidade, serie_2000, serie_2010, serie_2022)
                 VALUES (%s, %s, %s, %s, %s, %s)
             """, row)

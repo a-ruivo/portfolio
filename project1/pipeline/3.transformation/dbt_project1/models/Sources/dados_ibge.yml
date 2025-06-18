@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: dados_ibge
+  - name: ibge
     description: Tabelas com dados extraídos de APIs do IBGE
-    database: dados_ibge
-    schema: public
+    database: ibge
+    schema: silver
     tables:
-      - name: populacao
+      - name: ibge_populacao_etaria

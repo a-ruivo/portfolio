@@ -3,8 +3,8 @@
 
 with source_data as (
 select
-*
-from {{ source('dados_ibge', 'populacao') }}
+    *
+from {{ ref('int_ibge_age_group') }}
 )
 
 select *

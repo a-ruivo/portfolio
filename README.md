@@ -27,6 +27,8 @@ My name is Allan Ruivo Wildner. The purpose of this repository is to store proje
 
 ![alt text](project1/doc/project1.png)
 
+![alt text](project1/doc/model.png)
+
 # Setting up the infrastructure
 WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
 <br>
@@ -252,6 +254,9 @@ I chose to use linux over windows WSL because my personal computer is already on
 - Opening postgreSQL
   ```bash
   psql -U postgres -p 5432
+- Create schema
+  ```bash
+  CREATE SCHEMA schema_name;
 - Create database
   ```bash
   CREATE DATABASE my_bank -- Name of the database to be created.
@@ -341,7 +346,23 @@ I chose to use linux over windows WSL because my personal computer is already on
   ```bash
   cd ~/.dbt
   nano profiles.yml
+- Run the models without tests (--select to select a specific model)
+  ```bash
+  dbt run
+- Run all objects (--select to select a specific object)
+  ```bash
+  dbt build
+- Test the models (--select to select a specific model)
+  ```bash
+  dbt test
+- Import the seeds file to the database (--select to select a specific model)
+  ```bash
+  dbt seed
 
+# Streamlit
+- Installing
+  ```bash
+  pip install streamlit psycopg2-binary plotly
 
 # Tasks Orchestration (Airflow)
 
