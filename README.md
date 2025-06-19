@@ -3,8 +3,7 @@ My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the
 
 # Summary
 - [Project 1](#project-1)
-
-<details>
+- [Project 2](#project-2)
 
 # Project 1 
 
@@ -21,6 +20,8 @@ Dimensional model:
 ![alt text](project1/doc/model.png)
 
 ## Setting up the basic infrastructure
+
+<details>
 
 <summary> Using WSL: Key Steps and Commands </summary>
 
@@ -44,6 +45,10 @@ Here’s a quick guide to setting up and managing **WSL (Windows Subsystem for L
 - `wsl --manage <distro> --resize <memory>` — Adjusts the memory limit for a distribution.  
 - `wsl --shutdown` — Gracefully shuts down all running WSL instances.
 
+</details>
+
+<details>
+
 <summary> Basic Linux Commands (via WSL) </summary>
 
 **Linux** is a free, open-source operating system known for its stability, security, and use across servers, desktops, and embedded systems.
@@ -59,6 +64,9 @@ Here are some commonly used Linux commands for navigating and managing files and
 - `mkdir <directory>` — Creates a new directory.  
 - `sudo` — Runs a command with superuser (admin) privileges.
 
+</details>
+<details>
+
 <summary> Python Setup </summary>
 
 **Python** is a versatile, high-level programming language known for its readability and wide range of applications.
@@ -69,6 +77,9 @@ Here are some commonly used Linux commands for navigating and managing files and
   - Select the option to **add Python to the system PATH**.
 - After installation, verify that Python is accessible from your WSL environment by running `python` or `python3`.  
   If the command is not recognized, add the Python installation path manually via **Windows Environment Variables**.
+
+</details>
+<details>
 
 <summary> Python Virtual Environment Setup </summary>
 
@@ -87,6 +98,8 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
   ```bash
   pip install -r <path_to_requirements.txt>
 
+</details>
+<details>
 
 <summary> VS Code Setup </summary>
 
@@ -96,6 +109,9 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 - Launch VS Code and open a **WSL terminal**. Then run:
   ```bash
   code
+
+</details>
+<details>
 
 <summary> Git Setup </summary>
 
@@ -128,6 +144,9 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
   ```bash
   git clone <repository_url>
 
+</details>
+<details>
+
 <summary> Git Commands </summary>
 
 - `git status` — Checks the current status of your working directory and staging area.  
@@ -152,6 +171,9 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 - `git rebase <target-branch>` — Reapplies commits on top of another branch.  
 - `git restore --staged <file1> <file2>` — Unstages files that were added with `git add`.
 
+</details>
+<details>
+
 <summary> Commit Standardization (Commitizen) </summary>
 
 To standardize commit messages, you can use the [**Commitizen**] library:
@@ -163,7 +185,11 @@ To standardize commit messages, you can use the [**Commitizen**] library:
   ```bash
   cz commit
 
+</details>
+
 ## Setting Up the Advanced Infrastructure
+
+<details>
 
 <summary> AWS CLI </summary>
 
@@ -187,6 +213,9 @@ The **AWS CLI (Command Line Interface)** is a tool that lets you manage and auto
   ```bash
   aws sso login --profile default
 
+</details>
+<details>
+
 <summary> Terraform Setup </summary>
 
 **Terraform** is an open-source Infrastructure as Code (IaC) tool that allows you to provision, manage, and version cloud infrastructure using declarative configuration files.
@@ -204,6 +233,9 @@ The **AWS CLI (Command Line Interface)** is a tool that lets you manage and auto
   ```bash
   terraform apply
 
+</details>
+<details>
+
 <summary> Creating an EC2 Instance </summary>
 
 **Amazon EC2 (Elastic Compute Cloud)** is a scalable virtual server service that allows you to run applications in the cloud. It's commonly used to host websites, run backend services, or test environments on-demand.
@@ -217,6 +249,9 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 - Connect to the EC2 instance (each AMI has a default username, such as `ec2-user`):
   ```bash
   ssh -i ~/.ssh/ec2-key.pem ec2-user@<ec2-public-dns>
+
+<details>
+</details>
 
 <summary> Creating a PostgreSQL database inside EC2 </summary>
 
@@ -268,6 +303,9 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
   ```bash
   DROP TABLE nome_da_tabela;
 
+</details>
+<details>
+
 <summary> DBT </summary>
 
 **dbt** (data build tool) is a command-line tool that enables data teams to transform, test, and document data in the warehouse using modular SQL and software engineering practices.
@@ -298,6 +336,9 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
   ```bash
   dbt seed
 
+</details>
+<details>
+
 <summary> Streamlit </summary>
 
 **Streamlit** is an open-source Python framework that allows you to quickly build and share interactive web apps for data science and machine learning projects using simple Python scripts.
@@ -305,6 +346,9 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 - Install streamlit
   ```bash
   pip install streamlit psycopg2-binary plotly
+
+</details>
+<details>
 
 <summary> N8N </summary>
 
@@ -323,6 +367,9 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
   ```bash
   n8n
 
+</details>
+<details>
+
 <summary> Airflow </summary>
 
 **Apache Airflow** is an open-source platform used to programmatically author, schedule, and monitor workflows—especially data pipelines—by defining them as code using Python.
@@ -337,6 +384,8 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
   ```bash
   pip install apache-airflow[duckdb]
 
+</details>
+
 ## Data extraction
 
 [Extract](project1/pipeline/1.extraction/)
@@ -347,6 +396,8 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 
 ## Data visualization
 
+<details>
+
 <summary> N8N data upload, transformation and save </summary>
 
 ![alt text](project1/doc/n8n.png)
@@ -355,17 +406,28 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 
 [Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)
 
+</details>
+<details>
+
 <summary> Streamlit </summary>
+
+</details>
+<details>
 
 <summary> Metabase </summary>
 
-<summary> Tableau </summary>
+</details>
+<details>
 
-## Tasks Orchestration (Airflow)
+<summary> Tableau </summary>
 
 </details>
 
+## Tasks Orchestration (Airflow)
+
 # Project 2
+
+<details>
 
 <summary> Docker </summary>
 Installing docker
@@ -379,3 +441,5 @@ sudo apt install -y docker.io
 sudo systemctl start docker
 - Para que o docker inicie junto com o sistema
 sudo systemctl enable docker
+
+</details>
