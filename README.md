@@ -14,7 +14,7 @@ My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the
 The tech stack included: Python, PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, and n8n.
 
 Project:
-![alt text](project1/doc/project1_structure)
+![alt text](project1/doc/project1_structure.png)
 
 Dimensional model:
 ![alt text](project1/doc/model.png)
