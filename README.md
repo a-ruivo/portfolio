@@ -363,6 +363,7 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 
 ## Tasks Orchestration (Airflow)
 
+</details>
 
 # Project 2
 
