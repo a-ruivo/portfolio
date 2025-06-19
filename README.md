@@ -411,10 +411,47 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
   pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
 - Activate:
   ```bash
-  airflow api-server -p 8080
+  airflow api-server -p 9090
 - Installing duckdb with ariflow
   ```bash
   pip install apache-airflow[duckdb]
+- Use the url 'localhost:9090' to access airflow.
+
+</details>
+<details>
+<summary> Jenkins </summary>
+
+**Jenkins** is an open-source automation server that helps developers build, test, and deploy their software continuously.
+
+- Creating keys folder:
+  ```bash
+  sudo mkdir -p /etc/apt/keyrings
+- Updating system packages:
+  ```bash
+  sudo apt update && sudo apt upgrade
+- Install Java (Jenkins requirement):
+  ```bash
+  sudo apt install openjdk-17-jdk
+- Configurate the jenkins repository key:
+  ```bash
+  curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | gpg --dearmor | sudo tee /etc/apt/keyrings/jenkins.gpg > /dev/null
+- Dowload the jenkins repository:
+  ```bash
+  echo "deb [signed-by=/etc/apt/keyrings/jenkins.gpg] https://pkg.jenkins.io/debian binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+- Update packages and install jenkins:
+  ```bash
+  sudo apt update
+  sudo apt install jenkins
+- Start jenkins:
+  ```bash
+  sudo systemctl start jenkins
+  sudo systemctl enable jenkins
+- Use the url 'localhost:8080' to access jenkins.
+- Verificando senha inicial
+  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+
 
 </details>
 
@@ -456,6 +493,36 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 </details>
 
 ## Tasks Orchestration (Airflow)
+
+- Airflow + Jenkins integration
+- Install the airflow+jenkins provider:
+  ```bash
+  pip install apache-airflow-providers-jenkins
+- Open airflow in another port (ex:9090) and open jenkins in port 8080.
+- Gere um token da API do airflow para conexao ou faça o jenkins gerar automaticamente configurando um secret
+  curl -X POST http://localhost:9090/auth/token \
+  -H "Content-Type: application/json" \
+  -d '{"username": "admin", "password": "sua_senha"}'
+- Instale o plugin http request no jenkins
+- Altere a variavel de ambiente do airflow para pegar a dag da pasta desejada:
+  export AIRFLOW__CORE__DAGS_FOLDER=/caminho/completo/para/seu/project1/dags
+- Reinicie o airflow
+- use este comando
+  airflow scheduler
+- Instale o CLI do jenkins
+  wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+- Teste o CLI
+  java -jar jenkins-cli.jar -s http://localhost:8080/ help
+- Criando job no jenkins
+  chmod +x criar_job_com_token.sh
+./criar_job_com_token.sh
+- Instale jq
+  sudo apt update
+sudo apt install jq
+- Ativando o job por CLI
+  java -jar jenkins-cli.jar -s http://localhost:8080/ -auth "$JENKINS_USER:$JENKINS_TOKEN" build pipeline_airflow_ibge
+
+
 
 # Project 2
 
