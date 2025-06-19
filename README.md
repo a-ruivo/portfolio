@@ -1,257 +1,238 @@
-<h1 align="center"> Portfolio - Allan Ruivo </h1>
-My name is Allan Ruivo Wildner. The purpose of this repository is to store projects I've developed in order to develop myself as a professional and to show what technical skills I possess.
+<h1 align="center"> Portfolio - Allan Ruivo Wildner </h1>
+My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the projects I've developed as part of my journey to grow as a professional. It highlights the technical skills I've acquired and applied along the way.
 
 # Summary
 - [Project 1](#project-1)
-  - [1. Setting up the infrastructure](#setting-up-the-infrastructure)
-    - [WSL](#wsl-commands)
-    - [Linux](#linux-commands)
-    - [Python](#python-setup)
-    - [VScode](#vscode-setup)
-    - [Git Setup](#git-setup)
-    - [Git Commands](#git-commands)
-    - [Commits](#commits)
-    - [Virtual Env](#virtual-env)
-    - [Airflow](#airflow)
-    - [DuckDB](#duckdb)
-    - [PostgreSQL](#postgresql)
-    - [N8N](#n8n)
-  - [2. Data extraction from IBGE API using python](#data-extraction-from-ibge-api-using-python)
-  - [3. N8N data upload, transformation and save](#n8n-data-upload-transformation-and-save)
-  - [4. DBT](#dbt)
-  - [5. Tasks Orchestration (Airflow)](#tasks-orchestration-airflow)
-  - [6. Data Visualization](#data-visualization)
 
+<details>
 
-# Project 1
+# Project 1 
 
+**Project 1** is a personal initiative focused on strengthening my skills with a variety of tools and applying them **in practice**. The project involved the following key steps:
+- Extracting data from the IBGE API and modeling it using a star schema.
+- Storing the data in a remote environment.
+- Making the data accessible in three different formats.
+The tech stack included: Python, PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, and n8n.
+
+Project:
 ![alt text](project1/doc/project1.png)
 
+Dimensional model:
 ![alt text](project1/doc/model.png)
 
-# Setting up the infrastructure
-WSL, python, vscode, git environment, airflow, python libs, postgresql and n8n
-<br>
+## Setting up the basic infrastructure
 
-# WSL Commands
-I chose to use linux over windows WSL because my personal computer is already on this operating system and tools like tableau don't run on linux
-- Enable WSL
-  ```bash
-  wsl --install
-- Check for distributions already installed 
-  ```bash
-  wsl -- list --verbose
-- Check available distributions to install if necessary
-  ```bash
-  wsl --list --online
-- Install new distribution
-  ```bash
-  wsl --install --distribution <distro>
-- Uninstall old distro
-  ```bash
-  wsl --unregister <distro>
-- Configure a distro as default
-  ```bash
-  wsl --set-default <distro>
-- Updates
-  ```bash
-  wsl --update
-- Status
-  ```bash
-  wsl --status
-- Help
-  wsl --help
-- Checking WSL memory
-  df -h /
-- Checking WSL RAM and SWAP memory
-  free -h
-- Changing the WSL memory size
-  wsl --manage <distribution name> --resize <memory string>
-- WSL deactivation
-  wsl --shutdown
+<summary> Using WSL: Key Steps and Commands </summary>
 
-# Linux Commands
-- View directories
-  ```bash
-  ls
-- View hidden directories
-  ```bash
-  ls -a
-- Go to directorie
-  ```bash
-  cd <path>
-- Move file
-  ```bash
-  mv <path1> <path2>
-- Delete file
-  ```bash
-  rm <path>
-- Delete directorie
-  ```bash
-  rm -rf <path>
-- Create directorie
-  ```bash
-  mkdir <directorie>
-- Permission override
-  ```bash
-  sudo
+**WSL** (Windows Subsystem for Linux) lets you run a full Linux environment directly on Windows without using a virtual machine or dual boot.
 
-# Python Setup
-- Go to the python website and install (select the options to install as administrator and to add python.exe to the PATH variable)
-- Check that python is accessible from linux using the "python" or "python3" command, otherwise go to the windows environment variable settings and add it
+I chose to work with Linux to deepen my understanding of the operating system. However, I opted for WSL (Windows Subsystem for Linux) to maintain compatibility with essential tools like Tableau, which aren't supported on Linux.
 
-# VScode Setup
-- Install VS Code from the microsoft store
-- Activate VS Code in WSL
+Here’s a quick guide to setting up and managing **WSL (Windows Subsystem for Linux)**, along with some essential commands:
+
+- `wsl --install` — Enables WSL on Windows.  
+- `wsl --list --verbose` — Lists all installed Linux distributions with detailed info.  
+- `wsl --list --online` — Shows available distributions you can install.  
+- `wsl --install --distribution <distro>` — Installs a specific Linux distribution.  
+- `wsl --unregister <distro>` — Uninstalls a distribution.  
+- `wsl --set-default <distro>` — Sets the default distribution for WSL sessions.  
+- `wsl --update` — Updates the WSL system.  
+- `wsl --status` — Displays the current WSL configuration and status.  
+- `wsl --help` — Opens the help menu with a list of all commands.  
+- `df -h /` — Shows disk usage within the Linux environment.  
+- `free -h` — Displays memory and swap usage.  
+- `wsl --manage <distro> --resize <memory>` — Adjusts the memory limit for a distribution.  
+- `wsl --shutdown` — Gracefully shuts down all running WSL instances.
+
+<summary> Basic Linux Commands (via WSL) </summary>
+
+**Linux** is a free, open-source operating system known for its stability, security, and use across servers, desktops, and embedded systems.
+
+Here are some commonly used Linux commands for navigating and managing files and directories:
+
+- `ls` — Lists directories and files in the current path.  
+- `ls -a` — Shows hidden files and directories.  
+- `cd <path>` — Navigates to the specified directory.  
+- `mv <source> <destination>` — Moves or renames a file or directory.  
+- `rm <file>` — Deletes a specific file.  
+- `rm -rf <directory>` — Deletes a directory and its contents recursively.  
+- `mkdir <directory>` — Creates a new directory.  
+- `sudo` — Runs a command with superuser (admin) privileges.
+
+<summary> Python Setup </summary>
+
+**Python** is a versatile, high-level programming language known for its readability and wide range of applications.
+
+- Download and install Python from the official website. 
+  During installation, make sure to:
+  - Run the installer as administrator.
+  - Select the option to **add Python to the system PATH**.
+- After installation, verify that Python is accessible from your WSL environment by running `python` or `python3`.  
+  If the command is not recognized, add the Python installation path manually via **Windows Environment Variables**.
+
+<summary> Python Virtual Environment Setup </summary>
+
+A **Python virtual environment** is an isolated folder that lets you manage dependencies for a specific project without affecting others.
+
+- Create a virtual environment in your project directory:
+  ```bash
+  python3 -m venv <env_name>
+- Activate the environment:
+  ```bash
+  source <env_name>/bin/activate
+- Deactivate the environment:
+  ```bash
+  deactivate
+- Install dependencies from a requirements.txt file or directly via pip:
+  ```bash
+  pip install -r <path_to_requirements.txt>
+
+
+<summary> VS Code Setup </summary>
+
+**Visual Studio Code** (VS Code) is a lightweight, open-source code editor with built-in support for debugging, version control, and extensions across many programming languages.
+
+- Install **Visual Studio Code** from the Microsoft Store.
+- Launch VS Code and open a **WSL terminal**. Then run:
   ```bash
   code
-- Install python extensions and WSL
-- Change vs code to the WSL environment in the bottom left corner of the screen
 
-# Git Setup
-- Install git
-- Github credentials configuration
+<summary> Git Setup </summary>
+
+**Git** is a free and open-source distributed version control system that allows developers to track changes in source code, collaborate on projects, and manage different versions of files efficiently and securely.
+
+- Install Git (available via package manager or official site).
+- Configure your GitHub credentials:
   ```bash
-  git config --global user.name <nome>
-  git config --global user.email <email>
-- In the directorie you want to turn in a git repositore
+  git config --global user.name "<your_name>"
+  git config --global user.email "<your_email>"
+- In the directory you want to turn into a Git repository:
   ```bash
-  git init -b <nome da branch>
-- Use SSH connection to connect WSL on github
-- Go to github > settings > SSH and GPH keys
-- Click on New SSH Key
-- On linux use the command
+  git init -b <branch_name>
+- Set up SSH authentication for GitHub: Go to GitHub → Settings → SSH and GPG Keys → click New SSH Key.
+- On WSL/Linux, generate a new key:
   ```bash
-  ssh-keygen -t ed25519 -C "seuemail@email.com"
-- Press enter 3 times
-- Activate the key
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+- (Press Enter three times to accept the defaults)
+- Start the SSH agent:
   ```bash
   eval "$(ssh-agent -s)"
-- Create the key
+- Add the SSH private key to the agent:
   ```bash
-  ssh-add ~/. ssh/id_ed25519
-- If this command doesn't work, use this
+  ssh-add ~/.ssh/id_ed25519
+- To view and copy your public key:
   ```bash
-  nano ~/.
-- If you need to bring a repository that already exists to vscode
+  cat ~/.ssh/id_ed25519.pub
+- Paste the copied key into GitHub when creating the new SSH Key.
+- To clone an existing repository into VS Code:
   ```bash
-  git clone <repository url>
+  git clone <repository_url>
 
-# Git Commands
-- Checking the status of commits
-  ```bash
-  git status
-- Add files to the commit
-  ```bash
-  git add <file1> <file2> <fileN>
-- Add all the files to the commit
-  ```bash
-  git add -A
-- Commiting
-  ```bash
-  git commit -m <message>
-- Commit history on this branch
-  ```bash
-  git log
-- Commit history on all branches
-  ```bash
-  git log -all
-- Branch list
-  ```bash
-  git branch
-- Create branch
-  ```bash
-  git branch <new branch>
-- Change branch
-  ```bash
-  git checkout <branch> 
-- Change branch and create a new one
-  ```bash
-  git checkout -b <branch>
-- To merge (you must be in the target branch and if you need to cancel, use the same command with --abort)
-  ```bash
-  git merge <branch origem>
-- Change commit
-  ```bash
-  git checkout <hash commit>
-- Sending commits to a remote repository
-  ```bash
-  git push <repository> < branch>
-- List of connected remote repositories
-  ```bash
-  git remote -V
-- Connects to a remote repository
-  ```bash
-  git remote add origin <url>
-- Delete branch
-  ```bash
-  git push <remote branch> -d <local branch>
-- Downloading files from the remote repository to the remote branches
-  ```bash
-  git fetch
-- Integrates files from the remote branch with the local branch
-  ```bash
-  git pull
-- Reapply commits to another branch
-  ```bash
-  git rebase <destination branch>
-- Remove files from the commit stage
-  ```bash
-  git restore --staged  <file1> <file2>
+<summary> Git Commands </summary>
 
-# Commits
-- To standardize the commits I used the commitizen library
+- `git status` — Checks the current status of your working directory and staging area.  
+- `git add <file1> <file2> <fileN>` — Adds specific files to the staging area.  
+- `git add -A` — Adds all changes (new, modified, deleted files) to the staging area.  
+- `git commit -m "<message>"` — Commits staged changes with a message.  
+- `git log` — Shows the commit history of the current branch.  
+- `git log --all` — Displays the commit history across all branches.  
+- `git branch` — Lists all local branches.  
+- `git branch <new-branch>` — Creates a new branch.  
+- `git checkout <branch>` — Switches to an existing branch.  
+- `git checkout -b <branch>` — Creates and switches to a new branch.  
+- `git merge <source-branch>` — Merges a branch into the current one.  
+  > To cancel a merge in progress, use `git merge --abort`.  
+- `git checkout <commit-hash>` — Navigates to a specific commit (detached HEAD).  
+- `git push <remote> <branch>` — Sends local commits to a remote branch.  
+- `git remote -v` — Lists the connected remote repositories.  
+- `git remote add origin <url>` — Connects your local repo to a remote one.  
+- `git push <remote> --delete <branch>` — Deletes a remote branch.  
+- `git fetch` — Downloads changes from the remote repository without merging.  
+- `git pull` — Fetches and merges changes from the remote repository into the current branch.  
+- `git rebase <target-branch>` — Reapplies commits on top of another branch.  
+- `git restore --staged <file1> <file2>` — Unstages files that were added with `git add`.
+
+<summary> Commit Standardization (Commitizen) </summary>
+
+To standardize commit messages, you can use the [**Commitizen**] library:
+
+- Install Commitizen:
   ```bash
   pip install -U commitizen
-- When committing with the command below, it offers some commit configuration possibilities
+- Use interactive commit formatting:
   ```bash
   cz commit
 
-# Virtual Env
-- In the repository create a python virtual environment
-  ```bash
-  python3 -m venv <enviroment>
-- To activate the env use this command
-  ```bash
-  source <path>/bin/activate
-- To deactivate use
-  ```bash
-  deactivate
-- To install libraries in the env use or install directly from pip
-  ```bash
-  pip install -r <requirements path>
+## Setting Up the Advanced Infrastructure
 
-# Airflow
-- Installing airflow
-  ```bash
-  pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
-- Activating
-  ```bash
-  airflow api-server -p 8080
-- Installing duckdb with ariflow
-  ```bash
-  pip install apache-airflow[duckdb]
+<summary> AWS CLI </summary>
 
-# DuckDB
-- Installing duckdb
-  ```bash
-  pip install duckdb
+The **AWS CLI (Command Line Interface)** is a tool that lets you manage and automate AWS services directly from your terminal using simple text commands.
 
-# PostgreSQL
-- Installing PostgreSQL
+- Install the AWS CLI:
   ```bash
-  sudo apt install -y wget ca-certificates
-  wget -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-  echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
+- In your AWS account, configure an IAM user with the necessary permissions.
+- Set up Single Sign-On (SSO) in the terminal:
+  ```bash
+  aws configure sso
+- Provide the following details when prompted:
+- SSO session name (Recommended): <session_name>
+- SSO start URL [None]: <IAM_start_URL>
+- SSO region [None]: <AWS_region>
+- SSO registration scopes [None]: sso:account:access
+- Log in to your AWS session:
+  ```bash
+  aws sso login --profile default
+
+<summary> Terraform Setup </summary>
+
+**Terraform** is an open-source Infrastructure as Code (IaC) tool that allows you to provision, manage, and version cloud infrastructure using declarative configuration files.
+
+- Install Terraform:
+  ```bash
+  sudo apt-get install terraform
+- Initialize your Terraform project (downloads necessary providers and sets up the working directory):
+  ```bash
+  terraform init
+- Create an execution plan (previews changes without applying them):
+  ```bash
+  terraform plan
+- Apply the configuration to provision the infrastructure:
+  ```bash
+  terraform apply
+
+<summary> Creating an EC2 Instance </summary>
+
+**Amazon EC2 (Elastic Compute Cloud)** is a scalable virtual server service that allows you to run applications in the cloud. It's commonly used to host websites, run backend services, or test environments on-demand.
+
+To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/infra/) file in this repository, which defines all necessary infrastructure as code.
+
+**Manual Steps (if needed):**
+
+- Create an EC2 instance via the AWS Console, making sure to configure an **SSH key pair** during setup.  
+- Configure **Security Group rules**, such as opening port 22 for SSH access.
+- Connect to the EC2 instance (each AMI has a default username, such as `ec2-user`):
+  ```bash
+  ssh -i ~/.ssh/ec2-key.pem ec2-user@<ec2-public-dns>
+
+<summary> Creating a PostgreSQL database inside EC2 </summary>
+
+**PostgreSQL** is a free and open-source relational database management system known for its reliability, extensibility, and full compliance with SQL standards.
+
+- Install PostgreSQL:
+  ```bash
   sudo apt update
   sudo apt install -y postgresql-14
-- Checking for an active cluster
+- Check for an active cluster:
   ```bash
   pg_lsclusters
-- Changing user to postgreSQL
+- Change user to postgreSQL:
   ```bash
   sudo -i -u postgres
-- Opening postgreSQL
+- Open postgreSQL:
   ```bash
   psql -U postgres -p 5432
 - Create schema
@@ -276,32 +257,59 @@ I chose to use linux over windows WSL because my personal computer is already on
 - Create user
   ```bash
   CREATE ROLE my_user WITH LOGIN PASSWORD 'my_password' SUPERUSER CREATEDB CREATEROLE;
-- Help
-  ```bash
-  \h
-- Return
-  ```bash
-  \q
-- View databases
-  ```bash
-  \l
-- View schemas
-  ```bash
-  \dn
-- View tables
-  ```bash
-  \dt
-- Exit
-  ```bash
-  exit
-- Enter database
-  ```bash
-  \c nome_do_banco
+- `\h` - Help
+- `\q` - Return
+- `\l`- View databases
+- `\dn` - View schemas
+- `\dt` - view tables
+- `exit` - Exit
+- `\c database`- Enter database
 - Delete table
   ```bash
   DROP TABLE nome_da_tabela;
 
-# N8N
+<summary> DBT </summary>
+
+**dbt** (data build tool) is a command-line tool that enables data teams to transform, test, and document data in the warehouse using modular SQL and software engineering practices.
+
+- Install DBT:
+  ```bash
+  pip install dbt-postgres
+- Configure:
+  ```bash
+  dbt init
+- Check configuration:
+  ```bash
+  dbt debug
+- Editing profiles.yml (The profiles.yml file in dbt (data build tool) is a configuration file that stores the connection settings needed for dbt to access your data warehouse):
+  ```bash
+  cd ~/.dbt
+  nano profiles.yml
+- Run the models without tests (--select to select a specific model):
+  ```bash
+  dbt run
+- Run all objects (--select to select a specific object):
+  ```bash
+  dbt build
+- Test the models (--select to select a specific model):
+  ```bash
+  dbt test
+- Import the seeds file to the database (--select to select a specific model):
+  ```bash
+  dbt seed
+
+<summary> Streamlit </summary>
+
+**Streamlit** is an open-source Python framework that allows you to quickly build and share interactive web apps for data science and machine learning projects using simple Python scripts.
+
+- Install streamlit
+  ```bash
+  pip install streamlit psycopg2-binary plotly
+
+<summary> N8N </summary>
+
+**N8N** is an open-source workflow automation tool that lets you connect apps, services, and custom logic to automate tasks and data flows—without needing to write full applications.
+
 - Installing NodeJS
   ```bash
   sudo apt install nodejs
@@ -315,15 +323,31 @@ I chose to use linux over windows WSL because my personal computer is already on
   ```bash
   n8n
 
-# Data extraction
+<summary> Airflow </summary>
+
+**Apache Airflow** is an open-source platform used to programmatically author, schedule, and monitor workflows—especially data pipelines—by defining them as code using Python.
+
+- Install airflow:
+  ```bash
+  pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
+- Activate:
+  ```bash
+  airflow api-server -p 8080
+- Installing duckdb with ariflow
+  ```bash
+  pip install apache-airflow[duckdb]
+
+## Data extraction
 
 [Extract](project1/pipeline/1.extraction/)
 
-# Data ingestion
+## Data ingestion
 
 [Ingestion](project1/pipeline/2.ingestion/)
 
-# N8N data upload, transformation and save
+## Data visualization
+
+<summary> N8N data upload, transformation and save </summary>
 
 ![alt text](project1/doc/n8n.png)
 
@@ -331,49 +355,19 @@ I chose to use linux over windows WSL because my personal computer is already on
 
 [Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)
 
-# DBT
+<summary> Streamlit </summary>
 
-- DBT Installing
-  ```bash
-  pip install dbt-postgres
-- Configuration
-  ```bash
-  dbt init
-- Check configuration
-  ```bash
-  dbt debug
-- Editing profiles.yml
-  ```bash
-  cd ~/.dbt
-  nano profiles.yml
-- Run the models without tests (--select to select a specific model)
-  ```bash
-  dbt run
-- Run all objects (--select to select a specific object)
-  ```bash
-  dbt build
-- Test the models (--select to select a specific model)
-  ```bash
-  dbt test
-- Import the seeds file to the database (--select to select a specific model)
-  ```bash
-  dbt seed
+<summary> Metabase </summary>
 
-# Streamlit
-- Installing
-  ```bash
-  pip install streamlit psycopg2-binary plotly
+<summary> Tableau </summary>
 
-# Tasks Orchestration (Airflow)
-
-
-# Data Visualization
-
+## Tasks Orchestration (Airflow)
 
 
 # Project 2
 
-# Installing docker
+<summary> Docker </summary>
+Installing docker
 - Instalando utilitarios do gerenciador de pacotes do linux
 sudo apt update && sudo apt install -y software-properties-common
 - Atualizando o apt e todos os pacotes
@@ -384,45 +378,3 @@ sudo apt install -y docker.io
 sudo systemctl start docker
 - Para que o docker inicie junto com o sistema
 sudo systemctl enable docker
-
-# Creating EC2
-- Instale o AWS CLI fora do seu repositorio
-  ```bash
-  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-  unzip awscliv2.zip
-  sudo ./aws/install
-- Na AWS configure um usuario IAM com acesso a sua conta
-- No terminal use o comando
-  ```bash
-    aws configure sso
-    SSO session name (Recommended): <nome da sessao>
-    SSO start URL [None]: <link disponivel no IAM>
-    SSO region [None]: <regiao AWS>
-    SSO registration scopes [None]: sso:account:access
-- Criar EC2 configurando chave ssh
-- Ajustar regras de grupo de segurança
-- Conecte na EC2 (cada AMI possui um nome de usuario padrão como ec2-user)
-  ```bash
-  ssh -i <key path> (~/.ssh/ec2-key) <user>@<link EC2>
-
-# AWS CLI
-- Login
-  ```bash
-  aws sso login --profile default
-
-# Terraform
-- Intalling
-  ```bash
-  sudo apt-get install terraform
-- Starting
-  ```bash
-  terraform init
-- Planning
-  ```bash
-  terraform plan
-- Applying
-  ```bash
-  terraform apply
-
-
-# Atualiza e instala o Terraform
