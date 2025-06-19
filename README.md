@@ -1,5 +1,5 @@
 <h1 align="center"> Portfolio - Allan Ruivo Wildner </h1>
-My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the projects I've developed as part of my journey to grow as a professional. It highlights the technical skills I've acquired and applied along the way.
+My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the personal projects I've developed as part of my journey to grow as a professional. It highlights the technical skills I've acquired and applied along the way.
 
 # Summary
 - [Project 1](#project-1)
@@ -257,6 +257,17 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 
 **PostgreSQL** is a free and open-source relational database management system known for its reliability, extensibility, and full compliance with SQL standards.
 
+
+Adjustments necessary to enable remote access to your PostgreSQL instance on EC2:
+- Enabled external listening Updated postgresql.conf by setting:
+  listen_addresses = '*' (remove "#")
+- Allowed external connections Edited pg_hba.conf to add:
+  host all all 0.0.0.0/0 md5
+- Restarted PostgreSQL Applied config changes by restarting the PostgreSQL service.
+- Opened firewall access Ensured EC2's Security Group allows inbound traffic on port 5432 from your IP or all IPs (for testing).
+- Verified PostgreSQL is running and listening externally Used netstat to confirm it's listening on 0.0.0.0:5432.
+- Corrected credentials and connection IP Fixed host IP and confirmed that the database, user, and permissions were properly set.
+
 - Install PostgreSQL:
   ```bash
   sudo apt update
@@ -264,12 +275,15 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 - Check for an active cluster:
   ```bash
   pg_lsclusters
-- Change user to postgreSQL:
+- Change user to postgreSQL (default user = postgres):
   ```bash
-  sudo -i -u postgres
+  sudo -i -u user 
+- Open postgreSQL (default database = postgres):
+  ```bash
+  psql -U database -p 5432
 - Open postgreSQL:
   ```bash
-  psql -U postgres -p 5432
+  psql -U user -d database
 - Create schema
   ```bash
   CREATE SCHEMA schema_name;
@@ -302,6 +316,24 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 - Delete table
   ```bash
   DROP TABLE nome_da_tabela;
+- Checking configurations
+   ```bash
+  sudo nano /var/lib/pgsql/data/postgresql.conf
+- Reload config file
+  ```bash
+  cd /tmp
+  sudo -u postgres pg_ctl reload -D /var/lib/pgsql/data
+- Checking host-base authentication
+   ```bash
+  sudo nano /var/lib/pgsql/data/pg_hba.conf
+- Restarting postrgreSQL
+  ```bash
+  sudo systemctl restart postgresql
+- See users
+  ```bash
+  \du
+
+
 
 </details>
 <details>
