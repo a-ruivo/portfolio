@@ -54,7 +54,13 @@ resource "aws_instance" "free_tier_ec2" {
       "sudo /usr/bin/postgresql-setup initdb",
       "sudo systemctl enable postgresql",
       "sudo systemctl start postgresql",
-      "sudo -u postgres psql -c \"CREATE DATABASE ibge;\"",
+      "CREATE ROLE ruivo WITH LOGIN PASSWORD '123456' SUPERUSER CREATEDB CREATEROLE;",
+      "sudo -u postgres psql -c \"CREATE DATABASE ibge -- Name of the database to be created.
+     WITH OWNER = ruivo -- Server user who will be the owner of the database.
+          TEMPLATE = template1 -- Database that will be used as a template for creating the new database.
+          ENCODING = ‘UTF8’ -- Type of encoding for the data that will be stored in the database.
+          TABLESPACE = pg_default -- Tablespace where the database will be physically created.
+          CONNECTION LIMIT = 100; -- Maximum number of simultaneous connections allowed in the database.\"",
       "sudo -u postgres psql -d ibge -c \"CREATE SCHEMA silver;\"",
       "sudo -u postgres psql -d ibge -c \"CREATE SCHEMA gold;\""
     ]

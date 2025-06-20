@@ -275,12 +275,9 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 - Check for an active cluster:
   ```bash
   pg_lsclusters
-- Change user to postgreSQL (default user = postgres):
-  ```bash
-  sudo -i -u user 
 - Open postgreSQL (default database = postgres):
   ```bash
-  psql -U database -p 5432
+  psql -U user -d database
 - Open postgreSQL:
   ```bash
   psql -U user -d database
@@ -421,6 +418,10 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
   pip install apache-airflow[duckdb]
 - Use the url 'localhost:9090' to access airflow.
 
+alterando variavel para conectar airflow no postgres remoto
+export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:sua_senha_segura@<ip-da-ec2>:5432/airflow
+pip install asyncpg
+
 </details>
 <details>
 <summary> Jenkins </summary>
@@ -541,7 +542,16 @@ sudo apt install jq
 - Verificar a pasta onde devem estar as dags (se necessario mude o campo dags_folder do ~/airflow/airflow.cfg)
   airflow config get-value core dags_folder
 - Altere o campo dag_discovery_safe_mode para False se quiser que ele ache dags que não tenham airflow e dag no nome
+load_examples = False
 
+para testar as dags (rodar no python)
+from airflow.models import DagBag
+dagbag = DagBag()
+dagbag.dags.keys()
+dagbag.import_errors
+
+
+pip install apache-airflow[cncf.kubernetes]
 
 
 # Project 2
