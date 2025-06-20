@@ -422,6 +422,25 @@ alterando variavel para conectar airflow no postgres remoto
 export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:sua_senha_segura@<ip-da-ec2>:5432/airflow
 pip install asyncpg
 
+alterando variavel de ambiente da pasta de dags
+export AIRFLOW__CORE__DAGS_FOLDER=/caminho/completo/para/sua/pasta/dags
+
+para ver valor da variavel
+echo $NOME_DA_VARIAVEL
+
+ajustar ui widget
+pip install flask-appbuilder
+
+RODE ESTE COMANDO PARA PUXAR AS DAGS
+airflow dag-processor
+
+depois verifique se sua dag esta pausada com
+aitflow dags list
+
+se estiver pausada use
+airflow dags unpause dag
+
+
 </details>
 <details>
 <summary> Jenkins </summary>
