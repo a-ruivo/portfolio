@@ -367,6 +367,10 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 - Import the seeds file to the database (--select to select a specific model):
   ```bash
   dbt seed
+- Update dbt
+  ```bash
+  pip install --upgrade dbt-core
+
 
 </details>
 <details>
@@ -521,8 +525,19 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 sudo apt install jq
 - Ativando o job por CLI
   java -jar jenkins-cli.jar -s http://localhost:8080/ -auth "$JENKINS_USER:$JENKINS_TOKEN" build pipeline_airflow_ibge
-
-
+- Gerar token airflow
+  curl -X POST http://localhost:9090/auth/token \
+  -H "Content-Type: application/json" \
+  -d '{"username": "admin", "password": "SUA_SENHA_AQUI"}'
+- Ligue o scheduler
+  airflow scheduler
+- Verificar processos ativos
+  ps aux | grep airflow
+- Terminando o scheduler
+  pkill -f "airflow scheduler"
+- Se o scheduler der erro por a porta ja estar sendo utilizar usar este comando para ver os processos e matar
+  lsof -i :8793
+  kill -9 <pid>
 
 # Project 2
 

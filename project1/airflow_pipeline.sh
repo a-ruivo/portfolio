@@ -9,51 +9,38 @@ set +a
 JENKINS_URL="http://localhost:8080"
 JOB_NAME="pipeline_airflow_ibge"
 
-# === Jenkinsfile embutido no script ===
+# === Jenkinsfile embutido no script (adaptado p/ API v2 e logical_date) ===
 JENKINSFILE=$(cat <<'EOF'
 pipeline {
     agent any
 
     stages {
-        stage('Obter token do Airflow') {
+        stage('Acionar DAG no Airflow') {
             steps {
                 withCredentials([
-                    usernamePassword(
-                        credentialsId: 'airflow-password-id',
-                        usernameVariable: 'AIRFLOW_USER',
-                        passwordVariable: 'AIRFLOW_PASS'
-                    )
+                    string(credentialsId: 'airflow-static-token', variable: 'AIRFLOW_TOKEN')
                 ]) {
                     script {
-                        def authResponse = httpRequest(
-                            httpMode: 'POST',
-                            url: 'http://localhost:9090/auth/token',
-                            contentType: 'APPLICATION_JSON',
-                            requestBody: """
-{
-  \"username\": \"${AIRFLOW_USER}\",
-  \"password\": \"${AIRFLOW_PASS}\"
-}
-"""
-                        )
-                        def tokenJson = readJSON text: authResponse.content
-                        env.AIRFLOW_TOKEN = tokenJson.token
-                    }
-                }
-            }
-        }
+                        def logicalDate = new Date().format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone("UTC"))
 
-        stage('Acionar DAG') {
-            steps {
-                script {
-                    def dagResponse = httpRequest(
-                        httpMode: 'POST',
-                        url: 'http://localhost:9090/api/v1/dags/pipeline_ibge/dagRuns',
-                        customHeaders: [[name: 'Authorization', value: "Bearer ${env.AIRFLOW_TOKEN}"]],
-                        contentType: 'APPLICATION_JSON',
-                        requestBody: '{"conf": {}}'
-                    )
-                    echo "Airflow respondeu: ${dagResponse.status}"
+
+                        def payload = groovy.json.JsonOutput.toJson([
+                            conf: [:],
+                            logical_date: logicalDate
+                        ])
+
+                        def dagResponse = httpRequest(
+                            httpMode: 'POST',
+                            url: 'http://localhost:9090/api/v2/dags/pipeline_ibge/dagRuns',
+                            customHeaders: [[name: 'Authorization', value: "Bearer ${AIRFLOW_TOKEN}"]],
+                            contentType: 'APPLICATION_JSON',
+                            requestBody: payload,
+                            validResponseCodes: '100:599'
+                        )
+
+                        echo "DAG acionada! Código de resposta: ${dagResponse.status}"
+                        echo "Corpo da resposta: ${dagResponse.content}"
+                    }
                 }
             }
         }
@@ -66,14 +53,14 @@ EOF
 read CRUMB_FIELD CRUMB_TOKEN <<< $(curl -s -u "$JENKINS_USER:$JENKINS_TOKEN" \
   "$JENKINS_URL/crumbIssuer/api/json" | jq -r '.crumbRequestField + " " + .crumb')
 
-# === Cria o job via API ===
-curl -X POST "$JENKINS_URL/createItem?name=$JOB_NAME" \
+# === Atualiza job existente com novo Jenkinsfile ===
+curl -X POST "$JENKINS_URL/job/$JOB_NAME/config.xml" \
   -u "$JENKINS_USER:$JENKINS_TOKEN" \
   -H "$CRUMB_FIELD: $CRUMB_TOKEN" \
   -H "Content-Type: application/xml" \
   --data-binary @- <<EOF
 <flow-definition plugin="workflow-job">
-  <description>Pipeline criado via script com token</description>
+  <description>Pipeline atualizado para Airflow 3 com API v2</description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps">
@@ -85,5 +72,3 @@ $JENKINSFILE
   <triggers/>
 </flow-definition>
 EOF
-
-echo

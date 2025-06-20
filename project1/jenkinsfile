@@ -1,41 +1,36 @@
 pipeline {
     agent any
 
-    environment {
-        AIRFLOW_USER = "admin"
-        AIRFLOW_PASS = credentials('airflow-password-id') // Armazene a senha no Jenkins Credentials
-    }
-
     stages {
-        stage('Obter Token do Airflow') {
-            steps {
-                script {
-                    def authResponse = httpRequest(
-                        httpMode: 'POST',
-                        url: 'http://localhost:9090/auth/token',
-                        contentType: 'APPLICATION_JSON',
-                        requestBody: """{
-                          "username": "${AIRFLOW_USER}",
-                          "password": "${AIRFLOW_PASS}"
-                        }"""
-                    )
-                    def tokenJson = readJSON text: authResponse.content
-                    env.AIRFLOW_TOKEN = tokenJson.token
-                }
-            }
-        }
-
         stage('Acionar DAG no Airflow') {
             steps {
-                script {
-                    def dagResponse = httpRequest(
-                        httpMode: 'POST',
-                        url: 'http://localhost:9090/api/v1/dags/pipeline_ibge/dagRuns',
-                        customHeaders: [[name: 'Authorization', value: "Bearer ${env.AIRFLOW_TOKEN}"]],
-                        contentType: 'APPLICATION_JSON',
-                        requestBody: '{"conf": {}}'
-                    )
-                    echo "Resposta do Airflow: ${dagResponse.status}"
+                withCredentials([
+                    string(credentialsId: 'airflow-static-token', variable: 'AIRFLOW_TOKEN')
+                ]) {
+                    script {
+                        // Gera a logical_date no formato ISO UTC
+                        def logicalDate = java.time.ZonedDateTime
+                            .now(java.time.ZoneOffset.UTC)
+                            .withNano(0)
+                            .toString()
+
+                        def payload = groovy.json.JsonOutput.toJson([
+                            conf: [:],
+                            logical_date: logicalDate
+                        ])
+
+                        def response = httpRequest(
+                            httpMode: 'POST',
+                            url: 'http://localhost:9090/api/v2/dags/pipeline_ibge/dagRuns',
+                            customHeaders: [[name: 'Authorization', value: "Bearer ${AIRFLOW_TOKEN}"]],
+                            contentType: 'APPLICATION_JSON',
+                            requestBody: payload,
+                            validResponseCodes: '100:599'
+                        )
+
+                        echo "DAG acionada com status: ${response.status}"
+                        echo "Resposta do servidor: ${response.content}"
+                    }
                 }
             }
         }
