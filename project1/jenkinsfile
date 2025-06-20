@@ -1,34 +1,54 @@
-pipeline {
-    agent any
+// ==================================================================================================
+// Jenkinsfile: Define um pipeline declarativo para o Jenkins
+//
+// Este arquivo descreve as etapas automatizadas que o Jenkins deve executar em um job. 
+// No caso deste Jenkinsfile, o pipeline possui uma única etapa que aciona uma DAG 
+// do Apache Airflow por meio da API v2. A execução é autenticada com um token armazenado 
+// nas credenciais do Jenkins, e a data lógica usada na requisição é gerada no momento da execução.
+//
+// Jenkins interpreta este arquivo linha por linha durante a execução do job configurado.
+// ==================================================================================================
 
-    stages {
-        stage('Acionar DAG no Airflow') {
-            steps {
-                withCredentials([
-                    string(credentialsId: 'airflow-static-token', variable: 'AIRFLOW_TOKEN')
+pipeline {                           // Início da definição do pipeline no Jenkins declarativo
+    agent any                        // Define que o pipeline pode ser executado em qualquer agente disponível
+
+    stages {                         // Início do bloco de etapas (stages)
+        stage('Acionar DAG no Airflow') {  // Define uma etapa com o nome "Acionar DAG no Airflow"
+            steps {                 // Início do bloco de comandos a serem executados nessa etapa
+                withCredentials([   // Bloco para injetar credenciais de forma segura
+                    string(credentialsId: 'airflow-static-token', variable: 'AIRFLOW_TOKEN') 
+                    // Usa uma credencial do tipo string com o ID 'airflow-static-token'
+                    // A credencial é atribuída à variável de ambiente 'AIRFLOW_TOKEN'
                 ]) {
-                    script {
-                        // Gera a logical_date no formato ISO UTC
-                        def logicalDate = java.time.ZonedDateTime
-                            .now(java.time.ZoneOffset.UTC)
-                            .withNano(0)
-                            .toString()
+                    script {        // Início de um bloco de script Groovy para lógica mais complexa
 
+                        // Gera a logical_date no formato ISO UTC (por exemplo: 2025-06-20T14:30:00Z)
+                        def logicalDate = new Date().format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone('UTC'))
+
+
+                        // Cria um objeto JSON com os parâmetros que serão enviados para o Airflow
                         def payload = groovy.json.JsonOutput.toJson([
-                            conf: [:],
-                            logical_date: logicalDate
+                            conf: [:],                       // Parâmetro de configuração vazio
+                            logical_date: logicalDate        // Data lógica definida acima
                         ])
 
+                        // Realiza uma requisição HTTP para acionar a DAG no Airflow via API v2
                         def response = httpRequest(
-                            httpMode: 'POST',
-                            url: 'http://localhost:9090/api/v2/dags/pipeline_ibge/dagRuns',
-                            customHeaders: [[name: 'Authorization', value: "Bearer ${AIRFLOW_TOKEN}"]],
-                            contentType: 'APPLICATION_JSON',
-                            requestBody: payload,
-                            validResponseCodes: '100:599'
+                            httpMode: 'POST',                // Método HTTP POST
+                            url: 'http://localhost:9090/api/v2/dags/1/dagRuns',
+                            // Endpoint da API do Airflow para criar uma nova execução da DAG
+                            customHeaders: [[
+                                name: 'Authorization', 
+                                value: "Bearer ${AIRFLOW_TOKEN}" 
+                            ]],                             // Cabeçalho de autenticação com token Bearer
+                            contentType: 'APPLICATION_JSON', // Define que o corpo da requisição é JSON
+                            requestBody: payload,            // Corpo da requisição com os dados preparados
+                            validResponseCodes: '100:599'    // Define que qualquer código de resposta HTTP é aceitável
                         )
 
+                        // Imprime no console do Jenkins o código de resposta retornado pelo Airflow
                         echo "DAG acionada com status: ${response.status}"
+                        // Imprime o corpo completo da resposta HTTP recebida do Airflow
                         echo "Resposta do servidor: ${response.content}"
                     }
                 }

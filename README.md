@@ -538,6 +538,11 @@ sudo apt install jq
 - Se o scheduler der erro por a porta ja estar sendo utilizar usar este comando para ver os processos e matar
   lsof -i :8793
   kill -9 <pid>
+- Verificar a pasta onde devem estar as dags (se necessario mude o campo dags_folder do ~/airflow/airflow.cfg)
+  airflow config get-value core dags_folder
+- Altere o campo dag_discovery_safe_mode para False se quiser que ele ache dags que não tenham airflow e dag no nome
+
+
 
 # Project 2
 
