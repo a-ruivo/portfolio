@@ -534,7 +534,7 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 
 ## Data transformation
 
-- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the queries defined.
+- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the SQL queries defined.
 [DBT models folder](project1/pipeline/3.transformation/dbt_project1/models/)
 
 ## Data visualization
