@@ -550,6 +550,7 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 ### Streamlit
 
 - Create an [app.py](project1/pipeline/4.service/streamlit/app.py) file defining the connections and visualisation options you want to build.
+- Connect your github account to streamlit indicating where it should look for the file and wait for it to run.
 ![alt text](project1/doc/streamlit.png)
 
 - To avoid leaking credentials, set up variables within the streamlit application.
