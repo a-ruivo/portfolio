@@ -46,15 +46,15 @@ st.title("Brazil Population Anaylisis - IBGE Data")
 
 df = load_data()
 
-# 1. population_qty por year_num
-st.subheader("Population by year")
-fig1 = px.bar(df.groupby("year_num", as_index=False).sum(), x="year_num", y="population_qty")
-st.plotly_chart(fig1)
-
 # 2. population_qty por state_name_str
 st.subheader("Population by state")
 fig2 = px.bar(df.groupby("state_name_str", as_index=False).sum(), x="state_name_str", y="population_qty")
 st.plotly_chart(fig2)
+
+# 1. population_qty por year_num
+st.subheader("Population by year")
+fig1 = px.bar(df.groupby("year_num", as_index=False).sum(), x="year_num", y="population_qty")
+st.plotly_chart(fig1)
 
 # 3. population_qty por age_group_str
 st.subheader("Population by age group")

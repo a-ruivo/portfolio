@@ -1,5 +1,5 @@
 <h1 align="center"> Portfolio - Allan Ruivo Wildner </h1>
-My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the personal projects I've developed as part of my journey to grow as a professional. It highlights the technical skills I've acquired and applied along the way.
+My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the personal projects I've developed as part of my journey to grow as a professional.
 
 # Summary
 - [Project 1](#project-1)
@@ -10,8 +10,10 @@ My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the
 **Project 1** is a personal initiative focused on strengthening my skills with a variety of tools and applying them **in practice**. The project involved the following key steps:
 - Extracting data from the IBGE API and modeling it using a star schema.
 - Storing the data in a remote environment.
-- Making the data accessible in three different formats.
-The tech stack included: Python, PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, and n8n.
+- Making the data accessible in different formats.
+- Automating the process with terraform+airflow+jenkins.
+
+The tech stack included: PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, Tableau, DBT, Jenkins and n8n.
 
 Project:
 ![alt text](project1/doc/project1_structure.png)
@@ -226,12 +228,6 @@ The **AWS CLI (Command Line Interface)** is a tool that lets you manage and auto
 - Initialize your Terraform project (downloads necessary providers and sets up the working directory):
   ```bash
   terraform init
-- Create an execution plan (previews changes without applying them):
-  ```bash
-  terraform plan
-- Apply the configuration to provision the infrastructure:
-  ```bash
-  terraform apply
 
 </details>
 <details>
@@ -372,6 +368,122 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 </details>
 <details>
 
+<summary> Airflow </summary>
+
+**Apache Airflow** is an open-source platform used to programmatically author, schedule, and monitor workflows—especially data pipelines—by defining them as code using Python.
+
+- Install Airflow with Celery Executor (version pinned with constraints):
+  ```bash
+  pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
+- Start the Airflow API server (default port is 8080; use -p to specify another):
+  ```bash
+  airflow api-server -p 9090
+- Access Airflow via the following URL: `localhost:9090`
+- Install the Airflow + Jenkins integration provider:
+  ```bash
+  pip install apache-airflow-providers-jenkins
+- Set the `SQL_ALCHEMY_CONN` to connect Airflow to a remote PostgreSQL (EC2):
+  ```bash
+  export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:sua_senha_segura@<ip-da-ec2>:5432/airflow
+- nstall the async PostgreSQL client library:
+  ```bash
+  pip install asyncpg
+- pip install apache-airflow[cncf.kubernetes]
+  ```bash
+  pip install apache-airflow[cncf.kubernetes]
+- Redirect Airflow to your custom DAGs folder:
+  ```bash
+  export AIRFLOW__CORE__DAGS_FOLDER=/caminho/completo/para/sua/pasta/dags
+- Disable DAG filename filtering (allows DAGs without "dag"/"airflow" in the filename):
+  ```bash
+  export AIRFLOW__CORE__DAG_DISCOVERY_SAFE_MODE=False
+- Prevent Airflow from loading example DAGs on startup:
+  ```bash
+  export AIRFLOW__CORE__LOAD_EXAMPLES=False
+- `echo $VARIABLE_NAME`Use this command to check the value of an environment variable.
+- If the Airflow UI fails to load, install this dependency:
+  ```bash
+  pip install flask-appbuilder
+- Airflow requires several parallel processes — run them after the API server:
+  - DAG Processor:
+  ```bash
+  airflow dag-processor
+  ```
+  - Scheduler:
+  ```bash
+  airflow scheduler
+  ```
+  - Dag Trigger:
+  ```bash
+  airflow triggerer
+  ```
+  - Airflow worker:
+  ```bash
+  airflow celery worker
+  ```
+  - To kill a running process if needed (replace <process> with the name or pattern):
+  ```bash
+  pkill -f <"process">
+  ```
+  - If a port is already in use, find and release it:
+  ```bash
+  `lsof -i :<port>`
+  `kill -9 <pid>`
+  ``` 
+- `airflow dags list` use to list all discovered DAGs.
+- `airflow dags unpause <dag>` to unpause (activate) a specific DAG.
+- Python script to verify DAG imports manually:
+  ```bash
+  from airflow.models import DagBag
+  dagbag = DagBag()
+  dagbag.dags.keys()
+  dagbag.import_errors
+  ```
+
+</details>
+<details>
+<summary> Jenkins </summary>
+
+**Jenkins** is an open-source automation server that helps developers build, test, and deploy their software continuously. In this project, we will only use jenkins to perform a manual execution of the airflow dags.
+
+- Create the keyrings folder (for secure APT keys):
+  ```bash
+  sudo mkdir -p /etc/apt/keyrings
+- Updating system packages:
+  ```bash
+  sudo apt update && sudo apt upgrade
+- Install Java (required by Jenkins):
+  ```bash
+  sudo apt install openjdk-17-jdk
+- Configurate Jenkins repository key:
+  ```bash
+  curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | gpg --dearmor | sudo tee /etc/apt/keyrings/jenkins.gpg > /dev/null
+- Dowload and register the Jenkins repository:
+  ```bash
+  echo "deb [signed-by=/etc/apt/keyrings/jenkins.gpg] https://pkg.jenkins.io/debian binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+- Update APT sources and install Jenkins:
+  ```bash
+  sudo apt update
+  sudo apt install jenkins
+- Start Jenkins to run at boot:
+  ```bash
+  sudo systemctl start jenkins
+- Access Jenkins using your browser at: http://localhost:8080
+- Check the initial admin password (required for first login):
+  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+- Dowload the Jenkins CLI:
+  wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+- Test the CLI connection and list available commands:
+  java -jar jenkins-cli.jar -s http://localhost:8080/ help
+
+</details>
+<details>
+
+<summary> Metabase </summary>
+
+</details>
+<details>
+
 <summary> Streamlit </summary>
 
 **Streamlit** is an open-source Python framework that allows you to quickly build and share interactive web apps for data science and machine learning projects using simple Python scripts.
@@ -401,91 +513,29 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
   n8n
 
 </details>
-<details>
-
-<summary> Airflow </summary>
-
-**Apache Airflow** is an open-source platform used to programmatically author, schedule, and monitor workflows—especially data pipelines—by defining them as code using Python.
-
-- Install airflow:
-  ```bash
-  pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
-- Activate:
-  ```bash
-  airflow api-server -p 9090
-- Installing duckdb with ariflow
-  ```bash
-  pip install apache-airflow[duckdb]
-- Use the url 'localhost:9090' to access airflow.
-
-alterando variavel para conectar airflow no postgres remoto
-export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:sua_senha_segura@<ip-da-ec2>:5432/airflow
-pip install asyncpg
-
-alterando variavel de ambiente da pasta de dags
-export AIRFLOW__CORE__DAGS_FOLDER=/caminho/completo/para/sua/pasta/dags
-
-para ver valor da variavel
-echo $NOME_DA_VARIAVEL
-
-ajustar ui widget
-pip install flask-appbuilder
-
-RODE ESTE COMANDO PARA PUXAR AS DAGS
-airflow dag-processor
-
-depois verifique se sua dag esta pausada com
-aitflow dags list
-
-se estiver pausada use
-airflow dags unpause dag
-
-
-</details>
-<details>
-<summary> Jenkins </summary>
-
-**Jenkins** is an open-source automation server that helps developers build, test, and deploy their software continuously.
-
-- Creating keys folder:
-  ```bash
-  sudo mkdir -p /etc/apt/keyrings
-- Updating system packages:
-  ```bash
-  sudo apt update && sudo apt upgrade
-- Install Java (Jenkins requirement):
-  ```bash
-  sudo apt install openjdk-17-jdk
-- Configurate the jenkins repository key:
-  ```bash
-  curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | gpg --dearmor | sudo tee /etc/apt/keyrings/jenkins.gpg > /dev/null
-- Dowload the jenkins repository:
-  ```bash
-  echo "deb [signed-by=/etc/apt/keyrings/jenkins.gpg] https://pkg.jenkins.io/debian binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
-- Update packages and install jenkins:
-  ```bash
-  sudo apt update
-  sudo apt install jenkins
-- Start jenkins:
-  ```bash
-  sudo systemctl start jenkins
-  sudo systemctl enable jenkins
-- Use the url 'localhost:8080' to access jenkins.
-- Verificando senha inicial
-  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-
-
-
-
-</details>
 
 ## Data extraction
 
-[Extract](project1/pipeline/1.extraction/)
+- Run the file [population_extraction.py](project1/pipeline/1.extraction/population_extraction.py) to extract the data from the ibge api and stores it in duckdb.
 
 ## Data ingestion
 
-[Ingestion](project1/pipeline/2.ingestion/)
+- Create the [main.tf](project1/infra/main.tf) file with the specifications of the remote environment you want to create.
+- Create the EC2 instance with postgres installed and the necessary database using the commands:
+  - Create an execution plan (previews changes without applying them):
+    ```bash
+    terraform plan
+    ```
+  - Apply the configuration to provision the infrastructure:
+    ```bash
+    terraform apply
+    ```
+- Run the file [population_ingestion.py](project1/pipeline/2.ingestion/population_ingestion.py) in python to import the data from duckdb to a postgreSQL in a remote EC2 environment.
+
+## Data transformation
+
+- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the queries defined.
+[DBT models folder](project1/pipeline/3.transformation/dbt_project1/models/)
 
 ## Data visualization
 
@@ -504,6 +554,10 @@ airflow dags unpause dag
 
 <summary> Streamlit </summary>
 
+- Create an [app.py](project1/pipeline/4.service/streamlit/app.py) file defining the connections and visualisation options you want to build.
+- To avoid leaking credentials, set up variables within the streamlit application.
+![alt text](project1/doc/streamlit_secrets.png)
+
 </details>
 <details>
 
@@ -516,62 +570,41 @@ airflow dags unpause dag
 
 </details>
 
-## Tasks Orchestration (Airflow)
+## Tasks Orchestration (Airflow + Jenkins)
 
-- Airflow + Jenkins integration
-- Install the airflow+jenkins provider:
+This step brings everything together in an automated process where:
+1. The dag contains the 4 stages of execution: extraction, ingestion, transformation and service.
+2. Airflow reads the project dag and uploads it to your database with the schedule.
+3. We execute the dag manually using a flow in jenkins.
+
+- Run airflow (and its sub-processes) and jenkins.
+- Generate an airflow API token for connection and set as a secret text in jenkins:
   ```bash
-  pip install apache-airflow-providers-jenkins
-- Open airflow in another port (ex:9090) and open jenkins in port 8080.
-- Gere um token da API do airflow para conexao ou faça o jenkins gerar automaticamente configurando um secret
   curl -X POST http://localhost:9090/auth/token \
   -H "Content-Type: application/json" \
   -d '{"username": "admin", "password": "sua_senha"}'
-- Instale o plugin http request no jenkins
-- Altere a variavel de ambiente do airflow para pegar a dag da pasta desejada:
-  export AIRFLOW__CORE__DAGS_FOLDER=/caminho/completo/para/seu/project1/dags
-- Reinicie o airflow
-- use este comando
-  airflow scheduler
-- Instale o CLI do jenkins
-  wget http://localhost:8080/jnlpJars/jenkins-cli.jar
-- Teste o CLI
-  java -jar jenkins-cli.jar -s http://localhost:8080/ help
-- Criando job no jenkins
-  chmod +x criar_job_com_token.sh
-./criar_job_com_token.sh
-- Instale jq
+  ```
+- In the jenkins interface install the http request plugin
+- Intall jq library:
+  ```bash
   sudo apt update
-sudo apt install jq
-- Ativando o job por CLI
+  sudo apt install jq
+- To upload the stream for the first time in jenkins use:
+  ```bash
   java -jar jenkins-cli.jar -s http://localhost:8080/ -auth "$JENKINS_USER:$JENKINS_TOKEN" build pipeline_airflow_ibge
-- Gerar token airflow
-  curl -X POST http://localhost:9090/auth/token \
-  -H "Content-Type: application/json" \
-  -d '{"username": "admin", "password": "SUA_SENHA_AQUI"}'
-- Ligue o scheduler
-  airflow scheduler
-- Verificar processos ativos
-  ps aux | grep airflow
-- Terminando o scheduler
-  pkill -f "airflow scheduler"
-- Se o scheduler der erro por a porta ja estar sendo utilizar usar este comando para ver os processos e matar
-  lsof -i :8793
-  kill -9 <pid>
-- Verificar a pasta onde devem estar as dags (se necessario mude o campo dags_folder do ~/airflow/airflow.cfg)
-  airflow config get-value core dags_folder
-- Altere o campo dag_discovery_safe_mode para False se quiser que ele ache dags que não tenham airflow e dag no nome
-load_examples = False
+- Create the jenkinsfile (He defines what the jenkins should do).
+- Create the .sh file (It updates the jenkinsfile) and grant permission to run it:
+  ```bash
+  chmod +x jenkins_job.sh
+- Run the .sh file:
+  ``bash
+  ./jenkins_job.sh
 
-para testar as dags (rodar no python)
-from airflow.models import DagBag
-dagbag = DagBag()
-dagbag.dags.keys()
-dagbag.import_errors
+- In jenkins the process should appear like this:
+![alt text](project1/doc/jenkins.png)
 
-
-pip install apache-airflow[cncf.kubernetes]
-
+- In the airflow the dag should appear like this:
+![alt text](project1/doc/airflow.png)
 
 # Project 2
 
