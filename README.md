@@ -539,9 +539,7 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 
 ## Data visualization
 
-<details>
-
-<summary> N8N data upload, transformation and save </summary>
+### N8N
 
 ![alt text](project1/doc/n8n.png)
 
@@ -549,26 +547,17 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 
 [Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)
 
-</details>
-<details>
-
-<summary> Streamlit </summary>
+### Streamlit
 
 - Create an [app.py](project1/pipeline/4.service/streamlit/app.py) file defining the connections and visualisation options you want to build.
+![alt text](project1/doc/streamlit.png)
+
 - To avoid leaking credentials, set up variables within the streamlit application.
 ![alt text](project1/doc/streamlit_secrets.png)
 
-</details>
-<details>
+### Metabase
 
-<summary> Metabase </summary>
-
-</details>
-<details>
-
-<summary> Tableau </summary>
-
-</details>
+### Tableau 
 
 ## Tasks Orchestration (Airflow + Jenkins)
 
