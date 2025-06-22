@@ -613,7 +613,19 @@ This step brings everything together in an automated process where:
 - Use este comando para verificar os logs
   docker compose -f /home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml logs -f airflow-webserver
 - Use este comando para pegar a senha do jenkins:
-  docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+  docker exec docker-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
+- Verificar se airflow encontrou as dags
+  docker exec docker-airflow-webserver-1 ls /opt/airflow/dags
+- Verificar erros de importação das dags
+  docker exec -it docker-airflow-webserver-1 airflow dags list-import-errors
+- Adicione o job pela primeira vez no jenkins
+  curl -X POST "$JENKINS_URL/createItem?name=pipeline_airflow_ibge" \
+  -u "$JENKINS_USER:$JENKINS_TOKEN" \
+  -H "$CRUMB_FIELD: $CRUMB_TOKEN" \
+  -H "Content-Type: application/xml" \
+  --data-binary @config.xml
+
+
 - Generate an airflow API token for connection and set as a secret text in jenkins:
   ```bash
  docker exec docker-airflow-webserver-1 curl -X POST http://localhost:8080/auth/token \

@@ -4,8 +4,8 @@
 # Cada etapa é executada via BashOperator para manter os imports fora do DAG.
 # ============================================================================
 
-from airflow.providers.standard.operators.bash import BashOperator
-from airflow.providers.standard.operators.empty import EmptyOperator
+from airflow.operators.bash import BashOperator
+from airflow.operators.empty import EmptyOperator
 from airflow import DAG
 from datetime import datetime, timedelta
 
