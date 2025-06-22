@@ -12,7 +12,7 @@ JENKINSFILE_PATH="jenkinsfile"
 JENKINSFILE=$(<"$JENKINSFILE_PATH")
 
 # === Obtém crumb CSRF ===
-CRUMB_RESPONSE=$(curl -s -u "$JENKINS_USER:$JENKINS_PASS" "$JENKINS_URL/crumbIssuer/api/json")
+CRUMB_RESPONSE=$(curl -s -u "$JENKINS_USER:$JENKINS_TOKEN" "$JENKINS_URL/crumbIssuer/api/json")
 CRUMB_FIELD=$(echo "$CRUMB_RESPONSE" | jq -r '.crumbRequestField')
 CRUMB_TOKEN=$(echo "$CRUMB_RESPONSE" | jq -r '.crumb')
 
@@ -35,14 +35,14 @@ EOF
 
 # === Verifica se o job já existe ===
 EXISTE=$(curl -s -o /dev/null -w "%{http_code}" \
-  -u "$JENKINS_USER:$JENKINS_PASS" \
+  -u "$JENKINS_USER:$JENKINS_TOKEN" \
   "$JENKINS_URL/job/$JOB_NAME/api/json")
 
 if [ "$EXISTE" -eq 200 ]; then
   echo "🔄 Job '$JOB_NAME' já existe. Atualizando configuração..."
   echo "$PIPELINE_XML" | curl -s -o /dev/null \
     -X POST "$JENKINS_URL/job/$JOB_NAME/config.xml" \
-    -u "$JENKINS_USER:$JENKINS_PASS" \
+    -u "$JENKINS_USER:$JENKINS_TOKEN" \
     -H "$CRUMB_FIELD: $CRUMB_TOKEN" \
     -H "Content-Type: application/xml" \
     --data-binary @-
@@ -50,7 +50,7 @@ else
   echo "🆕 Job '$JOB_NAME' não existe. Criando novo job..."
   echo "$PIPELINE_XML" | curl -s -o /dev/null \
     -X POST "$JENKINS_URL/createItem?name=$JOB_NAME" \
-    -u "$JENKINS_USER:$JENKINS_PASS" \
+    -u "$JENKINS_USER:$JENKINS_TOKEN" \
     -H "$CRUMB_FIELD: $CRUMB_TOKEN" \
     -H "Content-Type: application/xml" \
     --data-binary @-
@@ -59,7 +59,7 @@ fi
 # === Aciona o build ===
 BUILD_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
   -X POST "$JENKINS_URL/job/$JOB_NAME/build" \
-  -u "$JENKINS_USER:$JENKINS_PASS" \
+  -u "$JENKINS_USER:$JENKINS_TOKEN" \
   -H "$CRUMB_FIELD: $CRUMB_TOKEN")
 
 if [ "$BUILD_STATUS" -eq 201 ]; then

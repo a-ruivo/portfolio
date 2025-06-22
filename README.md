@@ -624,7 +624,8 @@ This step brings everything together in an automated process where:
   -H "$CRUMB_FIELD: $CRUMB_TOKEN" \
   -H "Content-Type: application/xml" \
   --data-binary @config.xml
-
+- Crie uma chave da API na tela de segurança do jenkins e use no .sh
+- Adicione a chave de API do airflow no jenkins como secret text
 
 - Generate an airflow API token for connection and set as a secret text in jenkins:
   ```bash
