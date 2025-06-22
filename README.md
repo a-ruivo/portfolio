@@ -99,6 +99,10 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 - Install dependencies from a requirements.txt file or directly via pip:
   ```bash
   pip install -r <path_to_requirements.txt>
+- Create requirements.txt:
+  ```bash
+  pip freeze > requirements.txt
+
 
 </details>
 <details>

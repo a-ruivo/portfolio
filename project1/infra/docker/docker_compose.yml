@@ -9,7 +9,7 @@ services:
       - postgres_db:/var/lib/postgresql/data
 
   airflow-webserver:
-    image: apache/airflow:2.7.0
+    image: apache/airflow:2.7.0-python3.11
     depends_on:
       - postgres
     environment:
@@ -20,12 +20,16 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
       - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+      - /home/ruivo/analytics_engineer/portfolio/project1/pipeline:/opt/airflow/pipeline
+      - /home/ruivo/analytics_engineer/portfolio/project1/requirements.txt:/opt/airflow/requirements.txt
     ports:
       - "8080:8080"
-    command: webserver
+    command: >
+      bash -c "pip install -r /opt/airflow/requirements.txt && airflow webserver"
+
 
   airflow-scheduler:
-    image: apache/airflow:2.7.0
+    image: apache/airflow:2.7.0-python3.11
     depends_on:
       - airflow-webserver
     environment:
@@ -33,18 +37,26 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
       - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
-    command: scheduler
+      - /home/ruivo/analytics_engineer/portfolio/project1/pipeline:/opt/airflow/pipeline
+      - /home/ruivo/analytics_engineer/portfolio/project1/requirements.txt:/opt/airflow/requirements.txt
+    command: >
+      bash -c "pip install -r /opt/airflow/requirements.txt && airflow scheduler"
+
 
   airflow-init:
-    image: apache/airflow:2.7.0
+    image: apache/airflow:2.7.0-python3.11
     depends_on:
       - postgres
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    command: db init
     volumes:
       - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+      - /home/ruivo/analytics_engineer/portfolio/project1/pipeline:/opt/airflow/pipeline
+      - /home/ruivo/analytics_engineer/portfolio/project1/requirements.txt:/opt/airflow/requirements.txt
+    command: >
+      bash -c "pip install -r /opt/airflow/requirements.txt && airflow db init"
+
 
 
   jenkins:

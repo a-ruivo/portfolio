@@ -9,7 +9,7 @@ from airflow.operators.empty import EmptyOperator
 from airflow import DAG
 from datetime import datetime, timedelta
 
-BASE_PATH = "/home/ruivo/analytics_engineer/portfolio/project1/pipeline"
+BASE_PATH = "/opt/airflow/pipeline"
 
 default_args = {
     'start_date': datetime(2025, 1, 1),
