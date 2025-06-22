@@ -38,7 +38,7 @@ pipeline {                           // Início da definição do pipeline no Je
                         // Realiza uma requisição HTTP para acionar a DAG no Airflow via API v2
                         def response = httpRequest(
                             httpMode: 'POST',                // Método HTTP POST
-                            url: 'http://localhost:9090/api/v2/dags/pipeline_ibge_dag_airflow/dagRuns',
+                            url: 'http://localhost:8080/api/v1/dags/pipeline_ibge_dag_airflow/dagRuns',
                             // Endpoint da API do Airflow para criar uma nova execução da DAG
                             customHeaders: [[
                                 name: 'Authorization', 

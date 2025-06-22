@@ -2,7 +2,7 @@
 project1/env_project1/
 .csv
 .db
-project1/infra/.terraform/
+project1/infra/terraform/.terraform
 .terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup

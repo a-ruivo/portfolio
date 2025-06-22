@@ -1,0 +1,67 @@
+#!/bin/bash
+
+COMPOSE_PATH="/home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml"
+TERRAFORM_PATH="/home/ruivo/analytics_engineer/portfolio/project1/terraform"
+
+echo "Limpando containers anteriores..."
+docker compose -f "$COMPOSE_PATH" down -v
+
+echo "Subindo ambiente Airflow + Jenkins..."
+
+echo "Subindo o PostgreSQL..."
+docker compose -f "$COMPOSE_PATH" up -d postgres
+
+echo "Subindo o Jenkins..."
+docker compose -f "$COMPOSE_PATH" up -d jenkins
+
+echo "Inicializando banco de dados do Airflow..."
+docker compose -f "$COMPOSE_PATH" run --rm airflow-init
+
+# Carrega variáveis do .env
+set -o allexport
+source .env
+set +o allexport
+
+echo "Criando usuário administrador no Airflow..."
+docker compose -f "$COMPOSE_PATH" run --rm airflow-webserver airflow users create \
+  --username "$AIRFLOW_ADMIN_USERNAME" \
+  --firstname "$AIRFLOW_ADMIN_FIRSTNAME" \
+  --lastname "$AIRFLOW_ADMIN_LASTNAME" \
+  --role Admin \
+  --email "$AIRFLOW_ADMIN_EMAIL" \
+  --password "$AIRFLOW_ADMIN_PASSWORD"
+
+echo "Subindo webserver e scheduler do Airflow..."
+docker compose -f "$COMPOSE_PATH" up -d airflow-webserver airflow-scheduler
+
+echo "Verificando se a pasta de DAGs está sendo montada corretamente..."
+docker compose -f "$COMPOSE_PATH" exec airflow-webserver ls /opt/airflow/dags
+
+echo "Airflow: http://localhost:8080"
+echo "Jenkins: http://localhost:8081"
+
+echo ""
+read -p "Deseja provisionar a EC2 com Terraform agora? (s/n): " resposta
+
+if [[ "$resposta" == "s" || "$resposta" == "S" ]]; then
+  cd "$TERRAFORM_PATH" || { echo "Diretório Terraform não encontrado."; exit 1; }
+
+  echo "Inicializando Terraform..."
+  terraform init
+
+  echo "Validando plano de execução..."
+  terraform plan
+
+  echo ""
+  read -p "Deseja aplicar o plano e criar a EC2? (s/n): " aplicar
+
+  if [[ "$aplicar" == "s" || "$aplicar" == "S" ]]; then
+    terraform apply
+  else
+    echo "Criação da EC2 cancelada pelo usuário."
+  fi
+
+  cd ..
+else
+  echo "Etapa Terraform pulada."
+fi

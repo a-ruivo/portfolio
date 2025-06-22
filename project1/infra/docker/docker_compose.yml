@@ -1,0 +1,62 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+
+  airflow-webserver:
+    image: apache/airflow:2.7.0
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth #variavel de ambiente que permite conexao com api
+      AIRFLOW__CORE__DAG_DISCOVERY_SAFE_MODE: False # permite que o airflow encontre dags validas com qualquer nome
+      AIRFLOW__CORE__LOAD_EXAMPLES: False # faz com que o airflow não carregue dags de exemplo
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    volumes:
+      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+    ports:
+      - "8080:8080"
+    command: webserver
+
+  airflow-scheduler:
+    image: apache/airflow:2.7.0
+    depends_on:
+      - airflow-webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    volumes:
+      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+    command: scheduler
+
+  airflow-init:
+    image: apache/airflow:2.7.0
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    command: db init
+    volumes:
+      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    user: root
+    ports:
+      - "8081:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  postgres_db:
+  jenkins_home:

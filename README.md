@@ -368,9 +368,39 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 </details>
 <details>
 
+<summary> Docker </summary>
+
+sudo apt remove docker docker-engine docker.io containerd runc
+sudo apt update
+sudo apt install -y ca-certificates curl gnupg lsb-release
+
+# Adiciona a chave GPG
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+# Adiciona o repositório Docker oficial
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Atualiza e instala o Docker Engine
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+Dar permissão para usuario executar o docker
+sudo usermod -aG docker $USER
+
+
+</details>
+<details>
+
 <summary> Airflow </summary>
 
 **Apache Airflow** is an open-source platform used to programmatically author, schedule, and monitor workflows—especially data pipelines—by defining them as code using Python.
+
+In this project I'll be running airflow inside a docker container, so the settings will be inside the docker_compose.yml file. However, below are the instructions for configuring airflow locally.
 
 - Install Airflow with Celery Executor (version pinned with constraints):
   ```bash
@@ -397,6 +427,9 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 - Disable DAG filename filtering (allows DAGs without "dag"/"airflow" in the filename):
   ```bash
   export AIRFLOW__CORE__DAG_DISCOVERY_SAFE_MODE=False
+- Allow API connection
+  ```bash
+  export AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth
 - Prevent Airflow from loading example DAGs on startup:
   ```bash
   export AIRFLOW__CORE__LOAD_EXAMPLES=False
@@ -445,6 +478,8 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 <summary> Jenkins </summary>
 
 **Jenkins** is an open-source automation server that helps developers build, test, and deploy their software continuously. In this project, we will only use jenkins to perform a manual execution of the airflow dags.
+
+In this project I'll be running jenkins inside a docker container, so the settings will be inside the docker_compose.yml file. However, below are the instructions for configuring jenkins locally.
 
 - Create the keyrings folder (for secure APT keys):
   ```bash
@@ -534,7 +569,7 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 
 ## Data transformation
 
-- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the queries defined.
+- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the SQL queries defined.
 [DBT models folder](project1/pipeline/3.transformation/dbt_project1/models/)
 
 ## Data visualization
@@ -567,12 +602,23 @@ This step brings everything together in an automated process where:
 2. Airflow reads the project dag and uploads it to your database with the schedule.
 3. We execute the dag manually using a flow in jenkins.
 
-- Run airflow (and its sub-processes) and jenkins.
+- Comando para ativar o docker
+  docker compose up
+- Comando para desativar o docker
+  docker compose down
+- Criar arquivo start_project1.sh
+- Dar permissao de execução: chmod +x start_project1.sh
+- Rodar script: ./start_project1.sh
+- Verificar se containers estão rodando: docker compose -f /home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml ps
+- Use este comando para verificar os logs
+  docker compose -f /home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml logs -f airflow-webserver
+- Use este comando para pegar a senha do jenkins:
+  docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 - Generate an airflow API token for connection and set as a secret text in jenkins:
   ```bash
-  curl -X POST http://localhost:9090/auth/token \
+ docker exec docker-airflow-webserver-1 curl -X POST http://localhost:8080/auth/token \
   -H "Content-Type: application/json" \
-  -d '{"username": "admin", "password": "sua_senha"}'
+  -d '{"username": "ruivo", "password": "123456"}'
   ```
 - In the jenkins interface install the http request plugin
 - Intall jq library:
@@ -600,17 +646,6 @@ This step brings everything together in an automated process where:
 
 <details>
 
-<summary> Docker </summary>
-Installing docker
-- Instalando utilitarios do gerenciador de pacotes do linux
-sudo apt update && sudo apt install -y software-properties-common
-- Atualizando o apt e todos os pacotes
-sudo apt upgrade -y
-- Instalando o docker
-sudo apt install -y docker.io
-- Iniciando o docker
-sudo systemctl start docker
-- Para que o docker inicie junto com o sistema
-sudo systemctl enable docker
+
 
 </details>

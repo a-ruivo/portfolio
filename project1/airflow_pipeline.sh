@@ -12,7 +12,7 @@ source .env
 set +a
 
 # === Configurações ===
-JENKINS_URL="http://localhost:8080"
+JENKINS_URL="http://localhost:8081"
 JOB_NAME="pipeline_airflow_ibge"
 JENKINSFILE_PATH="jenkinsfile"   # Caminho do Jenkinsfile separado
 JENKINSFILE=$(<"$JENKINSFILE_PATH")
