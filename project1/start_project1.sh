@@ -3,6 +3,42 @@
 COMPOSE_PATH="/home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml"
 TERRAFORM_PATH="/home/ruivo/analytics_engineer/portfolio/project1/infra/terraform"
 
+echo ""
+read -p "Deseja provisionar a EC2 com Terraform agora? (s/n): " resposta
+
+echo "Efetuando login via AWS SSO..."
+aws sso login --profile default || {
+  echo "Falha no login via AWS SSO. Verifique suas configurações no ~/.aws/config."
+  exit 1
+}
+
+if [[ "$resposta" == "s" || "$resposta" == "S" ]]; then
+  cd "$TERRAFORM_PATH" || { echo "Diretório Terraform não encontrado."; exit 1; }
+
+  echo "Inicializando Terraform..."
+  terraform init
+
+  echo "Validando plano de execução..."
+  terraform plan
+
+  echo ""
+  read -p "Deseja aplicar o plano e criar a EC2? (s/n): " aplicar
+
+  if [[ "$aplicar" == "s" || "$aplicar" == "S" ]]; then
+    terraform apply
+  else
+    echo "Criação da EC2 cancelada pelo usuário."
+  fi
+
+  cd ..
+else
+  echo "Etapa Terraform pulada."
+fi
+
+EC2_IP=$(terraform output -raw ec2_public_ip)
+
+sed -i "s/^EC2_HOST=.*/EC2_HOST=$EC2_IP/" /home/ruivo/analytics_engineer/portfolio/project1/.env
+
 echo "Limpando containers anteriores..."
 docker compose -f "$COMPOSE_PATH" down -v
 
@@ -40,34 +76,5 @@ docker compose -f "$COMPOSE_PATH" exec airflow-webserver ls /opt/airflow/dags
 echo "Airflow: http://localhost:8080"
 echo "Jenkins: http://localhost:8081"
 
-echo ""
-read -p "Deseja provisionar a EC2 com Terraform agora? (s/n): " resposta
 
-echo "Efetuando login via AWS SSO..."
-aws sso login --profile default || {
-  echo "Falha no login via AWS SSO. Verifique suas configurações no ~/.aws/config."
-  exit 1
-}
 
-if [[ "$resposta" == "s" || "$resposta" == "S" ]]; then
-  cd "$TERRAFORM_PATH" || { echo "Diretório Terraform não encontrado."; exit 1; }
-
-  echo "Inicializando Terraform..."
-  terraform init
-
-  echo "Validando plano de execução..."
-  terraform plan
-
-  echo ""
-  read -p "Deseja aplicar o plano e criar a EC2? (s/n): " aplicar
-
-  if [[ "$aplicar" == "s" || "$aplicar" == "S" ]]; then
-    terraform apply
-  else
-    echo "Criação da EC2 cancelada pelo usuário."
-  fi
-
-  cd ..
-else
-  echo "Etapa Terraform pulada."
-fi
