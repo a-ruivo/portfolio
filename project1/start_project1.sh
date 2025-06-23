@@ -1,7 +1,7 @@
 #!/bin/bash
 
 COMPOSE_PATH="/home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml"
-TERRAFORM_PATH="/home/ruivo/analytics_engineer/portfolio/project1/terraform"
+TERRAFORM_PATH="/home/ruivo/analytics_engineer/portfolio/project1/infra/terraform"
 
 echo "Limpando containers anteriores..."
 docker compose -f "$COMPOSE_PATH" down -v
@@ -42,6 +42,12 @@ echo "Jenkins: http://localhost:8081"
 
 echo ""
 read -p "Deseja provisionar a EC2 com Terraform agora? (s/n): " resposta
+
+echo "Efetuando login via AWS SSO..."
+aws sso login --profile default || {
+  echo "Falha no login via AWS SSO. Verifique suas configurações no ~/.aws/config."
+  exit 1
+}
 
 if [[ "$resposta" == "s" || "$resposta" == "S" ]]; then
   cd "$TERRAFORM_PATH" || { echo "Diretório Terraform não encontrado."; exit 1; }

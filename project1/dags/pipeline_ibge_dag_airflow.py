@@ -6,10 +6,11 @@
 
 from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
+from airflow.operators.docker import DockerOperator
 from airflow import DAG
 from datetime import datetime, timedelta
 
-BASE_PATH = "/opt/airflow/pipeline"
+BASE_PATH = "/opt/airflow/project1/pipeline"
 
 default_args = {
     'start_date': datetime(2025, 1, 1),
@@ -36,9 +37,18 @@ ingest = BashOperator(
     dag=dag,
 )
 
-transform = BashOperator(
+transform = DockerOperator(
     task_id="transform_population",
-    bash_command=f"bash {BASE_PATH}/3.transformation/dbt_project1/run_dbt.sh",
+    image="ghcr.io/dbt-labs/dbt-postgres:1.10.1",
+    api_version="auto",
+    auto_remove=True,
+    command="run",
+    docker_url="unix://var/run/docker.sock",
+    network_mode="bridge",
+    volumes=[
+        "/home/ruivo/analytics_engineer/portfolio/project1/pipeline/3.transformation/dbt_project1:/usr/app"
+    ],
+    working_dir="/usr/app",
     dag=dag,
 )
 

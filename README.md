@@ -630,6 +630,10 @@ This step brings everything together in an automated process where:
   --data-binary @config.xml
 - Crie uma chave da API na tela de segurança do jenkins e use no .sh
 - Adicione a chave de API do airflow no jenkins como secret text
+- Para acessar o terminal de um docker
+  docker exec -it docker-airflow-webserver-1 bash
+
+
 
 - Generate an airflow API token for connection and set as a secret text in jenkins:
   ```bash

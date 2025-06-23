@@ -19,13 +19,11 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
-      - /home/ruivo/analytics_engineer/portfolio/project1/pipeline:/opt/airflow/pipeline
-      - /home/ruivo/analytics_engineer/portfolio/project1/requirements.txt:/opt/airflow/requirements.txt
+      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
     ports:
       - "8080:8080"
     command: >
-      bash -c "pip install -r /opt/airflow/requirements.txt && airflow webserver"
+      bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow webserver"
 
 
   airflow-scheduler:
@@ -36,11 +34,9 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
-      - /home/ruivo/analytics_engineer/portfolio/project1/pipeline:/opt/airflow/pipeline
-      - /home/ruivo/analytics_engineer/portfolio/project1/requirements.txt:/opt/airflow/requirements.txt
+      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
     command: >
-      bash -c "pip install -r /opt/airflow/requirements.txt && airflow scheduler"
+      bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow scheduler"
 
 
   airflow-init:
@@ -51,11 +47,9 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
-      - /home/ruivo/analytics_engineer/portfolio/project1/pipeline:/opt/airflow/pipeline
-      - /home/ruivo/analytics_engineer/portfolio/project1/requirements.txt:/opt/airflow/requirements.txt
+      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
     command: >
-      bash -c "pip install -r /opt/airflow/requirements.txt && airflow db init"
+      bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow db init"
 
 
 
