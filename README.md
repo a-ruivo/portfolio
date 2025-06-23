@@ -1,10 +1,9 @@
-<h1 align="center"> Portfolio - Allan Ruivo Wildner </h1>
-My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the personal projects I've developed as part of my journey to grow as a professional.
+# Portfolio - Allan Ruivo Wildner
+Welcome! My name is Allan Ruivo Wildner, and this repository is intended to present my portfolio of personal projects. Here, you will find the projects I have developed throughout my journey of learning and professional growth in the field of technology.
 
 # Summary
 - [Useful Knowledge](#useful-knowledge)
 - [Project 1](#project-1)
-- [Project 2](#project-2)
 
 # Useful Knowledge
 
@@ -65,21 +64,11 @@ Here are some commonly used Linux commands for navigating and managing files and
 
 A **Python virtual environment** is an isolated folder that lets you manage dependencies for a specific project without affecting others.
 
-- Create a virtual environment in your project directory:
-  ```bash
-  python3 -m venv <env_name>
-- Activate the environment:
-  ```bash
-  source <env_name>/bin/activate
-- Deactivate the environment:
-  ```bash
-  deactivate
-- Install dependencies from a requirements.txt file or directly via pip:
-  ```bash
-  pip install -r <path_to_requirements.txt>
-- Create requirements.txt:
-  ```bash
-  pip freeze > requirements.txt
+- `python3 -m venv <env_name>` — Create a virtual environment in your project directory.
+- `source <env_name>/bin/activate` — Activate the environment.
+- `deactivate` — Deactivate the environment.
+- `pip install -r <path_to_requirements.txt>` — Install dependencies from a requirements.txt file or directly via pip.
+- `pip freeze > requirements.txt` — Create requirements.txt.
 </details>
 <details>
 
@@ -88,9 +77,7 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 **Visual Studio Code** (VS Code) is a lightweight, open-source code editor with built-in support for debugging, version control, and extensions across many programming languages.
 
 - Install **Visual Studio Code** from the Microsoft Store.
-- Launch VS Code and open a **WSL terminal**. Then run:
-  ```bash
-  code
+- `code` — Run it int VS Code **WSL terminal**.
 </details>
 <details>
 
@@ -98,32 +85,18 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 
 **Git** is a free and open-source distributed version control system that allows developers to track changes in source code, collaborate on projects, and manage different versions of files efficiently and securely.
 
-- Install Git (available via package manager or official site).
-- Configure your GitHub credentials:
-  ```bash
-  git config --global user.name "<your_name>"
-  git config --global user.email "<your_email>"
-- In the directory you want to turn into a Git repository:
-  ```bash
-  git init -b <branch_name>
+- `sudo apt update && sudo apt install git -y` — Install Git.
+- `git config --global user.name "<your_name>"` — Configure github name credential.
+- `git config --global user.email "<your_email>"` — Configure github email credential.
+- `git init -b <branch_name>` — To transform a local repository in a remote repository.
 - Set up SSH authentication for GitHub: Go to GitHub → Settings → SSH and GPG Keys → click New SSH Key.
-- On WSL/Linux, generate a new key:
-  ```bash
-  ssh-keygen -t ed25519 -C "your_email@example.com"
-- (Press Enter three times to accept the defaults)
-- Start the SSH agent:
-  ```bash
-  eval "$(ssh-agent -s)"
-- Add the SSH private key to the agent:
-  ```bash
-  ssh-add ~/.ssh/id_ed25519
-- To view and copy your public key:
-  ```bash
-  cat ~/.ssh/id_ed25519.pub
-- Paste the copied key into GitHub when creating the new SSH Key.
-- To clone an existing repository into VS Code:
-  ```bash
-  git clone <repository_url>
+- ssh-keygen -t ed25519 -C "your_email@example.com" — Generate a ssh key.
+> (Press Enter three times to accept the defaults)
+- `eval "$(ssh-agent -s)"` — Start the SSH agent.
+- `ssh-add ~/.ssh/id_ed25519` — Add the SSH private key to the agent.
+- `cat ~/.ssh/id_ed25519.pub` — View the public key.
+> Paste the copied key into GitHub when creating the new SSH Key.
+- `git clone <repository_url>` — Clone an existing repository into VS Code.
 </details>
 <details>
 
@@ -156,12 +129,8 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 
 To standardize commit messages, you can use the [**Commitizen**] library:
 
-- Install Commitizen:
-  ```bash
-  pip install -U commitizen
-- Use interactive commit formatting:
-  ```bash
-  cz commit
+- `pip install -U commitizen` — Install commitizen.
+- `cz commit` — Use interactive commit formatting.
 </details>
 <details>
 
@@ -169,23 +138,17 @@ To standardize commit messages, you can use the [**Commitizen**] library:
 
 The **AWS CLI (Command Line Interface)** is a tool that lets you manage and automate AWS services directly from your terminal using simple text commands.
 
-- Install the AWS CLI:
-  ```bash
-  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-  unzip awscliv2.zip
-  sudo ./aws/install
+- `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`  — Dowload the installation package.
+- `unzip awscliv2.zip` — Unzip the file.
+- `sudo ./aws/install` — Install the AWS CLI.
 - In your AWS account, configure an IAM user with the necessary permissions.
-- Set up Single Sign-On (SSO) in the terminal:
-  ```bash
-  aws configure sso
-- Provide the following details when prompted:
-- SSO session name (Recommended): <session_name>
-- SSO start URL [None]: <IAM_start_URL>
-- SSO region [None]: <AWS_region>
-- SSO registration scopes [None]: sso:account:access
-- Log in to your AWS session:
-  ```bash
-  aws sso login --profile default
+- `aws configure sso` — Configure SSO
+> Provide the following details when prompted:
+  SSO session name (Recommended): <session_name>
+  SSO start URL [None]: <IAM_start_URL>
+  SSO region [None]: <AWS_region>
+  SSO registration scopes [None]: sso:account:access
+- `aws sso login --profile default` — Log in to your AWS session.
 </details>
 <details>
 
@@ -193,20 +156,10 @@ The **AWS CLI (Command Line Interface)** is a tool that lets you manage and auto
 
 **Terraform** is an open-source Infrastructure as Code (IaC) tool that allows you to provision, manage, and version cloud infrastructure using declarative configuration files.
 
-- Install Terraform:
-  ```bash
-  sudo apt-get install terraform
-- Initialize your Terraform project (downloads necessary providers and sets up the working directory):
-  ```bash
-  terraform init
-- Create an execution plan (previews changes without applying them):
-  ```bash
-  terraform plan
-  ```
-- Apply the configuration to provision the infrastructure:
-  ```bash
-  terraform apply
-  ```
+- `sudo apt-get install terraform` — Install terraform.
+- `terraform init` — Initialize your Terraform project (downloads necessary providers and sets up the working directory). 
+- `terraform plan` — Create an execution plan (previews changes without applying them).
+- `terraform apply` — Apply the configuration to provision the infrastructure.
 </details>
 <details>
 
@@ -220,9 +173,7 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 
 - Create an EC2 instance via the AWS Console, making sure to configure an **SSH key pair** during setup.  
 - Configure **Security Group rules**, such as opening port 22 for SSH access.
-- Connect to the EC2 instance (each AMI has a default username, such as `ec2-user`):
-  ```bash
-  ssh -i ~/.ssh/ec2-key.pem ec2-user@<ec2-public-dns>
+- `ssh -i ~/.ssh/ec2-key.pem ec2-user@<ec2-public-dns>` — Connect to the EC2 instance (each AMI has a default username).
 </details>
 <details>
 
@@ -230,77 +181,35 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 
 **PostgreSQL** is a free and open-source relational database management system known for its reliability, extensibility, and full compliance with SQL standards.
 
-Adjustments necessary to enable remote access to your PostgreSQL instance on EC2:
-- Enabled external listening Updated postgresql.conf by setting:
-  listen_addresses = '*' (remove "#")
-- Allowed external connections Edited pg_hba.conf to add:
-  host all all 0.0.0.0/0 md5
-- Restarted PostgreSQL Applied config changes by restarting the PostgreSQL service.
-- Opened firewall access Ensured EC2's Security Group allows inbound traffic on port 5432 from your IP or all IPs (for testing).
-- Verified PostgreSQL is running and listening externally Used netstat to confirm it's listening on 0.0.0.0:5432.
-- Corrected credentials and connection IP Fixed host IP and confirmed that the database, user, and permissions were properly set.
+> Adjustments necessary to enable remote access to your PostgreSQL instance on EC2:
+  Enabled external listening Updated postgresql.conf by setting: listen_addresses = '*' (remove "#")
+  Allowed external connections Edited pg_hba.conf to add: host all all 0.0.0.0/0 md5
+  Restarted PostgreSQL Applied config changes by restarting the PostgreSQL service.
+  Opened firewall access Ensured EC2's Security Group allows inbound traffic on port 5432 from your IP or all IPs (for testing).
+  Verified PostgreSQL is running and listening externally Used netstat to confirm it's listening on 0.0.0.0:5432.
+  Corrected credentials and connection IP Fixed host IP and confirmed that the database, user, and permissions were properly set.
 
-- Install PostgreSQL:
-  ```bash
-  sudo apt update
-  sudo apt install -y postgresql-14
-- Check for an active cluster:
-  ```bash
-  pg_lsclusters
-- Open postgreSQL (default database = postgres):
-  ```bash
-  psql -U user -d database
-- Open postgreSQL:
-  ```bash
-  psql -U user -d database
-- Create schema
-  ```bash
-  CREATE SCHEMA schema_name;
-- Create database
-  ```bash
-  CREATE DATABASE my_bank -- Name of the database to be created.
-     WITH OWNER = my_user -- Server user who will be the owner of the database.
-          TEMPLATE = template1 -- Database that will be used as a template for creating the new database.
-          ENCODING = ‘UTF8’ -- Type of encoding for the data that will be stored in the database.
-          TABLESPACE = pg_default -- Tablespace where the database will be physically created.
-          CONNECTION LIMIT = 100; -- Maximum number of simultaneous connections allowed in the database.
-- Create table
-  ```bash
-  CREATE TABLE my_table -- Name of the table
-  (
-      <field1> <data type>, 
-      <field2> <data type>, 
-      <field3> <data type>
-  );
-- Create user
-  ```bash
-  CREATE ROLE my_user WITH LOGIN PASSWORD 'my_password' SUPERUSER CREATEDB CREATEROLE;
-- `\h` - Help
-- `\q` - Return
-- `\l`- View databases
-- `\dn` - View schemas
-- `\dt` - view tables
-- `exit` - Exit
-- `\c database`- Enter database
-- Delete table
-  ```bash
-  DROP TABLE nome_da_tabela;
-- Checking configurations
-   ```bash
-  sudo nano /var/lib/pgsql/data/postgresql.conf
-- Reload config file
-  ```bash
-  cd /tmp
-  sudo -u postgres pg_ctl reload -D /var/lib/pgsql/data
-- Checking host-base authentication
-   ```bash
-  sudo nano /var/lib/pgsql/data/pg_hba.conf
-- Restarting postrgreSQL
-  ```bash
-  sudo systemctl restart postgresql
-- See users
-  ```bash
-  \du
+- `sudo apt update && sudo apt install -y postgresql-14` — Install PostgreSQL.
+- `pg_lsclusters` — Check for an active cluster.
+- `psql -U user -d database` — Open postgreSQL (default database = postgres).
+- `psql -U user -d database` — Open postgreSQL.
+- `CREATE SCHEMA schema_name;` — Create schema.
+- `CREATE DATABASE my_bank WITH OWNER = my_user TEMPLATE = template1 ENCODING = ‘UTF8’ TABLESPACE = pg_default CONNECTION LIMIT = 100;` — Create database.
+- `CREATE TABLE my_table (<field1> <data type>, <field2> <data type>, <field3> <data type>);` — Create table.
+- `CREATE ROLE my_user WITH LOGIN PASSWORD 'my_password' SUPERUSER CREATEDB CREATEROLE;` — Create user.
+- `\h` - Help.
+- `\q` - Return.
+- `\l`- View databases.
+- `\dn` - View schemas.
+- `\dt` - view tables.
+- `exit` - Exit.
+- `\c database`- Enter database.
+- `DROP TABLE nome_da_tabela;` — Delete table.
+- `sudo nano /var/lib/pgsql/data/postgresql.conf` — Check configurations.
+- `cd /tmp && sudo -u postgres pg_ctl reload -D /var/lib/pgsql/data` — Reload config files.
+- `sudo nano /var/lib/pgsql/data/pg_hba.conf` — Checking host-base authentication.
+- `sudo systemctl restart postgresql` — Restarting postgreSQL.
+- `\du` — View users.
 </details>
 <details>
 
