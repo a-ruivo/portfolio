@@ -3,6 +3,11 @@
 COMPOSE_PATH="/home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml"
 TERRAFORM_PATH="/home/ruivo/analytics_engineer/portfolio/project1/infra/terraform"
 
+# Carrega variáveis do .env
+set -o allexport
+source .env
+set +o allexport
+
 echo ""
 read -p "Deseja provisionar a EC2 com Terraform agora? (s/n): " resposta
 
@@ -70,11 +75,6 @@ docker compose -f "$COMPOSE_PATH" up -d jenkins
 
 echo "Inicializando banco de dados do Airflow..."
 docker compose -f "$COMPOSE_PATH" run --rm airflow-init
-
-# Carrega variáveis do .env
-set -o allexport
-source .env
-set +o allexport
 
 echo "Criando usuário administrador no Airflow..."
 docker compose -f "$COMPOSE_PATH" run --rm airflow-webserver airflow users create \

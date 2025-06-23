@@ -2,34 +2,17 @@
 My name is Allan Ruivo Wildner, and this repository serves as a portfolio of the personal projects I've developed as part of my journey to grow as a professional.
 
 # Summary
+- [Useful Knowledge](#useful-knowledge)
 - [Project 1](#project-1)
 - [Project 2](#project-2)
 
-# Project 1 
-
-**Project 1** is a personal initiative focused on strengthening my skills with a variety of tools and applying them **in practice**. The project involved the following key steps:
-- Extracting data from the IBGE API and modeling it using a star schema.
-- Storing the data in a remote environment.
-- Making the data accessible in different formats.
-- Automating the process with terraform+airflow+jenkins.
-
-The tech stack included: PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, Tableau, DBT, Jenkins and n8n.
-
-Project:
-![alt text](project1/doc/project1_structure.png)
-
-Dimensional model:
-![alt text](project1/doc/model.png)
-
-## Setting up the basic infrastructure
+# Useful Knowledge
 
 <details>
 
 <summary> Using WSL: Key Steps and Commands </summary>
 
 **WSL** (Windows Subsystem for Linux) lets you run a full Linux environment directly on Windows without using a virtual machine or dual boot.
-
-I chose to work with Linux to deepen my understanding of the operating system. However, I opted for WSL (Windows Subsystem for Linux) to maintain compatibility with essential tools like Tableau, which aren't supported on Linux.
 
 Here’s a quick guide to setting up and managing **WSL (Windows Subsystem for Linux)**, along with some essential commands:
 
@@ -46,12 +29,9 @@ Here’s a quick guide to setting up and managing **WSL (Windows Subsystem for L
 - `free -h` — Displays memory and swap usage.  
 - `wsl --manage <distro> --resize <memory>` — Adjusts the memory limit for a distribution.  
 - `wsl --shutdown` — Gracefully shuts down all running WSL instances.
-
 </details>
-
 <details>
-
-<summary> Basic Linux Commands (via WSL) </summary>
+<summary> Basic Linux Commands </summary>
 
 **Linux** is a free, open-source operating system known for its stability, security, and use across servers, desktops, and embedded systems.
 
@@ -65,10 +45,9 @@ Here are some commonly used Linux commands for navigating and managing files and
 - `rm -rf <directory>` — Deletes a directory and its contents recursively.  
 - `mkdir <directory>` — Creates a new directory.  
 - `sudo` — Runs a command with superuser (admin) privileges.
-
+- `chmod` — Aumentar a permissão de um arquivo. 
 </details>
 <details>
-
 <summary> Python Setup </summary>
 
 **Python** is a versatile, high-level programming language known for its readability and wide range of applications.
@@ -79,7 +58,6 @@ Here are some commonly used Linux commands for navigating and managing files and
   - Select the option to **add Python to the system PATH**.
 - After installation, verify that Python is accessible from your WSL environment by running `python` or `python3`.  
   If the command is not recognized, add the Python installation path manually via **Windows Environment Variables**.
-
 </details>
 <details>
 
@@ -102,8 +80,6 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 - Create requirements.txt:
   ```bash
   pip freeze > requirements.txt
-
-
 </details>
 <details>
 
@@ -115,7 +91,6 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 - Launch VS Code and open a **WSL terminal**. Then run:
   ```bash
   code
-
 </details>
 <details>
 
@@ -149,7 +124,6 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 - To clone an existing repository into VS Code:
   ```bash
   git clone <repository_url>
-
 </details>
 <details>
 
@@ -176,10 +150,8 @@ A **Python virtual environment** is an isolated folder that lets you manage depe
 - `git pull` — Fetches and merges changes from the remote repository into the current branch.  
 - `git rebase <target-branch>` — Reapplies commits on top of another branch.  
 - `git restore --staged <file1> <file2>` — Unstages files that were added with `git add`.
-
 </details>
 <details>
-
 <summary> Commit Standardization (Commitizen) </summary>
 
 To standardize commit messages, you can use the [**Commitizen**] library:
@@ -190,11 +162,7 @@ To standardize commit messages, you can use the [**Commitizen**] library:
 - Use interactive commit formatting:
   ```bash
   cz commit
-
 </details>
-
-## Setting Up the Advanced Infrastructure
-
 <details>
 
 <summary> AWS CLI </summary>
@@ -218,7 +186,6 @@ The **AWS CLI (Command Line Interface)** is a tool that lets you manage and auto
 - Log in to your AWS session:
   ```bash
   aws sso login --profile default
-
 </details>
 <details>
 
@@ -232,11 +199,18 @@ The **AWS CLI (Command Line Interface)** is a tool that lets you manage and auto
 - Initialize your Terraform project (downloads necessary providers and sets up the working directory):
   ```bash
   terraform init
-
+- Create an execution plan (previews changes without applying them):
+  ```bash
+  terraform plan
+  ```
+- Apply the configuration to provision the infrastructure:
+  ```bash
+  terraform apply
+  ```
 </details>
 <details>
 
-<summary> Creating an EC2 Instance </summary>
+<summary> AWS EC2 Instance </summary>
 
 **Amazon EC2 (Elastic Compute Cloud)** is a scalable virtual server service that allows you to run applications in the cloud. It's commonly used to host websites, run backend services, or test environments on-demand.
 
@@ -249,14 +223,12 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 - Connect to the EC2 instance (each AMI has a default username, such as `ec2-user`):
   ```bash
   ssh -i ~/.ssh/ec2-key.pem ec2-user@<ec2-public-dns>
-
-<details>
 </details>
+<details>
 
-<summary> Creating a PostgreSQL database inside EC2 </summary>
+<summary> PostgreSQL </summary>
 
 **PostgreSQL** is a free and open-source relational database management system known for its reliability, extensibility, and full compliance with SQL standards.
-
 
 Adjustments necessary to enable remote access to your PostgreSQL instance on EC2:
 - Enabled external listening Updated postgresql.conf by setting:
@@ -329,9 +301,6 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 - See users
   ```bash
   \du
-
-
-
 </details>
 <details>
 
@@ -367,8 +336,7 @@ Adjustments necessary to enable remote access to your PostgreSQL instance on EC2
 - Update dbt
   ```bash
   pip install --upgrade dbt-core
-
-
+- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the SQL queries defined.
 </details>
 <details>
 
@@ -396,15 +364,22 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 Dar permissão para usuario executar o docker
 sudo usermod -aG docker $USER
 
+- Comando para ativar o docker
+  docker compose up
+- Comando para desativar o docker
+  docker compose down
 
+  - Verificar se containers estão rodando: docker compose -f docker_compose.yml ps
+- Use este comando para verificar os logs
+  docker compose -f docker_compose.yml logs -f docker_name
+- Para acessar o terminal de um docker
+  docker exec -it docker-airflow-webserver-1 bash
 </details>
 <details>
 
 <summary> Airflow </summary>
 
 **Apache Airflow** is an open-source platform used to programmatically author, schedule, and monitor workflows—especially data pipelines—by defining them as code using Python.
-
-In this project I'll be running airflow inside a docker container, so the settings will be inside the docker_compose.yml file. However, below are the instructions for configuring airflow locally.
 
 - Install Airflow with Celery Executor (version pinned with constraints):
   ```bash
@@ -476,14 +451,16 @@ In this project I'll be running airflow inside a docker container, so the settin
   dagbag.dags.keys()
   dagbag.import_errors
   ```
-
+- Verificar se airflow encontrou as dags
+  docker exec docker-airflow-webserver-1 ls /opt/airflow/dags
+- Verificar erros de importação das dags
+  docker exec -it docker-airflow-webserver-1 airflow dags list-import-errors
 </details>
 <details>
+
 <summary> Jenkins </summary>
 
 **Jenkins** is an open-source automation server that helps developers build, test, and deploy their software continuously. In this project, we will only use jenkins to perform a manual execution of the airflow dags.
-
-In this project I'll be running jenkins inside a docker container, so the settings will be inside the docker_compose.yml file. However, below are the instructions for configuring jenkins locally.
 
 - Create the keyrings folder (for secure APT keys):
   ```bash
@@ -514,12 +491,12 @@ In this project I'll be running jenkins inside a docker container, so the settin
   wget http://localhost:8080/jnlpJars/jenkins-cli.jar
 - Test the CLI connection and list available commands:
   java -jar jenkins-cli.jar -s http://localhost:8080/ help
-
+- Use este comando para pegar a senha do jenkins:
+  docker exec docker-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
 </details>
 <details>
 
 <summary> Metabase </summary>
-
 </details>
 <details>
 
@@ -530,7 +507,6 @@ In this project I'll be running jenkins inside a docker container, so the settin
 - Install streamlit
   ```bash
   pip install streamlit psycopg2-binary plotly
-
 </details>
 <details>
 
@@ -550,123 +526,64 @@ In this project I'll be running jenkins inside a docker container, so the settin
 - Opening N8N
   ```bash
   n8n
-
 </details>
 
-## Data extraction
+# Project 1 
 
-- Run the file [population_extraction.py](project1/pipeline/1.extraction/population_extraction.py) to extract the data from the ibge api and stores it in duckdb.
+**Project 1** is a personal initiative focused on strengthening my skills with a variety of tools and applying them **in practice**. The project involved the following key steps:
+- Extracting data from the IBGE API and modeling it using a star schema.
+- Storing the data in a remote environment.
+- Making the data accessible in different formats.
+- Automating the process with terraform+airflow+jenkins.
 
-## Data ingestion
+Automation proccess:
+  1. Using terraform create the EC2 instance with PostgresSQL.
+  2. Using docker create 5 containers with the applications: postgreSQL, airflow Webserver, airflow scheduler, airflow database and jenkins.
+  3. use this infrastructure to run the dag using jenkins as a trigger. The dag contains the 4 stages of execution: extraction, ingestion, transformation and service.
+  4. Everything will be executed through .sh files.
 
-- Create the [main.tf](project1/infra/main.tf) file with the specifications of the remote environment you want to create.
-- Create the EC2 instance with postgres installed and the necessary database using the commands:
-  - Create an execution plan (previews changes without applying them):
-    ```bash
-    terraform plan
-    ```
-  - Apply the configuration to provision the infrastructure:
-    ```bash
-    terraform apply
-    ```
-- Run the file [population_ingestion.py](project1/pipeline/2.ingestion/population_ingestion.py) in python to import the data from duckdb to a postgreSQL in a remote EC2 environment.
+The tech stack included: PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, Tableau, DBT, Jenkins and n8n.
 
-## Data transformation
+Project:
+![alt text](project1/doc/project1_structure.png)
 
-- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the SQL queries defined.
-[DBT models folder](project1/pipeline/3.transformation/dbt_project1/models/)
+Dimensional model:
+![alt text](project1/doc/model.png)
 
-## Data visualization
+## Steps
 
-### N8N
-
-![alt text](project1/doc/n8n.png)
-
-[Workflow](project1/pipeline/3.transformation/n8n/n8n_workflow.json)
-
-[Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)
-
-### Streamlit
-
-- Create an [app.py](project1/pipeline/4.service/streamlit/app.py) file defining the connections and visualisation options you want to build.
-- Connect your github account to streamlit indicating where it should look for the file and wait for it to run.
+1. Using linux bash install the applications necessaire: AWS CLI, Python, VS Code, Terraform, Docker, DBT, Tableau e N8N. 
+> I chose to work with Linux to deepen my understanding of the operating system. However, I opted for WSL (Windows Subsystem for Linux) to maintain compatibility with essential tools like Tableau, which aren't supported on Linux.
+2. Create the file [population_extraction.py](project1/pipeline/1.extraction/population_extraction.py) to extract the data from the ibge api and stores it in duckdb.
+3. Create the file [main.tf](project1/infra/main.tf) with the specifications of the remote environment you want to create.
+4. Create the file [population_ingestion.py](project1/pipeline/2.ingestion/population_ingestion.py) in python to import the data from duckdb to a postgreSQL in a remote EC2 environment.
+5. Creathe DBT models transforming the data:[DBT models folder](project1/pipeline/3.transformation/dbt_project1/models/)
+6. - Create an file [app.py](project1/pipeline/4.service/streamlit/app.py) defining the connections and visualisation options you want to build.
+> Connect your github account to streamlit indicating where it should look for the file and wait for it to run.
 ![alt text](project1/doc/streamlit.png)
-
-- To avoid leaking credentials, set up variables within the streamlit application.
+> To avoid leaking credentials, set up variables within the streamlit application.
 ![alt text](project1/doc/streamlit_secrets.png)
-
-### Metabase
-
-### Tableau 
-
-## Tasks Orchestration (Airflow + Jenkins)
-
-This step brings everything together in an automated process where:
-1. The dag contains the 4 stages of execution: extraction, ingestion, transformation and service.
-2. Airflow reads the project dag and uploads it to your database with the schedule.
-3. We execute the dag manually using a flow in jenkins.
-
-- Comando para ativar o docker
-  docker compose up
-- Comando para desativar o docker
-  docker compose down
-- Criar arquivo start_project1.sh
-- Dar permissao de execução: chmod +x start_project1.sh
-- Rodar script: ./start_project1.sh
-- Verificar se containers estão rodando: docker compose -f /home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml ps
-- Use este comando para verificar os logs
-  docker compose -f /home/ruivo/analytics_engineer/portfolio/project1/infra/docker/docker_compose.yml logs -f airflow-webserver
-- Use este comando para pegar a senha do jenkins:
-  docker exec docker-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
-- Verificar se airflow encontrou as dags
-  docker exec docker-airflow-webserver-1 ls /opt/airflow/dags
-- Verificar erros de importação das dags
-  docker exec -it docker-airflow-webserver-1 airflow dags list-import-errors
-- Adicione o job pela primeira vez no jenkins
-  curl -X POST "$JENKINS_URL/createItem?name=pipeline_airflow_ibge" \
-  -u "$JENKINS_USER:$JENKINS_TOKEN" \
-  -H "$CRUMB_FIELD: $CRUMB_TOKEN" \
-  -H "Content-Type: application/xml" \
-  --data-binary @config.xml
-- Crie uma chave da API na tela de segurança do jenkins e use no .sh
-- Adicione a chave de API do airflow no jenkins como secret text
-- Para acessar o terminal de um docker
-  docker exec -it docker-airflow-webserver-1 bash
-
-
-
-- Generate an airflow API token for connection and set as a secret text in jenkins:
-  ```bash
- docker exec docker-airflow-webserver-1 curl -X POST http://localhost:8080/auth/token \
-  -H "Content-Type: application/json" \
-  -d '{"username": "ruivo", "password": "123456"}'
-  ```
-- In the jenkins interface install the http request plugin
-- Intall jq library:
-  ```bash
-  sudo apt update
-  sudo apt install jq
-- To upload the stream for the first time in jenkins use:
-  ```bash
-  java -jar jenkins-cli.jar -s http://localhost:8080/ -auth "$JENKINS_USER:$JENKINS_TOKEN" build pipeline_airflow_ibge
-- Create the jenkinsfile (He defines what the jenkins should do).
-- Create the .sh file (It updates the jenkinsfile) and grant permission to run it:
-  ```bash
-  chmod +x jenkins_job.sh
-- Run the .sh file:
-  ``bash
-  ./jenkins_job.sh
-
-- In jenkins the process should appear like this:
+7. Metabase
+8. Tableau
+9. N8N:[Workflow](project1/pipeline/3.transformation/n8n/n8n_workflow.json) [Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)
+> Workflow design
+![alt text](project1/doc/n8n.png)
+10. Create the files [docker_compose.yml](project1/infra/docker/docker_compose.yml) and [Dockerfile](project1/infra/docker/Dockerfile) to activate airflow.
+11. Create the file [start_project1.sh](project1/start_project1.sh) para que execute todas estas etapas com um unico comando.
+12. Use o jenkins como gatilho para executar a dag. [jenkinsfile](project1/jenkinsfile) e [airflow_pipeline.sh](project1/airflow_pipeline.sh)
+> In jenkins the process should appear like this:
 ![alt text](project1/doc/jenkins.png)
-
-- In the airflow the dag should appear like this:
+> In the airflow the dag should appear like this:
 ![alt text](project1/doc/airflow.png)
 
-# Project 2
-
-<details>
 
 
 
-</details>
+
+
+
+
+
+
+
+
