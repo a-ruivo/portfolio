@@ -45,6 +45,9 @@ Here are some commonly used Linux commands for navigating and managing files and
 - `mkdir <directory>` — Creates a new directory.  
 - `sudo` — Runs a command with superuser (admin) privileges.
 - `chmod` — Aumentar a permissão de um arquivo. 
+- `pkill -f <"process">` — To kill a running process if needed (replace <process> with the name or pattern).
+- `lsof -i :<port>` — Find the procces using the port.
+- `kill -9 <pid>` — Kill the process.
 </details>
 <details>
 <summary> Python Setup </summary>
@@ -217,72 +220,29 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 
 **dbt** (data build tool) is a command-line tool that enables data teams to transform, test, and document data in the warehouse using modular SQL and software engineering practices.
 
-- Install DBT:
-  ```bash
-  pip install dbt-postgres
-- Configure:
-  ```bash
-  dbt init
-- Check configuration:
-  ```bash
-  dbt debug
-- Editing profiles.yml (The profiles.yml file in dbt (data build tool) is a configuration file that stores the connection settings needed for dbt to access your data warehouse):
-  ```bash
-  cd ~/.dbt
-  nano profiles.yml
-- Run the models without tests (--select to select a specific model):
-  ```bash
-  dbt run
-- Run all objects (--select to select a specific object):
-  ```bash
-  dbt build
-- Test the models (--select to select a specific model):
-  ```bash
-  dbt test
-- Import the seeds file to the database (--select to select a specific model):
-  ```bash
-  dbt seed
-- Update dbt
-  ```bash
-  pip install --upgrade dbt-core
-- Use the `dbt build` command to run all the dbt models, thus creating all the tables with their metadata according to the SQL queries defined.
+- `pip install dbt-postgres` — Install DBT.
+- `dbt init` — Configure DBT.
+- `dbt debug` — Check configuration.
+- `cd ~/.dbt && nano profiles.yml` — Editing profiles.yml (The profiles.yml file in dbt (data build tool) is a configuration file that stores the connection settings needed for dbt to access your data warehouse).
+- `dbt run` — Run the models without tests (--select to select a specific model).
+- `dbt build` — Run all objects (--select to select a specific object).
+- `dbt test` — Test the models (--select to select a specific model).
+- `dbt seed` — Import the seeds file to the database (--select to select a specific model).
+- `pip install --upgrade dbt-core` — Update DBT.
 </details>
 <details>
 
 <summary> Docker </summary>
 
-sudo apt remove docker docker-engine docker.io containerd runc
-sudo apt update
-sudo apt install -y ca-certificates curl gnupg lsb-release
-
-# Adiciona a chave GPG
-sudo mkdir -m 0755 -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-# Adiciona o repositório Docker oficial
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-  https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-# Atualiza e instala o Docker Engine
-sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-Dar permissão para usuario executar o docker
-sudo usermod -aG docker $USER
-
-- Comando para ativar o docker
-  docker compose up
-- Comando para desativar o docker
-  docker compose down
-
-  - Verificar se containers estão rodando: docker compose -f docker_compose.yml ps
-- Use este comando para verificar os logs
-  docker compose -f docker_compose.yml logs -f docker_name
-- Para acessar o terminal de um docker
-  docker exec -it docker-airflow-webserver-1 bash
+- `sudo mkdir -m 0755 -p /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg` — Add GPG key.
+- `echo \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \ https://download.docker.com/linux/ubuntu \ $(lsb_release -cs) stable" | \ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null` — Add the docker official repository.
+- `sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin` — Update and install the docker engine.
+- `sudo usermod -aG docker $USER` — Giver permission to the user to run docker.
+- `docker compose up` — Activate docker.
+- `docker compose down` — Deactivate docker.
+- `docker compose -f docker_compose.yml ps` — View containers online.
+- `docker compose -f docker_compose.yml logs -f docker_name` — Check the logs.
+- `docker exec -it docker-airflow-webserver-1 bash` — Access docker.
 </details>
 <details>
 
@@ -290,69 +250,8 @@ sudo usermod -aG docker $USER
 
 **Apache Airflow** is an open-source platform used to programmatically author, schedule, and monitor workflows—especially data pipelines—by defining them as code using Python.
 
-- Install Airflow with Celery Executor (version pinned with constraints):
-  ```bash
-  pip install "apache-airflow[celery]==3.0.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.9.txt"
-- Start the Airflow API server (default port is 8080; use -p to specify another):
-  ```bash
-  airflow api-server -p 9090
-- Access Airflow via the following URL: `localhost:9090`
-- Install the Airflow + Jenkins integration provider:
-  ```bash
-  pip install apache-airflow-providers-jenkins
-- Set the `SQL_ALCHEMY_CONN` to connect Airflow to a remote PostgreSQL (EC2):
-  ```bash
-  export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:sua_senha_segura@<ip-da-ec2>:5432/airflow
-- nstall the async PostgreSQL client library:
-  ```bash
-  pip install asyncpg
-- pip install apache-airflow[cncf.kubernetes]
-  ```bash
-  pip install apache-airflow[cncf.kubernetes]
-- Redirect Airflow to your custom DAGs folder:
-  ```bash
-  export AIRFLOW__CORE__DAGS_FOLDER=/caminho/completo/para/sua/pasta/dags
-- Disable DAG filename filtering (allows DAGs without "dag"/"airflow" in the filename):
-  ```bash
-  export AIRFLOW__CORE__DAG_DISCOVERY_SAFE_MODE=False
-- Allow API connection
-  ```bash
-  export AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth
-- Prevent Airflow from loading example DAGs on startup:
-  ```bash
-  export AIRFLOW__CORE__LOAD_EXAMPLES=False
-- `echo $VARIABLE_NAME`Use this command to check the value of an environment variable.
-- If the Airflow UI fails to load, install this dependency:
-  ```bash
-  pip install flask-appbuilder
-- Airflow requires several parallel processes — run them after the API server:
-  - DAG Processor:
-  ```bash
-  airflow dag-processor
-  ```
-  - Scheduler:
-  ```bash
-  airflow scheduler
-  ```
-  - Dag Trigger:
-  ```bash
-  airflow triggerer
-  ```
-  - Airflow worker:
-  ```bash
-  airflow celery worker
-  ```
-  - To kill a running process if needed (replace <process> with the name or pattern):
-  ```bash
-  pkill -f <"process">
-  ```
-  - If a port is already in use, find and release it:
-  ```bash
-  `lsof -i :<port>`
-  `kill -9 <pid>`
-  ``` 
-- `airflow dags list` use to list all discovered DAGs.
-- `airflow dags unpause <dag>` to unpause (activate) a specific DAG.
+- `airflow dags list` — Use to list all discovered DAGs.
+- `airflow dags unpause <dag>` — To unpause (activate) a specific DAG.
 - Python script to verify DAG imports manually:
   ```bash
   from airflow.models import DagBag
@@ -360,10 +259,8 @@ sudo usermod -aG docker $USER
   dagbag.dags.keys()
   dagbag.import_errors
   ```
-- Verificar se airflow encontrou as dags
-  docker exec docker-airflow-webserver-1 ls /opt/airflow/dags
-- Verificar erros de importação das dags
-  docker exec -it docker-airflow-webserver-1 airflow dags list-import-errors
+- `docker exec docker-airflow-webserver-1 ls /opt/airflow/dags` — Check if airflow find the dags.
+- `docker exec -it docker-airflow-webserver-1 airflow dags list-import-errors` — Check the import errors.
 </details>
 <details>
 
@@ -371,37 +268,8 @@ sudo usermod -aG docker $USER
 
 **Jenkins** is an open-source automation server that helps developers build, test, and deploy their software continuously. In this project, we will only use jenkins to perform a manual execution of the airflow dags.
 
-- Create the keyrings folder (for secure APT keys):
-  ```bash
-  sudo mkdir -p /etc/apt/keyrings
-- Updating system packages:
-  ```bash
-  sudo apt update && sudo apt upgrade
-- Install Java (required by Jenkins):
-  ```bash
-  sudo apt install openjdk-17-jdk
-- Configurate Jenkins repository key:
-  ```bash
-  curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | gpg --dearmor | sudo tee /etc/apt/keyrings/jenkins.gpg > /dev/null
-- Dowload and register the Jenkins repository:
-  ```bash
-  echo "deb [signed-by=/etc/apt/keyrings/jenkins.gpg] https://pkg.jenkins.io/debian binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
-- Update APT sources and install Jenkins:
-  ```bash
-  sudo apt update
-  sudo apt install jenkins
-- Start Jenkins to run at boot:
-  ```bash
-  sudo systemctl start jenkins
-- Access Jenkins using your browser at: http://localhost:8080
-- Check the initial admin password (required for first login):
-  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-- Dowload the Jenkins CLI:
-  wget http://localhost:8080/jnlpJars/jenkins-cli.jar
-- Test the CLI connection and list available commands:
-  java -jar jenkins-cli.jar -s http://localhost:8080/ help
-- Use este comando para pegar a senha do jenkins:
-  docker exec docker-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
+- `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` — Check the initial admin password.
+- `docker exec docker-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword` — In docker.
 </details>
 <details>
 
@@ -413,9 +281,8 @@ sudo usermod -aG docker $USER
 
 **Streamlit** is an open-source Python framework that allows you to quickly build and share interactive web apps for data science and machine learning projects using simple Python scripts.
 
-- Install streamlit
-  ```bash
-  pip install streamlit psycopg2-binary plotly
+- `pip install streamlit psycopg2-binary plotly` — Install streamlit.
+> Most configurations need to be done in the browser.
 </details>
 <details>
 
@@ -423,18 +290,10 @@ sudo usermod -aG docker $USER
 
 **N8N** is an open-source workflow automation tool that lets you connect apps, services, and custom logic to automate tasks and data flows—without needing to write full applications.
 
-- Installing NodeJS
-  ```bash
-  sudo apt install nodejs
-- Installing NPM
-  ```bash
-  sudo apt install npm
-- Installing N8N
-  ```bash
-  npm install n8n -g
-- Opening N8N
-  ```bash
-  n8n
+- `sudo apt install nodejs` — Installing NodeJS (N8N requirements).
+- `sudo apt install npm` — Installing NPM (N8N requirements).
+- `npm install n8n -g` — Installing N8N.
+- `n8n` — Opening N8N.
 </details>
 
 # Project 1 
@@ -456,12 +315,13 @@ The tech stack included: PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabas
 Project:
 ![alt text](project1/doc/project1_structure.png)
 
+![alt text](image.png)
 Dimensional model:
 ![alt text](project1/doc/model.png)
 
 ## Steps
 
-1. Using linux bash install the applications necessaire: AWS CLI, Python, VS Code, Terraform, Docker, DBT, Tableau e N8N. 
+1. Using the Linux terminal, install the necessary programs.: AWS CLI, Python, VS Code, Terraform, Docker, DBT, Tableau e N8N. 
 > I chose to work with Linux to deepen my understanding of the operating system. However, I opted for WSL (Windows Subsystem for Linux) to maintain compatibility with essential tools like Tableau, which aren't supported on Linux.
 2. Create the file [population_extraction.py](project1/pipeline/1.extraction/population_extraction.py) to extract the data from the ibge api and stores it in duckdb.
 3. Create the file [main.tf](project1/infra/main.tf) with the specifications of the remote environment you want to create.
@@ -478,8 +338,8 @@ Dimensional model:
 > Workflow design
 ![alt text](project1/doc/n8n.png)
 10. Create the files [docker_compose.yml](project1/infra/docker/docker_compose.yml) and [Dockerfile](project1/infra/docker/Dockerfile) to activate airflow.
-11. Create the file [start_project1.sh](project1/start_project1.sh) para que execute todas estas etapas com um unico comando.
-12. Use o jenkins como gatilho para executar a dag. [jenkinsfile](project1/jenkinsfile) e [airflow_pipeline.sh](project1/airflow_pipeline.sh)
+11. Create the file [start_project1.sh](project1/start_project1.sh) to execute the step with one command.
+12. Use jenkins to trigger the dag. [jenkinsfile](project1/jenkinsfile) e [airflow_pipeline.sh](project1/airflow_pipeline.sh)
 > In jenkins the process should appear like this:
 ![alt text](project1/doc/jenkins.png)
 > In the airflow the dag should appear like this:
