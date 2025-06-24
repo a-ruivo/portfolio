@@ -304,18 +304,11 @@ To deploy an EC2 instance using **Terraform**, refer to the [main.tf](project1/i
 - Making the data accessible in different formats.
 - Automating the process with terraform+airflow+jenkins.
 
-Automation proccess:
-  1. Using terraform create the EC2 instance with PostgresSQL.
-  2. Using docker create 5 containers with the applications: postgreSQL, airflow Webserver, airflow scheduler, airflow database and jenkins.
-  3. use this infrastructure to run the dag using jenkins as a trigger. The dag contains the 4 stages of execution: extraction, ingestion, transformation and service.
-  4. Everything will be executed through .sh files.
-
-The tech stack included: PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, Tableau, DBT, Jenkins and n8n.
+The stack included: PostgreSQL, EC2, Airflow, Terraform, Streamlit, Metabase, Tableau, DBT, Jenkins and n8n.
 
 Project:
 ![alt text](project1/doc/project1_structure.png)
 
-![alt text](image.png)
 Dimensional model:
 ![alt text](project1/doc/model.png)
 
@@ -326,12 +319,13 @@ Dimensional model:
 2. Create the file [population_extraction.py](project1/pipeline/1.extraction/population_extraction.py) to extract the data from the ibge api and stores it in duckdb.
 3. Create the file [main.tf](project1/infra/main.tf) with the specifications of the remote environment you want to create.
 4. Create the file [population_ingestion.py](project1/pipeline/2.ingestion/population_ingestion.py) in python to import the data from duckdb to a postgreSQL in a remote EC2 environment.
-5. Creathe DBT models transforming the data:[DBT models folder](project1/pipeline/3.transformation/dbt_project1/models/)
-6. - Create an file [app.py](project1/pipeline/4.service/streamlit/app.py) defining the connections and visualisation options you want to build.
+5. Create DBT models transforming the data:[DBT models folder](project1/pipeline/3.transformation/dbt_project1/models/)
+6. Create an file [app.py](project1/pipeline/4.service/streamlit/app.py) defining the connections and visualisation options you want to build.
 > Connect your github account to streamlit indicating where it should look for the file and wait for it to run.
 ![alt text](project1/doc/streamlit.png)
 > To avoid leaking credentials, set up variables within the streamlit application.
 ![alt text](project1/doc/streamlit_secrets.png)
+**-------------- (Next steps in progress) -------------------**
 7. Metabase
 8. Tableau
 9. N8N:[Workflow](project1/pipeline/3.transformation/n8n/n8n_workflow.json) [Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)

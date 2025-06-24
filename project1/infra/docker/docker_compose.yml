@@ -20,6 +20,7 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
       - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
+      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
     ports:
       - "8080:8080"
     command: >
@@ -35,6 +36,7 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
       - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
+      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
     command: >
       bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow scheduler"
 
@@ -48,6 +50,7 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
       - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
+      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
     command: >
       bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow db init"
 

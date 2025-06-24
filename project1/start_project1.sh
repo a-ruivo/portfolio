@@ -11,19 +11,19 @@ set +o allexport
 echo ""
 read -p "Deseja provisionar a EC2 com Terraform agora? (s/n): " resposta
 
-echo "Efetuando login via AWS SSO..."
-aws sso login --profile default || {
-  echo "Falha no login via AWS SSO. Verifique suas configurações no ~/.aws/config."
-  exit 1
-}
-
 if [[ "$resposta" == "s" || "$resposta" == "S" ]]; then
+    echo "Efetuando login via AWS SSO..."
+  aws sso login --profile default || {
+    echo "Falha no login via AWS SSO. Verifique suas configurações no ~/.aws/config."
+    exit 1
+  }
+  
   cd "$TERRAFORM_PATH" || { echo "Diretório Terraform não encontrado."; exit 1; }
 
   echo "Inicializando Terraform..."
   terraform init
 
-cd "$TERRAFORM_PATH"
+  cd "$TERRAFORM_PATH"
 
   echo "Validando plano de execução..."
   terraform plan

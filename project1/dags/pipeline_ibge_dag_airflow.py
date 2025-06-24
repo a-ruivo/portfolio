@@ -6,7 +6,7 @@
 
 from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
-from airflow.operators.docker import DockerOperator
+from airflow.providers.docker.operators.docker import DockerOperator
 from airflow import DAG
 import os
 from dotenv import load_dotenv
@@ -48,12 +48,14 @@ transform = DockerOperator(
     auto_remove=True,
     command="run",
     docker_url="unix://var/run/docker.sock",
-    environment={"DB_HOST": os.getenv("DB_HOST")},
+    environment={
+        "DB_HOST": os.getenv("DB_HOST")
+    },
     network_mode="bridge",
     volumes=[
-        "/home/ruivo/analytics_engineer/portfolio/project1/pipeline/3.transformation/dbt_project1:/usr/app"
+        "/home/ruivo/.dbt:/root/.dbt"
     ],
-    working_dir="/usr/app",
+    working_dir="/root",
     dag=dag,
 )
 
