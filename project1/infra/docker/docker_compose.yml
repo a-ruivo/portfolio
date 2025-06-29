@@ -12,15 +12,19 @@ services:
     image: apache/airflow:2.7.0-python3.11
     depends_on:
       - postgres
+    user: airflow
     environment:
+      AIRFLOW__WEBSERVER__SECRET_KEY: chave
       AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth #variavel de ambiente que permite conexao com api
-      AIRFLOW__CORE__DAG_DISCOVERY_SAFE_MODE: False # permite que o airflow encontre dags validas com qualquer nome
-      AIRFLOW__CORE__LOAD_EXAMPLES: False # faz com que o airflow não carregue dags de exemplo
+      AIRFLOW__CORE__DAG_DISCOVERY_SAFE_MODE: "False" # permite que o airflow encontre dags validas com qualquer nome
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False" # faz com que o airflow não carregue dags de exemplo
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
+      - /etc/localtime:/etc/localtime:ro
+      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1:rw
       - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+      - /home/ruivo/analytics_engineer/portfolio/project1/shared_data:/opt/airflow/shared_data:rw
     ports:
       - "8080:8080"
     command: >
@@ -31,29 +35,51 @@ services:
     image: apache/airflow:2.7.0-python3.11
     depends_on:
       - airflow-webserver
+    user: airflow
     environment:
+      AIRFLOW__WEBSERVER__SECRET_KEY: chave
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
+      - /etc/localtime:/etc/localtime:ro
+      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1:rw
       - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+      - /home/ruivo/analytics_engineer/portfolio/project1/shared_data:/opt/airflow/shared_data:rw
     command: >
       bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow scheduler"
-
 
   airflow-init:
     image: apache/airflow:2.7.0-python3.11
     depends_on:
       - postgres
+    user: airflow
+    environment:
+      AIRFLOW__WEBSERVER__SECRET_KEY: chave
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1:rw
+      - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+      - /home/ruivo/analytics_engineer/portfolio/project1/shared_data:/opt/airflow/shared_data:rw
+    command: >
+      bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow db init"
+
+  airflow-triggerer:
+    image: apache/airflow:2.7.0-python3.11
+    depends_on:
+      - airflow-webserver
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1
+      - /etc/localtime:/etc/localtime:ro
+      - /home/ruivo/analytics_engineer/portfolio/project1:/opt/airflow/project1:rw
       - /home/ruivo/analytics_engineer/portfolio/project1/dags:/opt/airflow/dags
+      - /home/ruivo/analytics_engineer/portfolio/project1/shared_data:/opt/airflow/shared_data:rw
+    user: 50000:0
     command: >
-      bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow db init"
-
+      bash -c "pip install -r /opt/airflow/project1/requirements.txt && airflow triggerer"
 
 
   jenkins:

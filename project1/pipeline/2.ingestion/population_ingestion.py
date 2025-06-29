@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DUCKDB_PATH = os.getenv("extraction_path") + "ibge_duckdb.db"
+SHARED_PATH = "/opt/airflow/shared_data"
+DUCKDB_PATH = os.path.join(SHARED_PATH, "ibge_duckdb.db")
 
 # Validating required env variables
 required_vars = ["DB_NAME", "DB_USER", "DB_PASSWORD"]

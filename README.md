@@ -337,7 +337,7 @@ Dimensional model:
 > In jenkins the process should appear like this:
 ![alt text](project1/doc/jenkins.png)
 > In the airflow the dag should appear like this:
-![alt text](project1/doc/airflow.png)
+![alt text](project1/doc/airflow2.png)
 
 
 

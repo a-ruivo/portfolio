@@ -8,6 +8,7 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow import DAG
+from docker.types import Mount
 import os
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
@@ -18,7 +19,7 @@ BASE_PATH = "/opt/airflow/project1/pipeline"
 
 default_args = {
     'start_date': datetime(2025, 1, 1),
-    'retries': 1,
+    'retries': 0,
     'retry_delay': timedelta(minutes=5),
 }
 
@@ -41,6 +42,8 @@ ingest = BashOperator(
     dag=dag,
 )
 
+from docker.types import Mount
+
 transform = DockerOperator(
     task_id="transform_population",
     image="ghcr.io/dbt-labs/dbt-postgres:1.10.1",
@@ -48,12 +51,10 @@ transform = DockerOperator(
     auto_remove=True,
     command="run",
     docker_url="unix://var/run/docker.sock",
-    environment={
-        "DB_HOST": os.getenv("DB_HOST")
-    },
+    environment={"DB_HOST": os.getenv("DB_HOST")},
     network_mode="bridge",
-    volumes=[
-        "/home/ruivo/.dbt:/root/.dbt"
+    mounts=[
+        Mount(source="/home/ruivo/.dbt", target="/root/.dbt", type="bind"),
     ],
     working_dir="/root",
     dag=dag,

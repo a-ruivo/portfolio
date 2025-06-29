@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 
 # Path to DuckDB file
-DUCKDB_PATH = "ibge_duckdb.db"
+DUCKDB_PATH = "/opt/airflow/shared_data/ibge_duckdb.db"
 
 # Load .env variables
 load_dotenv()
@@ -94,6 +94,7 @@ def run_etl():
     create_duckdb_table()
     insert_into_duckdb(df)
     print("ETL completed successfully. Data saved to ibge_populacao_etaria table.")
+
 
 if __name__ == "__main__":
     run_etl()
