@@ -325,7 +325,9 @@ Dimensional model:
 ![alt text](project1/doc/streamlit.png)
 > To avoid leaking credentials, set up variables within the streamlit application.
 ![alt text](project1/doc/streamlit_secrets.png)
+
 **-------------- (Next steps in progress) -------------------**
+
 7. Metabase
 8. Tableau
 9. N8N:[Workflow](project1/pipeline/3.transformation/n8n/n8n_workflow.json) [Trigger](project1/pipeline/3.transformation/n8n/n8n_request.py)
